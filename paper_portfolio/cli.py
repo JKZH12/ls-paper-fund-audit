@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from datetime import date
 from pathlib import Path
 
 from .audit import ensure_genesis_event, git_anchor, record_audit_event, verify_audit_chain, write_manifest
@@ -86,6 +87,10 @@ def resolve_portfolio_id(conn, portfolio_id: int | None) -> int:
     return portfolio_id if portfolio_id is not None else default_portfolio_id(conn)
 
 
+def audit_workspace(db_path: Path) -> Path:
+    return Path(".") if db_path == DEFAULT_DB_PATH else db_path.parent
+
+
 def realized_delta_for_trade(before, *, symbol: str, side: str, quantity: float, price: float, fee: float) -> float:
     holding = before.holdings.get(symbol.upper())
     if side == "sell" and holding is not None:
@@ -148,7 +153,7 @@ def handle_trade(conn, args, portfolio_id: int) -> None:
                 },
             },
         )
-    manifest_path = write_manifest(conn, portfolio_id=portfolio_id, db_path=args.db)
+    manifest_path = write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
     print(f"Recorded simulated trade {trade_id}: {args.side} {args.quantity:g} {args.symbol.upper()} @ {args.price:g}")
     print(f"Audit manifest: {manifest_path}")
 
@@ -168,7 +173,7 @@ def handle_price(conn, args, portfolio_id: int) -> None:
                 "source": args.source,
             },
         )
-    manifest_path = write_manifest(conn, portfolio_id=portfolio_id, db_path=args.db)
+    manifest_path = write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
     print(f"Updated price: {args.symbol.upper()} = {args.price:g}")
     print(f"Audit manifest: {manifest_path}")
 
@@ -188,7 +193,7 @@ def main(argv: list[str] | None = None) -> None:
         )
         with conn:
             ensure_genesis_event(conn, portfolio_id)
-        manifest_path = write_manifest(conn, portfolio_id=portfolio_id, db_path=args.db)
+        manifest_path = write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
         print(f"Created portfolio {portfolio_id}: {args.name}")
         print(f"Audit manifest: {manifest_path}")
         return
@@ -219,7 +224,7 @@ def main(argv: list[str] | None = None) -> None:
         if args.print_report:
             print(render_report(conn, portfolio_id))
         else:
-            path = args.out_dir / f"{__import__('datetime').date.today().isoformat()}.md"
+            path = args.out_dir / f"{date.today().isoformat()}.md"
             with conn:
                 record_audit_event(
                     conn,
@@ -231,7 +236,13 @@ def main(argv: list[str] | None = None) -> None:
                     },
                 )
             path = write_daily_report(conn, portfolio_id, args.out_dir)
-            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, report_path=path, db_path=args.db)
+            manifest_path = write_manifest(
+                conn,
+                portfolio_id=portfolio_id,
+                workspace=audit_workspace(args.db),
+                report_path=path,
+                db_path=args.db,
+            )
             print(f"Wrote report: {path}")
             print(f"Audit manifest: {manifest_path}")
         return
@@ -240,7 +251,7 @@ def main(argv: list[str] | None = None) -> None:
         if args.audit_command == "init":
             with conn:
                 event_hash = ensure_genesis_event(conn, portfolio_id)
-            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, db_path=args.db)
+            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
             if event_hash:
                 print(f"Created genesis audit event: {event_hash}")
             else:
@@ -260,7 +271,7 @@ def main(argv: list[str] | None = None) -> None:
         if args.audit_command == "manifest":
             with conn:
                 ensure_genesis_event(conn, portfolio_id)
-            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, db_path=args.db)
+            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
             print(f"Audit manifest: {manifest_path}")
             return
         if args.audit_command == "anchor":
@@ -269,7 +280,7 @@ def main(argv: list[str] | None = None) -> None:
                 for problem in result.problems:
                     print(f"- {problem}")
                 raise SystemExit(1)
-            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, db_path=args.db)
+            manifest_path = write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
             message = args.message or f"Anchor paper portfolio audit {manifest_path.stem}"
             anchor = git_anchor(include_code=args.include_code, message=message, push=not args.no_push)
             print(f"Audit manifest: {manifest_path}")

@@ -8,8 +8,8 @@
   },
   "files": {
     "daily_report": {
-      "path": null,
-      "sha256": null
+      "path": "reports/daily/2026-07-06.md",
+      "sha256": "96876160a84a038a284f542269fd4bac660ea98ca24aef591ef91628919b58e0"
     },
     "database": {
       "path": "data/portfolio.sqlite",
@@ -17,7 +17,7 @@
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-07-06T13:19:48Z",
+  "generated_at": "2026-07-06T13:21:52Z",
   "manifest_date": "2026-07-06",
   "manifest_version": 1,
   "metrics": {

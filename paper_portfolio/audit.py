@@ -241,6 +241,10 @@ def write_manifest(
     manifest_date: date | None = None,
 ) -> Path:
     manifest_date = manifest_date or date.today()
+    if report_path is None:
+        candidate = Path("reports/daily") / f"{manifest_date.isoformat()}.md"
+        if (workspace / candidate).exists():
+            report_path = candidate
     event_log_path = sync_event_log(conn, portfolio_id, workspace)
     verification = verify_audit_chain(conn, portfolio_id)
     snapshot = portfolio_snapshot(conn, portfolio_id)
