@@ -793,8 +793,8 @@
       <div class="status-strip" aria-label="book status">
         <span class="pill"><span class="dot long"></span>Simulated only</span>
         <span class="pill"><span class="dot"></span>28 positions</span>
-        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-07 21:59:38 HKT</span>
-        <span class="pill mono">Audit 292 events</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-07 22:11:19 HKT</span>
+        <span class="pill mono">Audit 325 events</span>
       </div>
     </div>
   </header>
@@ -812,7 +812,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Exposure Stack</div>
-          <span class="pill">Gross 59.84%</span>
+          <span class="pill">Gross 61.35%</span>
         </div>
         <div class="panel-body">
           <div id="exposureStack" class="exposure-stack"></div>
@@ -938,7 +938,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Audit / Report</div>
-          <span class="pill mono">23e1...e04d</span>
+          <span class="pill mono">fcaa...4e29</span>
         </div>
         <div class="panel-body">
           <div class="watch-list">
@@ -952,7 +952,7 @@
             </div>
             <div class="watch-item">
               <strong>Head hash</strong>
-              <span class="mono">23e17e18b09f5c4b0efcbbfa15809210ca07a7bb4118f8e65a971022fedde04d</span>
+              <span class="mono">fcaad01e7179acf2a0b1d7708564cf7733e26237fc1a46b50efb3841b2c44e29</span>
             </div>
           </div>
           <div class="footnote">All order-related actions remain local paper-trading actions only.</div>
@@ -963,66 +963,430 @@
 
   <script>
     const book = {
-      asOf: "2026-07-07 21:59:38 HKT",
-      summary: {
-        totalEquity: 49740974.08,
-        cash: 50063719.87,
-        longMarketValue: 14721665.74,
-        shortMarketValue: 15044411.53,
-        netMarketValue: -322745.79,
-        grossExposure: 29766077.28,
-        totalPnl: -259025.92,
-        returnPct: -0.005181,
-        realizedPnl: 126273.99,
-        unrealizedPnl: -385299.91,
-        grossExposurePct: 0.598422,
-        netExposurePct: -0.006489
+      "asOf": "2026-07-07 22:11:19 HKT",
+      "summary": {
+            "totalEquity": 49723910.697841726,
+            "cash": 49815100.31333865,
+            "longMarketValue": 15207157.614491725,
+            "shortMarketValue": 15298347.22998865,
+            "netMarketValue": -91189.61549692403,
+            "grossExposure": 30505504.844480373,
+            "totalPnl": -276089.30215827376,
+            "returnPct": -0.005521786043165475,
+            "realizedPnl": 126273.98766311951,
+            "unrealizedPnl": -402363.28982139344,
+            "grossExposurePct": 0.6134976999265761,
+            "netExposurePct": -0.0018339188172679694
       },
-      positions: [
-        { symbol: "1888.HK", name: "Kingboard Laminates", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: -82874.7729, averageCost: 9.03975, lastPrice: 8.9257, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "2513.HK", name: "Knowledge Atlas / Z.ai", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: 3580.6346, averageCost: 209.2275, lastPrice: 205.2911, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "285A.T", name: "Kioxia", theme: "Storage hierarchy", pair: "285A.T / 6981.T", quantity: 1673.0092, averageCost: 447.79625, lastPrice: 447.2148, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "6981.T", name: "Murata", theme: "Semi capex / materials", pair: "285A.T / 6981.T", quantity: -12759.6428, averageCost: 58.713809, lastPrice: 56.902524, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "AMAT", name: "Applied Materials", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: -1247.7196, averageCost: 600.27, lastPrice: 536.52, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "AMD", name: "Advanced Micro Devices", theme: "Compute semis", pair: "INTC / AMD", quantity: -2727.3804, averageCost: 549.55203324, lastPrice: 512.65997, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "ARM", name: "Arm Holdings", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -2281.5383, averageCost: 328.46, lastPrice: 307.735, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "ASML", name: "ASML Holding", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: 671.3074, averageCost: 1860.5337, lastPrice: 1732.4747, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "AVGO", name: "Broadcom", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -4023.9465, averageCost: 372.06689508, lastPrice: 365.17001, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "AXTI", name: "AXT", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 4601.7824, averageCost: 65.20331101, lastPrice: 62.385, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "CIEN", name: "Ciena", theme: "Optical networking", pair: "COHR+LITE / FN+GLW+CIEN+NOK", quantity: -2965.9333, averageCost: 419.18, lastPrice: 416.55, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "COHR", name: "Coherent", theme: "Optical networking", pair: "COHR+LITE / FN+GLW+CIEN+NOK", quantity: 3827.5940, averageCost: 324.815, lastPrice: 319.935, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "CRWV", name: "CoreWeave", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: -14559.3201, averageCost: 85.87335138, lastPrice: 82.1431, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "FN", name: "Fabrinet", theme: "Optical networking", pair: "COHR+LITE / FN+GLW+CIEN+NOK", quantity: -2539.4677, averageCost: 489.57501, lastPrice: 482.345, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "GEV", name: "GE Vernova", theme: "Power infrastructure", pair: "GEV / ON", quantity: 933.6975, averageCost: 1066, lastPrice: 1043.905, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "GLW", name: "Corning", theme: "Optical networking", pair: "COHR+LITE / FN+GLW+CIEN+NOK", quantity: -3989.0693, averageCost: 187, lastPrice: 183.92, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "INTC", name: "Intel", theme: "Compute semis", pair: "INTC / AMD", quantity: 14249.9429, averageCost: 122.65193212, lastPrice: 112.22, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "LITE", name: "Lumentum", theme: "Optical networking", pair: "COHR+LITE / FN+GLW+CIEN+NOK", quantity: 1737.7921, averageCost: 715.425, lastPrice: 706.76, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "MU", name: "Micron Technology", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: -1347.4069, averageCost: 923.14366176, lastPrice: 917.74, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "NBIS", name: "Nebius", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: 6749.1198, averageCost: 222.29992312, lastPrice: 199.01, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "NOK", name: "Nokia", theme: "Optical networking", pair: "COHR+LITE / FN+GLW+CIEN+NOK", quantity: -40812.8006, averageCost: 12.185, lastPrice: 12.07, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "NVDA", name: "NVIDIA", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -7765.8378, averageCost: 192.25, lastPrice: 192.16, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "ON", name: "ON Semiconductor", theme: "Power semis", pair: "GEV / ON", quantity: -5433.5710, averageCost: 91.59, lastPrice: 90.77, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "QCOM", name: "Qualcomm", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -6755.0134, averageCost: 184.41275791, lastPrice: 182.8, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "SNDK", name: "SanDisk", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: 471.7348, averageCost: 1581.64, lastPrice: 1581.64, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "SOI.PA", name: "Soitec", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 5531.4770, averageCost: 135.3608, lastPrice: 120.126776, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "TSM", name: "Taiwan Semiconductor", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: 4408.4693, averageCost: 452.91756162, lastPrice: 435.64001, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" },
-        { symbol: "WDC", name: "Western Digital", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: 3930.3148, averageCost: 571.61964922, lastPrice: 531.115, realizedPnl: 0, updatedAt: "2026-07-07 21:59:38 HKT" }
+      "positions": [
+            {
+                  "symbol": "1888.HK",
+                  "name": "Kingboard Laminates",
+                  "theme": "HK / China AI & CCL",
+                  "pair": "2513.HK / 1888.HK",
+                  "quantity": -82874.77290301,
+                  "averageCost": 9.03975,
+                  "lastPrice": 8.9264,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "2513.HK",
+                  "name": "Knowledge Atlas / Z.ai",
+                  "theme": "HK / China AI & CCL",
+                  "pair": "2513.HK / 1888.HK",
+                  "quantity": 3580.63461232,
+                  "averageCost": 209.2275,
+                  "lastPrice": 205.3072,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "285A.T",
+                  "name": "Kioxia",
+                  "theme": "Storage hierarchy",
+                  "pair": "285A.T / 6981.T",
+                  "quantity": 1673.00916064,
+                  "averageCost": 447.79625,
+                  "lastPrice": 446.94692,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "6981.T",
+                  "name": "Murata",
+                  "theme": "Semi capex / materials",
+                  "pair": "285A.T / 6981.T",
+                  "quantity": -12759.64276734,
+                  "averageCost": 58.713809,
+                  "lastPrice": 56.8684396,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "AMAT",
+                  "name": "Applied Materials",
+                  "theme": "Semi capex / materials",
+                  "pair": "ASML / AMAT",
+                  "quantity": -1706.7745466384,
+                  "averageCost": 584.4873984307543,
+                  "lastPrice": 541.59,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:19 HKT"
+            },
+            {
+                  "symbol": "AMD",
+                  "name": "Advanced Micro Devices",
+                  "theme": "Compute semis",
+                  "pair": "INTC / AMD",
+                  "quantity": -2727.3803827202,
+                  "averageCost": 549.5520332361541,
+                  "lastPrice": 514.92,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "ARM",
+                  "name": "Arm Holdings",
+                  "theme": "Compute semis",
+                  "pair": "TSM / NVDA+ARM+AVGO+QCOM",
+                  "quantity": -2281.5382691075,
+                  "averageCost": 328.46,
+                  "lastPrice": 310.39,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "ASML",
+                  "name": "ASML Holding",
+                  "theme": "Semi capex / materials",
+                  "pair": "ASML / AMAT",
+                  "quantity": 958.1915949108,
+                  "averageCost": 1822.4217537073473,
+                  "lastPrice": 1733.24,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:17 HKT"
+            },
+            {
+                  "symbol": "AVGO",
+                  "name": "Broadcom",
+                  "theme": "Compute semis",
+                  "pair": "TSM / NVDA+ARM+AVGO+QCOM",
+                  "quantity": -4023.9464974724997,
+                  "averageCost": 372.06689508129676,
+                  "lastPrice": 366.07,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "AXTI",
+                  "name": "AXT",
+                  "theme": "Semi capex / materials",
+                  "pair": "AXTI + SOI.PA",
+                  "quantity": 4601.7824085789,
+                  "averageCost": 65.20331100849629,
+                  "lastPrice": 61.99,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "CIEN",
+                  "name": "Ciena",
+                  "theme": "Optical networking",
+                  "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
+                  "quantity": -2965.9333449397,
+                  "averageCost": 419.18,
+                  "lastPrice": 415.95,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "COHR",
+                  "name": "Coherent",
+                  "theme": "Optical networking",
+                  "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
+                  "quantity": 3827.5939828265,
+                  "averageCost": 324.815,
+                  "lastPrice": 320.45001,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "CRWV",
+                  "name": "CoreWeave",
+                  "theme": "AI cloud demand",
+                  "pair": "NBIS / CRWV",
+                  "quantity": -14559.3200662287,
+                  "averageCost": 85.87335138282015,
+                  "lastPrice": 81.628,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "FN",
+                  "name": "Fabrinet",
+                  "theme": "Optical networking",
+                  "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
+                  "quantity": -2539.4677304542,
+                  "averageCost": 489.57501,
+                  "lastPrice": 476.68,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "GEV",
+                  "name": "GE Vernova",
+                  "theme": "Power infrastructure",
+                  "pair": "GEV / ON",
+                  "quantity": 933.6975083878,
+                  "averageCost": 1066.0,
+                  "lastPrice": 1062.4,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "GLW",
+                  "name": "Corning",
+                  "theme": "Optical networking",
+                  "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
+                  "quantity": -3989.069324701,
+                  "averageCost": 187.0,
+                  "lastPrice": 184.246,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "INTC",
+                  "name": "Intel",
+                  "theme": "Compute semis",
+                  "pair": "INTC / AMD",
+                  "quantity": 14249.9429440179,
+                  "averageCost": 122.65193212099902,
+                  "lastPrice": 111.655,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "LITE",
+                  "name": "Lumentum",
+                  "theme": "Optical networking",
+                  "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
+                  "quantity": 1737.7921368862,
+                  "averageCost": 715.425,
+                  "lastPrice": 703.44,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "MU",
+                  "name": "Micron Technology",
+                  "theme": "Storage hierarchy",
+                  "pair": "WDC / SNDK+MU",
+                  "quantity": -1347.4069475331,
+                  "averageCost": 923.1436617607814,
+                  "lastPrice": 919.71002,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "NBIS",
+                  "name": "Nebius",
+                  "theme": "AI cloud demand",
+                  "pair": "NBIS / CRWV",
+                  "quantity": 6749.1198391568,
+                  "averageCost": 222.2999231219273,
+                  "lastPrice": 200.34,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "NOK",
+                  "name": "Nokia",
+                  "theme": "Optical networking",
+                  "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
+                  "quantity": -40812.8006411754,
+                  "averageCost": 12.185,
+                  "lastPrice": 12.001,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "NVDA",
+                  "name": "NVIDIA",
+                  "theme": "Compute semis",
+                  "pair": "TSM / NVDA+ARM+AVGO+QCOM",
+                  "quantity": -7765.8377940808,
+                  "averageCost": 192.25,
+                  "lastPrice": 193.25,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "ON",
+                  "name": "ON Semiconductor",
+                  "theme": "Power semis",
+                  "pair": "GEV / ON",
+                  "quantity": -5433.5710445537,
+                  "averageCost": 91.59,
+                  "lastPrice": 90.45,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "QCOM",
+                  "name": "Qualcomm",
+                  "theme": "Compute semis",
+                  "pair": "TSM / NVDA+ARM+AVGO+QCOM",
+                  "quantity": -6755.0134015482,
+                  "averageCost": 184.41275790647683,
+                  "lastPrice": 182.7,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "SNDK",
+                  "name": "SanDisk",
+                  "theme": "Storage hierarchy",
+                  "pair": "WDC / SNDK+MU",
+                  "quantity": 471.7347886755,
+                  "averageCost": 1581.64,
+                  "lastPrice": 1571.27502,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "SOI.PA",
+                  "name": "Soitec",
+                  "theme": "Semi capex / materials",
+                  "pair": "AXTI + SOI.PA",
+                  "quantity": 5531.4770225654,
+                  "averageCost": 135.3608,
+                  "lastPrice": 118.8823275,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "TSM",
+                  "name": "Taiwan Semiconductor",
+                  "theme": "Compute semis",
+                  "pair": "TSM / NVDA+ARM+AVGO+QCOM",
+                  "quantity": 4408.4692617324,
+                  "averageCost": 452.9175616219673,
+                  "lastPrice": 434.325,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            },
+            {
+                  "symbol": "WDC",
+                  "name": "Western Digital",
+                  "theme": "Storage hierarchy",
+                  "pair": "WDC / SNDK+MU",
+                  "quantity": 3930.3147898864,
+                  "averageCost": 571.6196492233518,
+                  "lastPrice": 529.365,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-07 22:11:11 HKT"
+            }
       ],
-      trades: [
-        { time: "2026-07-07 21:59:38 HKT", symbol: "MU", side: "short", quantity: 541.9942, price: 917.74, notes: "add short 1.0% NAV MU; sizing NAV 49740974.08; notional 497409.74; source FMP MU quote timestamp 1783432743" },
-        { time: "2026-07-07 21:59:38 HKT", symbol: "AVGO", side: "short", quantity: 1362.1320, price: 365.17001, notes: "add short 1.0% NAV AVGO; sizing NAV 49740974.08; notional 497409.74; source FMP AVGO quote timestamp 1783432735" },
-        { time: "2026-07-07 21:59:38 HKT", symbol: "QCOM", side: "short", quantity: 4081.5898, price: 182.8, notes: "add short 1.5% NAV QCOM; sizing NAV 49740974.08; notional 746114.61; source FMP QCOM quote timestamp 1783432748" },
-        { time: "2026-07-07 21:59:38 HKT", symbol: "SNDK", side: "buy", quantity: 471.7348, price: 1581.64, notes: "buy 1.5% NAV SNDK after short cover; sizing NAV 49740974.08; notional 746114.61; source FMP SNDK quote timestamp 1783432750" },
-        { time: "2026-07-07 21:59:38 HKT", symbol: "SNDK", side: "cover", quantity: 552.3184, price: 1581.64, notes: "cover existing SNDK short before rotating to 1.5% NAV long; sizing NAV 49740974.08; source FMP SNDK quote timestamp 1783432750" },
-        { time: "2026-07-07 21:52:53 HKT", symbol: "NOK", side: "short", quantity: 40812.8006, price: 12.185, notes: "short 1.0% NAV Nokia / NOK; sizing NAV 49730397.58; notional 497303.98; source FMP NOK quote timestamp 1783432351" },
-        { time: "2026-07-07 21:52:53 HKT", symbol: "CIEN", side: "short", quantity: 2965.9333, price: 419.18, notes: "short 2.5% NAV Ciena / CIEN; sizing NAV 49730397.58; notional 1243259.94; source FMP CIEN quote timestamp 1783432349" },
-        { time: "2026-07-07 21:52:53 HKT", symbol: "GLW", side: "short", quantity: 3989.0693, price: 187, notes: "short 1.5% NAV Corning / GLW; sizing NAV 49730397.58; notional 745955.96; source FMP GLW quote timestamp 1783432350" },
-        { time: "2026-07-07 21:52:53 HKT", symbol: "FN", side: "short", quantity: 2539.4677, price: 489.57501, notes: "short 2.5% NAV Fabrinet / FN; sizing NAV 49730397.58; notional 1243259.94; source FMP FN quote timestamp 1783432342" },
-        { time: "2026-07-07 21:52:53 HKT", symbol: "LITE", side: "buy", quantity: 1737.7921, price: 715.425, notes: "buy 2.5% NAV LITE; sizing NAV 49730397.58; notional 1243259.94; source FMP LITE quote timestamp 1783432349" },
-        { time: "2026-07-07 21:52:53 HKT", symbol: "COHR", side: "buy", quantity: 3827.5940, price: 324.815, notes: "buy 2.5% NAV COHR; sizing NAV 49730397.58; notional 1243259.94; source FMP COHR quote timestamp 1783432346" },
-        { time: "2026-07-07 21:48:05 HKT", symbol: "ON", side: "short", quantity: 5433.5710, price: 91.59, notes: "short 1.0% NAV ON Semiconductor / ON; sizing NAV 49766077.20; notional 497660.77; source FMP ON quote timestamp 1783432064" }
+      "trades": [
+            {
+                  "time": "2026-07-07 22:11:11 HKT",
+                  "symbol": "AMAT",
+                  "side": "short",
+                  "quantity": 459.0549188501,
+                  "price": 541.59,
+                  "notes": "2026-07-07 simulated add: short AMAT 0.5% NAV; sizing NAV 49,723,910.70; target notional 248,619.55; FMP quote 541.59 timestamp 1783433376"
+            },
+            {
+                  "time": "2026-07-07 22:11:08 HKT",
+                  "symbol": "ASML",
+                  "side": "buy",
+                  "quantity": 286.8841631857,
+                  "price": 1733.24,
+                  "notes": "2026-07-07 simulated add: buy ASML 1.0% NAV; sizing NAV 49,723,910.70; target notional 497,239.11; FMP quote 1733.24 timestamp 1783433378"
+            },
+            {
+                  "time": "2026-07-07 21:59:38 HKT",
+                  "symbol": "MU",
+                  "side": "short",
+                  "quantity": 541.9941822017,
+                  "price": 917.74,
+                  "notes": "add short 1.0% NAV MU; sizing NAV 49740974.08; notional 497409.74; source FMP MU quote timestamp 1783432743"
+            },
+            {
+                  "time": "2026-07-07 21:59:38 HKT",
+                  "symbol": "AVGO",
+                  "side": "short",
+                  "quantity": 1362.1319581359,
+                  "price": 365.17001,
+                  "notes": "add short 1.0% NAV AVGO; sizing NAV 49740974.08; notional 497409.74; source FMP AVGO quote timestamp 1783432735"
+            },
+            {
+                  "time": "2026-07-07 21:59:38 HKT",
+                  "symbol": "QCOM",
+                  "side": "short",
+                  "quantity": 4081.5897765902,
+                  "price": 182.8,
+                  "notes": "add short 1.5% NAV QCOM; sizing NAV 49740974.08; notional 746114.61; source FMP QCOM quote timestamp 1783432748"
+            },
+            {
+                  "time": "2026-07-07 21:59:38 HKT",
+                  "symbol": "SNDK",
+                  "side": "buy",
+                  "quantity": 471.7347886755,
+                  "price": 1581.64,
+                  "notes": "buy 1.5% NAV SNDK after short cover; sizing NAV 49740974.08; notional 746114.61; source FMP SNDK quote timestamp 1783432750"
+            },
+            {
+                  "time": "2026-07-07 21:59:38 HKT",
+                  "symbol": "SNDK",
+                  "side": "cover",
+                  "quantity": 552.3184459657,
+                  "price": 1581.64,
+                  "notes": "cover existing SNDK short before rotating to 1.5% NAV long; sizing NAV 49740974.08; source FMP SNDK quote timestamp 1783432750"
+            },
+            {
+                  "time": "2026-07-07 21:52:53 HKT",
+                  "symbol": "NOK",
+                  "side": "short",
+                  "quantity": 40812.8006411754,
+                  "price": 12.185,
+                  "notes": "short 1.0% NAV Nokia / NOK; sizing NAV 49730397.58; notional 497303.98; source FMP NOK quote timestamp 1783432351"
+            },
+            {
+                  "time": "2026-07-07 21:52:53 HKT",
+                  "symbol": "CIEN",
+                  "side": "short",
+                  "quantity": 2965.9333449397,
+                  "price": 419.18,
+                  "notes": "short 2.5% NAV Ciena / CIEN; sizing NAV 49730397.58; notional 1243259.94; source FMP CIEN quote timestamp 1783432349"
+            },
+            {
+                  "time": "2026-07-07 21:52:53 HKT",
+                  "symbol": "GLW",
+                  "side": "short",
+                  "quantity": 3989.069324701,
+                  "price": 187.0,
+                  "notes": "short 1.5% NAV Corning / GLW; sizing NAV 49730397.58; notional 745955.96; source FMP GLW quote timestamp 1783432350"
+            },
+            {
+                  "time": "2026-07-07 21:52:53 HKT",
+                  "symbol": "FN",
+                  "side": "short",
+                  "quantity": 2539.4677304542,
+                  "price": 489.57501,
+                  "notes": "short 2.5% NAV Fabrinet / FN; sizing NAV 49730397.58; notional 1243259.94; source FMP FN quote timestamp 1783432342"
+            },
+            {
+                  "time": "2026-07-07 21:52:53 HKT",
+                  "symbol": "LITE",
+                  "side": "buy",
+                  "quantity": 1737.7921368862,
+                  "price": 715.425,
+                  "notes": "buy 2.5% NAV LITE; sizing NAV 49730397.58; notional 1243259.94; source FMP LITE quote timestamp 1783432349"
+            }
       ]
-    };
+};
 
     const state = {
       side: "all",
@@ -1077,13 +1441,17 @@
 
     function renderOverview() {
       const s = book.summary;
+      const largestLeg = book.positions.reduce((largest, position) => {
+        const exposure = Math.abs(marketValue(position));
+        return exposure > largest.exposure ? { position, exposure } : largest;
+      }, { position: null, exposure: 0 });
       const metrics = [
         { label: "Total equity", value: money.format(s.totalEquity), footLeft: "Initial $50.0m", footRight: "USD base", className: metricClass(s.totalPnl) },
         { label: "Cash", value: money.format(s.cash), footLeft: "Cash buffer", footRight: pct(s.cash / s.totalEquity), className: "neutral" },
         { label: "Total PnL", value: `${signedMoney(s.totalPnl)} <span class="metric-subvalue">${pct(s.returnPct)}</span>`, footLeft: "Realized " + signedMoney(s.realizedPnl), footRight: "UPnL " + signedMoney(s.unrealizedPnl), className: metricClass(s.totalPnl) },
         { label: "Gross exposure", value: money.format(s.grossExposure), footLeft: "Long " + pct(s.longMarketValue / s.totalEquity), footRight: "Short " + pct(s.shortMarketValue / s.totalEquity), className: "neutral" },
         { label: "Net exposure", value: money.format(s.netMarketValue), footLeft: "Net % NAV", footRight: pct(s.netExposurePct), className: metricClass(s.netMarketValue) },
-        { label: "Largest leg", value: "3.00%", footLeft: "NBIS / TSM", footRight: "single-name", className: "neutral" }
+        { label: "Largest leg", value: pct(largestLeg.exposure / s.totalEquity), footLeft: largestLeg.position ? largestLeg.position.symbol : "N/A", footRight: "single-name", className: "neutral" }
       ];
 
       document.getElementById("overview").innerHTML = metrics.map((item) => `
