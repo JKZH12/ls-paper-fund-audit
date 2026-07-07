@@ -792,9 +792,9 @@
       </div>
       <div class="status-strip" aria-label="book status">
         <span class="pill"><span class="dot long"></span>Simulated only</span>
-        <span class="pill"><span class="dot"></span>19 positions</span>
-        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-07 21:44:36 HKT</span>
-        <span class="pill mono">Audit 190 events</span>
+        <span class="pill"><span class="dot"></span>22 positions</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-07 21:48:05 HKT</span>
+        <span class="pill mono">Audit 218 events</span>
       </div>
     </div>
   </header>
@@ -812,7 +812,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Exposure Stack</div>
-          <span class="pill">Gross 37.70%</span>
+          <span class="pill">Gross 44.62%</span>
         </div>
         <div class="panel-body">
           <div id="exposureStack" class="exposure-stack"></div>
@@ -938,7 +938,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Audit / Report</div>
-          <span class="pill mono">05ba...0510</span>
+          <span class="pill mono">c2a8...c9e9</span>
         </div>
         <div class="panel-body">
           <div class="watch-list">
@@ -952,7 +952,7 @@
             </div>
             <div class="watch-item">
               <strong>Head hash</strong>
-              <span class="mono">05baad8ae7adef3812b717f1895ab3b273097fa135cca61b7a87d3e51b8f0510</span>
+              <span class="mono">c2a838add624387896dee088aec7aeb22d8e606abdd8d58031462291a0b1c9e9</span>
             </div>
           </div>
           <div class="footnote">All order-related actions remain local paper-trading actions only.</div>
@@ -963,43 +963,50 @@
 
   <script>
     const book = {
-      asOf: "2026-07-07 21:44:36 HKT",
+      asOf: "2026-07-07 21:48:05 HKT",
       summary: {
-        totalEquity: 49762696.18,
-        cash: 48201548.62,
-        longMarketValue: 10160509.88,
-        shortMarketValue: 8599362.32,
-        netMarketValue: 1561147.56,
-        grossExposure: 18759872.20,
-        totalPnl: -237303.82,
-        returnPct: -0.004746,
+        totalEquity: 49766077.20,
+        cash: 48699209.39,
+        longMarketValue: 11635023.60,
+        shortMarketValue: 10568155.79,
+        netMarketValue: 1066867.80,
+        grossExposure: 22203179.39,
+        totalPnl: -233922.80,
+        returnPct: -0.004678,
         realizedPnl: -223.51,
-        unrealizedPnl: -237080.32,
-        grossExposurePct: 0.376987,
-        netExposurePct: 0.031372
+        unrealizedPnl: -233699.30,
+        grossExposurePct: 0.446151,
+        netExposurePct: 0.021438
       },
       positions: [
-        { symbol: "1888.HK", name: "Kingboard Laminates", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: -82874.7729, averageCost: 9.03975, lastPrice: 8.9264, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "2513.HK", name: "Knowledge Atlas / Z.ai", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: 3580.6346, averageCost: 209.2275, lastPrice: 205.3072, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "285A.T", name: "Kioxia", theme: "Storage hierarchy", pair: "285A.T / 6981.T", quantity: 1673.0092, averageCost: 447.79625, lastPrice: 447.361048, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "6981.T", name: "Murata", theme: "Semi capex / materials", pair: "285A.T / 6981.T", quantity: -12759.6428, averageCost: 58.713809, lastPrice: 56.92113224, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "AMAT", name: "Applied Materials", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: -1247.7196, averageCost: 600.27, lastPrice: 546.975, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "AMD", name: "Advanced Micro Devices", theme: "Compute semis", pair: "INTC / AMD", quantity: -2727.3804, averageCost: 549.55203324, lastPrice: 517.0994, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "ARM", name: "Arm Holdings", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: -2281.5383, averageCost: 328.46, lastPrice: 310.41, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "ASML", name: "ASML Holding", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: 671.3074, averageCost: 1860.5337, lastPrice: 1745.18, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "AVGO", name: "Broadcom", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: -2661.8145, averageCost: 375.59624224, lastPrice: 368.63, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "AXTI", name: "AXT", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 4601.7824, averageCost: 65.20331101, lastPrice: 64.95, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "CRWV", name: "CoreWeave", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: -14559.3201, averageCost: 85.87335138, lastPrice: 84.355, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "INTC", name: "Intel", theme: "Compute semis", pair: "INTC / AMD", quantity: 14249.9429, averageCost: 122.65193212, lastPrice: 114.54, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "MU", name: "Micron Technology", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: -805.4128, averageCost: 926.78, lastPrice: 926.78, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "NBIS", name: "Nebius", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: 6749.1198, averageCost: 222.29992312, lastPrice: 204.675, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "QCOM", name: "Qualcomm", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: -2673.4236, averageCost: 186.875, lastPrice: 184.475, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "SNDK", name: "SanDisk", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: -552.3184, averageCost: 1810.67, lastPrice: 1599.23816, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "SOI.PA", name: "Soitec", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 5531.4770, averageCost: 135.3608, lastPrice: 117.483665, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "TSM", name: "Taiwan Semiconductor", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: 3271.5956, averageCost: 458.19, lastPrice: 437.85999, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" },
-        { symbol: "WDC", name: "Western Digital", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: 3930.3148, averageCost: 571.61964922, lastPrice: 537, realizedPnl: 0, updatedAt: "2026-07-07 21:44:36 HKT" }
+        { symbol: "1888.HK", name: "Kingboard Laminates", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: -82874.7729, averageCost: 9.03975, lastPrice: 8.9271, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "2513.HK", name: "Knowledge Atlas / Z.ai", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: 3580.6346, averageCost: 209.2275, lastPrice: 205.3233, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "285A.T", name: "Kioxia", theme: "Storage hierarchy", pair: "285A.T / 6981.T", quantity: 1673.0092, averageCost: 447.79625, lastPrice: 447.350188, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "6981.T", name: "Murata", theme: "Semi capex / materials", pair: "285A.T / 6981.T", quantity: -12759.6428, averageCost: 58.713809, lastPrice: 56.91975044, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "AMAT", name: "Applied Materials", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: -1247.7196, averageCost: 600.27, lastPrice: 542.92, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "AMD", name: "Advanced Micro Devices", theme: "Compute semis", pair: "INTC / AMD", quantity: -2727.3804, averageCost: 549.55203324, lastPrice: 517.06, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "ARM", name: "Arm Holdings", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -2281.5383, averageCost: 328.46, lastPrice: 308.735, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "ASML", name: "ASML Holding", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: 671.3074, averageCost: 1860.5337, lastPrice: 1741.9799, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "AVGO", name: "Broadcom", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -2661.8145, averageCost: 375.59624224, lastPrice: 367.115, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "AXTI", name: "AXT", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 4601.7824, averageCost: 65.20331101, lastPrice: 65.5, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "CRWV", name: "CoreWeave", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: -14559.3201, averageCost: 85.87335138, lastPrice: 83.64, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "GEV", name: "GE Vernova", theme: "Power infrastructure", pair: "GEV / ON", quantity: 933.6975, averageCost: 1066, lastPrice: 1066, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "INTC", name: "Intel", theme: "Compute semis", pair: "INTC / AMD", quantity: 14249.9429, averageCost: 122.65193212, lastPrice: 114.115, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "MU", name: "Micron Technology", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: -805.4128, averageCost: 926.78, lastPrice: 924.21, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "NBIS", name: "Nebius", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: 6749.1198, averageCost: 222.29992312, lastPrice: 203.965, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "NVDA", name: "NVIDIA", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -7765.8378, averageCost: 192.25, lastPrice: 192.25, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "ON", name: "ON Semiconductor", theme: "Power semis", pair: "GEV / ON", quantity: -5433.5710, averageCost: 91.59, lastPrice: 91.59, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "QCOM", name: "Qualcomm", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: -2673.4236, averageCost: 186.875, lastPrice: 184.155, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "SNDK", name: "SanDisk", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: -552.3184, averageCost: 1810.67, lastPrice: 1607.325, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "SOI.PA", name: "Soitec", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 5531.4770, averageCost: 135.3608, lastPrice: 117.6573145, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "TSM", name: "Taiwan Semiconductor", theme: "Compute semis", pair: "TSM / NVDA+ARM+AVGO+QCOM", quantity: 4408.4693, averageCost: 452.91756162, lastPrice: 437.745, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" },
+        { symbol: "WDC", name: "Western Digital", theme: "Storage hierarchy", pair: "WDC / SNDK+MU", quantity: 3930.3148, averageCost: 571.61964922, lastPrice: 534.805, realizedPnl: 0, updatedAt: "2026-07-07 21:48:05 HKT" }
       ],
       trades: [
+        { time: "2026-07-07 21:48:05 HKT", symbol: "ON", side: "short", quantity: 5433.5710, price: 91.59, notes: "short 1.0% NAV ON Semiconductor / ON; sizing NAV 49766077.20; notional 497660.77; source FMP ON quote timestamp 1783432064" },
+        { time: "2026-07-07 21:48:05 HKT", symbol: "GEV", side: "buy", quantity: 933.6975, price: 1066, notes: "buy 2.0% NAV GEV; sizing NAV 49766077.20; notional 995321.54; source FMP GEV quote timestamp 1783432064" },
+        { time: "2026-07-07 21:48:04 HKT", symbol: "NVDA", side: "short", quantity: 7765.8378, price: 192.25, notes: "short 3.0% NAV NVDA; sizing NAV 49766077.20; notional 1492982.32; source FMP NVDA quote timestamp 1783432063" },
+        { time: "2026-07-07 21:48:04 HKT", symbol: "TSM", side: "buy", quantity: 1136.8737, price: 437.745, notes: "buy 1.0% NAV TSMC / TSM; sizing NAV 49766077.20; notional 497660.77; source FMP TSM quote timestamp 1783432058" },
         { time: "2026-07-07 21:44:36 HKT", symbol: "AMD", side: "short", quantity: 962.3429, price: 517.0994, notes: "short 1.0% NAV AMD; sizing NAV 49762696.18; notional 497626.96; source FMP AMD quote timestamp 1783431837" },
         { time: "2026-07-07 21:44:36 HKT", symbol: "INTC", side: "buy", quantity: 4344.5692, price: 114.54, notes: "buy 1.0% NAV Intel / INTC; sizing NAV 49762696.18; notional 497626.96; source FMP INTC quote timestamp 1783431842" },
         { time: "2026-07-07 21:44:36 HKT", symbol: "MU", side: "short", quantity: 805.4128, price: 926.78, notes: "short 1.5% NAV MU; sizing NAV 49762696.18; notional 746440.44; source FMP MU quote timestamp 1783431849" },
@@ -1007,11 +1014,7 @@
         { time: "2026-07-07 10:49:50 HKT", symbol: "1888.HK", side: "short", quantity: 82874.7729, price: 9.03975, notes: "short 1.5% NAV 1888.HK Kingboard Laminates; USD-equivalent price: HKD 70.9 * HKDUSD 0.1275; source FMP 1888.HK timestamp 1783391652 and HKDUSD timestamp 1783392552" },
         { time: "2026-07-07 10:49:50 HKT", symbol: "2513.HK", side: "buy", quantity: 3580.6346, price: 209.2275, notes: "buy 1.5% NAV 2513.HK Knowledge Atlas Tech / Z.ai; USD-equivalent price: HKD 1641 * HKDUSD 0.1275; source FMP 2513.HK timestamp 1783391650 and HKDUSD timestamp 1783392552" },
         { time: "2026-07-07 10:49:49 HKT", symbol: "6981.T", side: "short", quantity: 12759.6428, price: 58.713809, notes: "short 1.5% NAV Murata 6981.T; USD-equivalent price: JPY 9506 * JPYUSD 0.0061765; source FMP 6981.T timestamp 1783391400 and JPYUSD timestamp 1783392551" },
-        { time: "2026-07-07 10:49:49 HKT", symbol: "285A.T", side: "buy", quantity: 1673.0092, price: 447.79625, notes: "buy 1.5% NAV Kioxia 285A.T; USD-equivalent price: JPY 72500 * JPYUSD 0.0061765; source FMP 285A.T timestamp 1783391400 and JPYUSD timestamp 1783392551" },
-        { time: "2026-07-07 00:31:04 HKT", symbol: "SOI.PA", side: "buy", quantity: 5531.4770, price: 135.3608, notes: "buy Soitec Paris line using USD-equivalent price: SOI.PA EUR 118.40 * EURUSD 1.14325; source FMP SOI.PA timestamp 1783352106 and EURUSD timestamp 1783355431" },
-        { time: "2026-07-07 00:30:57 HKT", symbol: "SLOIY", side: "sell", quantity: 11175.3008, price: 67, notes: "rotate out of illiquid Soitec OTC ADR SLOIY at current theoretical price; source FMP quote timestamp 1783353975" },
-        { time: "2026-07-06 23:55:33 HKT", symbol: "AMAT", side: "short", quantity: 1247.7196, price: 600.27, notes: "short 1.5% NAV AMAT; source FMP quote timestamp 1783353274" },
-        { time: "2026-07-06 23:55:22 HKT", symbol: "SLOIY", side: "buy", quantity: 11175.3008, price: 67.02, notes: "long 1.5% NAV Soitec via USD OTC ADR SLOIY; SOI.PA also quoted but ledger is USD-base; source FMP quote timestamp 1783351527" }
+        { time: "2026-07-07 10:49:49 HKT", symbol: "285A.T", side: "buy", quantity: 1673.0092, price: 447.79625, notes: "buy 1.5% NAV Kioxia 285A.T; USD-equivalent price: JPY 72500 * JPYUSD 0.0061765; source FMP 285A.T timestamp 1783391400 and JPYUSD timestamp 1783392551" }
       ]
     };
 
