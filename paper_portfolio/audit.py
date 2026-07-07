@@ -10,7 +10,8 @@ from pathlib import Path
 from typing import Any
 
 from .core import portfolio_metrics
-from .db import DEFAULT_DB_PATH, get_portfolio, load_state
+from .core import apply_trade
+from .db import DEFAULT_DB_PATH, connect, get_portfolio, load_state, save_state
 
 
 ZERO_HASH = "0" * 64
@@ -24,6 +25,17 @@ class AuditVerification:
     event_count: int
     head_hash: str
     problems: list[str]
+
+
+@dataclass(frozen=True)
+class AuditEvent:
+    id: int
+    portfolio_id: int
+    event_type: str
+    created_at: str
+    previous_hash: str
+    event_hash: str
+    payload: dict[str, Any]
 
 
 def utc_now() -> str:
@@ -65,6 +77,60 @@ def compute_event_hash(
         "payload": payload,
     }
     return sha256_text(canonical_json(material))
+
+
+def sqlite_timestamp(iso_timestamp: str) -> str:
+    if iso_timestamp.endswith("Z"):
+        return iso_timestamp[:-1].replace("T", " ")
+    return iso_timestamp.replace("T", " ")
+
+
+def load_event_log(path: Path = EVENT_LOG_PATH) -> list[AuditEvent]:
+    events: list[AuditEvent] = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line_number, raw_line in enumerate(handle, start=1):
+            line = raw_line.strip()
+            if not line:
+                continue
+            try:
+                raw_event = json.loads(line)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"invalid JSON on event log line {line_number}: {exc}") from exc
+            events.append(
+                AuditEvent(
+                    id=int(raw_event["id"]),
+                    portfolio_id=int(raw_event["portfolio_id"]),
+                    event_type=str(raw_event["event_type"]),
+                    created_at=str(raw_event["created_at"]),
+                    previous_hash=str(raw_event["previous_hash"]),
+                    event_hash=str(raw_event["event_hash"]),
+                    payload=dict(raw_event["payload"]),
+                )
+            )
+    return events
+
+
+def verify_event_log(events: list[AuditEvent]) -> AuditVerification:
+    problems: list[str] = []
+    previous_hash = ZERO_HASH
+    head_hash = ZERO_HASH
+    for index, event in enumerate(events, start=1):
+        if event.id != index:
+            problems.append(f"event {event.id} is out of sequence; expected {index}")
+        expected_hash = compute_event_hash(
+            portfolio_id=event.portfolio_id,
+            event_type=event.event_type,
+            created_at=event.created_at,
+            previous_hash=event.previous_hash,
+            payload=event.payload,
+        )
+        if event.previous_hash != previous_hash:
+            problems.append(f"event {event.id} previous_hash does not match prior head")
+        if event.event_hash != expected_hash:
+            problems.append(f"event {event.id} event_hash does not match payload")
+        previous_hash = event.event_hash
+        head_hash = event.event_hash
+    return AuditVerification(ok=not problems, event_count=len(events), head_hash=head_hash, problems=problems)
 
 
 def audit_status(conn: sqlite3.Connection, portfolio_id: int) -> tuple[int, str]:
@@ -284,6 +350,169 @@ def write_manifest(
     return path
 
 
+def restore_database_from_event_log(
+    *,
+    event_log_path: Path = EVENT_LOG_PATH,
+    db_path: Path = DEFAULT_DB_PATH,
+    force: bool = False,
+    write_restored_manifest: bool = True,
+) -> AuditVerification:
+    events = load_event_log(event_log_path)
+    verification = verify_event_log(events)
+    if not verification.ok:
+        problems = "\n".join(f"- {problem}" for problem in verification.problems)
+        raise ValueError(f"cannot rebuild from invalid audit event log:\n{problems}")
+    if not events:
+        raise ValueError("cannot rebuild from an empty audit event log")
+    if db_path.exists():
+        if not force:
+            raise FileExistsError(f"{db_path} already exists; pass --force to overwrite")
+        db_path.unlink()
+
+    conn = connect(db_path)
+    restored_portfolio_ids: set[int] = set()
+    try:
+        with conn:
+            for event in events:
+                if event.event_type == "portfolio_genesis":
+                    _restore_genesis_event(conn, event, restored_portfolio_ids)
+                elif event.event_type == "trade_recorded":
+                    _restore_trade_event(conn, event)
+                elif event.event_type == "price_mark_updated":
+                    _restore_price_mark_event(conn, event)
+                elif event.event_type == "daily_report_generated":
+                    pass
+                else:
+                    pass
+                _insert_restored_audit_event(conn, event)
+
+        portfolio_id = events[-1].portfolio_id
+        restored_verification = verify_audit_chain(conn, portfolio_id)
+        if not restored_verification.ok:
+            problems = "\n".join(f"- {problem}" for problem in restored_verification.problems)
+            raise ValueError(f"rebuilt database audit chain failed:\n{problems}")
+        if write_restored_manifest:
+            write_manifest(conn, portfolio_id=portfolio_id, db_path=db_path)
+        return restored_verification
+    finally:
+        conn.close()
+
+
+def _restore_genesis_event(conn: sqlite3.Connection, event: AuditEvent, restored_portfolio_ids: set[int]) -> None:
+    snapshot = event.payload["snapshot"]
+    portfolio = snapshot["portfolio"]
+    portfolio_id = int(portfolio["id"])
+    conn.execute(
+        """
+        INSERT INTO portfolios (id, name, strategy_type, initial_cash, cash, base_currency, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            portfolio_id,
+            portfolio["name"],
+            portfolio["strategy_type"],
+            float(portfolio["initial_cash"]),
+            float(portfolio["cash"]),
+            portfolio["base_currency"],
+            sqlite_timestamp(event.created_at),
+        ),
+    )
+    for holding in snapshot.get("holdings", []):
+        conn.execute(
+            """
+            INSERT INTO holdings (portfolio_id, symbol, quantity, average_cost, realized_pnl, last_price, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                portfolio_id,
+                holding["symbol"],
+                float(holding["quantity"]),
+                float(holding["average_cost"]),
+                float(holding["realized_pnl"]),
+                None if holding.get("last_price") is None else float(holding["last_price"]),
+                sqlite_timestamp(event.created_at),
+            ),
+        )
+    restored_portfolio_ids.add(portfolio_id)
+
+
+def _restore_trade_event(conn: sqlite3.Connection, event: AuditEvent) -> None:
+    payload = event.payload
+    portfolio_id = event.portfolio_id
+    before = load_state(conn, portfolio_id)
+    after = apply_trade(
+        before,
+        symbol=payload["symbol"],
+        side=payload["side"],
+        quantity=float(payload["quantity"]),
+        price=float(payload["price"]),
+        fee=float(payload.get("fee", 0.0)),
+    )
+    save_state(conn, portfolio_id, after)
+    conn.execute(
+        """
+        INSERT INTO transactions (id, portfolio_id, symbol, side, quantity, price, fee, realized_pnl, trade_time, notes)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            int(payload["trade_id"]),
+            portfolio_id,
+            str(payload["symbol"]).upper(),
+            payload["side"],
+            float(payload["quantity"]),
+            float(payload["price"]),
+            float(payload.get("fee", 0.0)),
+            float(payload.get("realized_pnl", 0.0)),
+            sqlite_timestamp(event.created_at),
+            str(payload.get("notes", "")),
+        ),
+    )
+
+
+def _restore_price_mark_event(conn: sqlite3.Connection, event: AuditEvent) -> None:
+    payload = event.payload
+    symbol = str(payload["symbol"]).upper()
+    conn.execute(
+        """
+        INSERT INTO price_snapshots (portfolio_id, symbol, price, price_time, source)
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        (
+            event.portfolio_id,
+            symbol,
+            float(payload["price"]),
+            sqlite_timestamp(event.created_at),
+            str(payload.get("source", "restored-audit-event")),
+        ),
+    )
+    conn.execute(
+        """
+        UPDATE holdings
+        SET last_price = ?, updated_at = ?
+        WHERE portfolio_id = ? AND symbol = ?
+        """,
+        (float(payload["price"]), sqlite_timestamp(event.created_at), event.portfolio_id, symbol),
+    )
+
+
+def _insert_restored_audit_event(conn: sqlite3.Connection, event: AuditEvent) -> None:
+    conn.execute(
+        """
+        INSERT INTO audit_events (id, portfolio_id, event_type, payload_json, previous_hash, event_hash, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            event.id,
+            event.portfolio_id,
+            event.event_type,
+            canonical_json(event.payload),
+            event.previous_hash,
+            event.event_hash,
+            event.created_at,
+        ),
+    )
+
+
 def git_anchor(
     *,
     workspace: Path = Path("."),
@@ -291,7 +520,7 @@ def git_anchor(
     include_code: bool = False,
     push: bool = True,
 ) -> dict[str, str | bool | None]:
-    paths = ["audit", "reports/daily"]
+    paths = ["audit", "reports/daily", "reports/dashboard"]
     if include_code:
         paths.extend([".gitignore", "AGENTS.md", "README.md", "paper_portfolio", "pyproject.toml", "tests"])
     subprocess.run(["git", "add", *paths], cwd=workspace, check=True)

@@ -2,9 +2,15 @@ import unittest
 import tempfile
 from pathlib import Path
 
-from paper_portfolio.audit import ensure_genesis_event, record_audit_event, verify_audit_chain, write_manifest
+from paper_portfolio.audit import (
+    ensure_genesis_event,
+    record_audit_event,
+    restore_database_from_event_log,
+    verify_audit_chain,
+    write_manifest,
+)
 from paper_portfolio.core import Holding, PortfolioState, apply_trade, holding_unrealized_pnl, portfolio_metrics
-from paper_portfolio.db import connect, create_portfolio
+from paper_portfolio.db import connect, create_portfolio, load_state, record_transaction, save_state, update_price
 
 
 def empty_state(cash=1_000_000):
@@ -91,6 +97,81 @@ class CoreTest(unittest.TestCase):
             manifest = write_manifest(conn, portfolio_id=portfolio_id, workspace=workspace, db_path=db_path)
             self.assertTrue(manifest.exists())
             self.assertTrue((workspace / "audit/events.jsonl").exists())
+
+    def test_rebuild_database_from_event_log(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp)
+            source_db = workspace / "source.sqlite"
+            restored_db = workspace / "restored.sqlite"
+            conn = connect(source_db)
+            portfolio_id = create_portfolio(
+                conn,
+                name="LS Paper Fund",
+                initial_cash=50_000_000,
+                base_currency="USD",
+                strategy_type="long_short_hedge_fund",
+            )
+            with conn:
+                ensure_genesis_event(conn, portfolio_id)
+
+            before = load_state(conn, portfolio_id)
+            after = apply_trade(before, symbol="NVDA", side="buy", quantity=10, price=100, fee=1)
+            realized_pnl = 0.0
+            with conn:
+                save_state(conn, portfolio_id, after)
+                trade_id = record_transaction(
+                    conn,
+                    portfolio_id=portfolio_id,
+                    symbol="NVDA",
+                    side="buy",
+                    quantity=10,
+                    price=100,
+                    fee=1,
+                    realized_pnl=realized_pnl,
+                    notes="test rebuild",
+                )
+                record_audit_event(
+                    conn,
+                    portfolio_id=portfolio_id,
+                    event_type="trade_recorded",
+                    payload={
+                        "trade_id": trade_id,
+                        "symbol": "NVDA",
+                        "side": "buy",
+                        "quantity": 10,
+                        "price": 100,
+                        "fee": 1,
+                        "realized_pnl": realized_pnl,
+                        "notes": "test rebuild",
+                        "post_trade_snapshot": {
+                            "cash": after.cash,
+                            "holding": after.holdings["NVDA"].__dict__,
+                        },
+                    },
+                )
+            update_price(conn, portfolio_id=portfolio_id, symbol="NVDA", price=110, source="test mark")
+            with conn:
+                record_audit_event(
+                    conn,
+                    portfolio_id=portfolio_id,
+                    event_type="price_mark_updated",
+                    payload={"symbol": "NVDA", "price": 110, "source": "test mark"},
+                )
+            write_manifest(conn, portfolio_id=portfolio_id, workspace=workspace, db_path=source_db)
+
+            result = restore_database_from_event_log(
+                event_log_path=workspace / "audit/events.jsonl",
+                db_path=restored_db,
+                write_restored_manifest=False,
+            )
+            self.assertTrue(result.ok)
+            restored_conn = connect(restored_db)
+            restored_state = load_state(restored_conn, portfolio_id)
+            self.assertAlmostEqual(restored_state.cash, after.cash)
+            self.assertAlmostEqual(restored_state.holdings["NVDA"].quantity, 10)
+            self.assertAlmostEqual(restored_state.holdings["NVDA"].last_price, 110)
+            restored_result = verify_audit_chain(restored_conn, portfolio_id)
+            self.assertEqual(restored_result.head_hash, result.head_hash)
 
 
 if __name__ == "__main__":

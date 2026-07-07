@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LS Paper Fund - Model Book Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f4f6f7;
+      --surface: #ffffff;
+      --surface-soft: #f8faf9;
+      --ink: #191919;
+      --muted: #5f6868;
+      --line: #d8dfdd;
+      --line-strong: #aeb9b6;
+      --long: #0f766e;
+      --short: #b42318;
+      --blue: #2563eb;
+      --amber: #b45309;
+      --good-bg: #e8f5f2;
+      --bad-bg: #fff0ed;
+      --warn-bg: #fff6e8;
+      --shadow: 0 14px 36px rgba(18, 28, 28, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .shell {
+      width: min(1480px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .topbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .identity {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 220px;
+    }
+
+    .identity h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .identity span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 30px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: 4px 10px;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex: 0 0 auto;
+    }
+
+    .dot.long {
+      background: var(--long);
+    }
+
+    .dot.short {
+      background: var(--short);
+    }
+
+    .dot.warn {
+      background: var(--amber);
+    }
+
+    main {
+      padding: 22px 0 42px;
+    }
+
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 740;
+      letter-spacing: 0;
+    }
+
+    .section-head .subtle {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      min-height: 112px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 14px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-size: 24px;
+      line-height: 1.1;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .metric-subvalue {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 16px;
+      font-weight: 720;
+      vertical-align: baseline;
+    }
+
+    .metric-foot {
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .positive {
+      color: var(--long);
+    }
+
+    .negative {
+      color: var(--short);
+    }
+
+    .neutral {
+      color: var(--muted);
+    }
+
+    .layout-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.65fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .layout-3 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) minmax(310px, 0.65fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      background: var(--surface-soft);
+    }
+
+    .panel-title {
+      font-weight: 720;
+    }
+
+    .panel-body {
+      padding: 14px;
+    }
+
+    .exposure-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .exposure-row {
+      display: grid;
+      grid-template-columns: 136px minmax(0, 1fr) 88px;
+      align-items: center;
+      gap: 10px;
+      min-height: 34px;
+    }
+
+    .bar-track {
+      height: 12px;
+      border-radius: 999px;
+      background: #e8edeb;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      min-width: 2px;
+    }
+
+    .bar-fill.long {
+      background: var(--long);
+    }
+
+    .bar-fill.short {
+      background: var(--short);
+    }
+
+    .bar-fill.net {
+      background: var(--blue);
+    }
+
+    .pair-bars {
+      display: grid;
+      gap: 12px;
+    }
+
+    .pair-line {
+      display: grid;
+      grid-template-columns: minmax(160px, 0.58fr) minmax(0, 1fr) 82px;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pair-line-name {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .split-track {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 14px;
+      background: #e8edeb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .split-half {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .split-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+    }
+
+    .split-fill.short {
+      right: 0;
+      background: var(--short);
+      border-radius: 999px 0 0 999px;
+    }
+
+    .split-fill.long {
+      left: 0;
+      background: var(--long);
+      border-radius: 0 999px 999px 0;
+    }
+
+    .pair-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .pair-tile {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--surface);
+      min-height: 152px;
+    }
+
+    .pair-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .pair-name {
+      font-weight: 720;
+      line-height: 1.2;
+    }
+
+    .pair-symbols {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .pair-cover {
+      display: grid;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .pair-cover-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .pair-cover-labels .short-side {
+      color: var(--short);
+    }
+
+    .pair-cover-labels .long-side {
+      color: var(--long);
+      text-align: right;
+    }
+
+    .pair-cover-track {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 12px;
+      border-radius: 999px;
+      background: #e8edeb;
+      overflow: hidden;
+    }
+
+    .pair-cover-half {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pair-cover-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+    }
+
+    .pair-cover-fill.short {
+      right: 0;
+      background: var(--short);
+      border-radius: 999px 0 0 999px;
+    }
+
+    .pair-cover-fill.long {
+      left: 0;
+      background: var(--long);
+      border-radius: 0 999px 999px 0;
+    }
+
+    .pair-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .mini-stat {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+
+    .mini-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 13px;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .segmented {
+      display: inline-grid;
+      grid-auto-flow: column;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--surface);
+      min-height: 34px;
+    }
+
+    .segmented button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      padding: 7px 11px;
+      color: var(--muted);
+      cursor: pointer;
+      min-width: 58px;
+    }
+
+    .segmented button:last-child {
+      border-right: 0;
+    }
+
+    .segmented button.active {
+      background: #e7efed;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .control,
+    .search {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-height: 34px;
+      background: var(--surface);
+      color: var(--ink);
+      padding: 6px 10px;
+    }
+
+    .search {
+      width: min(280px, 100%);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th,
+    td {
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: right;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    th {
+      position: sticky;
+      top: 101px;
+      background: var(--surface-soft);
+      z-index: 5;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    th:first-child,
+    td:first-child,
+    th:nth-child(2),
+    td:nth-child(2) {
+      text-align: left;
+    }
+
+    tr:hover td {
+      background: #f5f8f7;
+    }
+
+    .table-wrap {
+      max-height: 620px;
+      overflow: auto;
+    }
+
+    .symbol-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 122px;
+    }
+
+    .symbol-main {
+      font-weight: 760;
+    }
+
+    .symbol-sub {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: normal;
+    }
+
+    .side-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      min-width: 56px;
+      height: 24px;
+      padding: 0 9px;
+      font-size: 12px;
+      font-weight: 720;
+    }
+
+    .side-badge.long {
+      color: var(--long);
+      background: var(--good-bg);
+    }
+
+    .side-badge.short {
+      color: var(--short);
+      background: var(--bad-bg);
+    }
+
+    .pair-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--surface-soft);
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+
+    .blotter {
+      display: grid;
+      gap: 10px;
+    }
+
+    .trade-row {
+      display: grid;
+      grid-template-columns: 84px 58px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trade-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .trade-time {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .trade-note {
+      min-width: 0;
+    }
+
+    .trade-note strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .trade-note span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .watch-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .watch-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 11px;
+      background: var(--surface);
+    }
+
+    .watch-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .watch-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .scenario-grid label {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .scenario-result {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .scenario-result div {
+      border-top: 1px solid var(--line);
+      padding-top: 9px;
+    }
+
+    .scenario-result span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .scenario-result strong {
+      display: block;
+      margin-top: 2px;
+      font-size: 15px;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    .footnote {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 1180px) {
+      .overview-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .layout-2,
+      .layout-3 {
+        grid-template-columns: 1fr;
+      }
+
+      th {
+        top: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100vw - 20px, 1480px);
+      }
+
+      .topbar,
+      .section-head {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .status-strip {
+        justify-content: flex-start;
+      }
+
+      .overview-grid,
+      .pair-grid,
+      .scenario-result,
+      .scenario-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-value {
+        font-size: 21px;
+      }
+
+      .pair-line,
+      .exposure-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .tools {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .segmented {
+        grid-auto-flow: column;
+      }
+
+      .search,
+      .control {
+        width: 100%;
+      }
+
+      th,
+      td {
+        padding: 9px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell topbar">
+      <div class="identity">
+        <h1>LS Paper Fund</h1>
+        <span>Model Book Dashboard</span>
+      </div>
+      <div class="status-strip" aria-label="book status">
+        <span class="pill"><span class="dot long"></span>Simulated only</span>
+        <span class="pill"><span class="dot"></span>18 positions</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-07 18:04:12 HKT</span>
+        <span class="pill mono">Audit 163 events</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="section">
+      <div class="section-head">
+        <h2>Book Overview</h2>
+        <div class="subtle">USD-base ledger snapshot</div>
+      </div>
+      <div id="overview" class="overview-grid"></div>
+    </section>
+
+    <section class="section layout-3">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Exposure Stack</div>
+          <span class="pill">Gross 33.88%</span>
+        </div>
+        <div class="panel-body">
+          <div id="exposureStack" class="exposure-stack"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Pair Exposure</div>
+          <span class="pill">Long / Short</span>
+        </div>
+        <div class="panel-body">
+          <div id="pairBars" class="pair-bars"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Sim Trade Impact</div>
+          <span class="pill">Preview only</span>
+        </div>
+        <div class="panel-body">
+          <div class="scenario-grid">
+            <label>
+              Side
+              <select id="scenarioSide" class="control">
+                <option value="long">Long</option>
+                <option value="short">Short</option>
+              </select>
+            </label>
+            <label>
+              % NAV
+              <input id="scenarioPct" class="control" type="number" min="0" step="0.1" value="1.0">
+            </label>
+          </div>
+          <div id="scenarioResult" class="scenario-result"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section layout-2">
+      <div>
+        <div class="section-head">
+          <h2>Pair / Basket View</h2>
+          <div class="subtle">Temporary ticker-level groups before formal taxonomy</div>
+        </div>
+        <div id="pairGrid" class="pair-grid"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Watch Items</div>
+          <span class="pill">Design prompts</span>
+        </div>
+        <div class="panel-body">
+          <div class="watch-list">
+            <div class="watch-item">
+              <strong>FX-linked marks</strong>
+              <span>SOI.PA, 285A.T, 6981.T, 2513.HK, 1888.HK need visible local price x FX trace.</span>
+            </div>
+            <div class="watch-item">
+              <strong>Pair attribution</strong>
+              <span>Current ledger stores symbol-level PnL; pair and theme PnL are dashboard-level derived views.</span>
+            </div>
+            <div class="watch-item">
+              <strong>Quote freshness</strong>
+              <span>Dashboard should flag stale marks before sizing new paper trades.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Position Book</h2>
+        <div class="tools">
+          <div class="segmented" role="tablist" aria-label="side filter">
+            <button class="active" data-side="all" type="button">All</button>
+            <button data-side="long" type="button">Long</button>
+            <button data-side="short" type="button">Short</button>
+          </div>
+          <select id="pairFilter" class="control" aria-label="pair filter">
+            <option value="all">All pairs</option>
+          </select>
+          <input id="searchBox" class="search" type="search" placeholder="Ticker / name / pair" aria-label="position search">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Pair</th>
+                <th>Side</th>
+                <th>Qty</th>
+                <th>Avg</th>
+                <th>Last</th>
+                <th>Market value</th>
+                <th>% NAV</th>
+                <th>UPnL</th>
+                <th>UPnL %</th>
+              </tr>
+            </thead>
+            <tbody id="positionRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section layout-2">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Recent Blotter</div>
+          <span class="pill">Latest 12</span>
+        </div>
+        <div class="panel-body">
+          <div id="blotter" class="blotter"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Audit / Report</div>
+          <span class="pill mono">c39d...b1d3</span>
+        </div>
+        <div class="panel-body">
+          <div class="watch-list">
+            <div class="watch-item">
+              <strong>Daily report</strong>
+              <span class="mono">reports/daily/2026-07-07.md</span>
+            </div>
+            <div class="watch-item">
+              <strong>Ledger database</strong>
+              <span class="mono">data/portfolio.sqlite</span>
+            </div>
+            <div class="watch-item">
+              <strong>Head hash</strong>
+              <span class="mono">c39dd8c62ba46277fd597249ab91a46ada4ae0e952fb145279f454b6539bb1d3</span>
+            </div>
+          </div>
+          <div class="footnote">All order-related actions remain local paper-trading actions only.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const book = {
+      asOf: "2026-07-07 18:04:12 HKT",
+      summary: {
+        totalEquity: 49815296.20,
+        cash: 48201548.62,
+        longMarketValue: 9244701.39,
+        shortMarketValue: 7630953.81,
+        netMarketValue: 1613747.58,
+        grossExposure: 16875655.20,
+        totalPnl: -184703.80,
+        returnPct: -0.003694,
+        realizedPnl: -223.51,
+        unrealizedPnl: -184480.30,
+        grossExposurePct: 0.338765,
+        netExposurePct: 0.032395
+      },
+      positions: [
+        { symbol: "1888.HK", name: "Kingboard Laminates", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: -82874.7729, averageCost: 9.03975, lastPrice: 8.9264, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "2513.HK", name: "Knowledge Atlas / Z.ai", theme: "HK / China AI & CCL", pair: "2513.HK / 1888.HK", quantity: 3580.6346, averageCost: 209.2275, lastPrice: 205.3072, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "285A.T", name: "Kioxia", theme: "Storage hierarchy", pair: "285A.T / 6981.T", quantity: 1673.0092, averageCost: 447.79625, lastPrice: 447.106924, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "6981.T", name: "Murata", theme: "Semi capex / materials", pair: "285A.T / 6981.T", quantity: -12759.6428, averageCost: 58.713809, lastPrice: 56.88879812, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "AMAT", name: "Applied Materials", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: -1247.7196, averageCost: 600.27, lastPrice: 592.79, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "AMD", name: "Advanced Micro Devices", theme: "Compute semis", pair: "INTC / AMD", quantity: -1765.0374, averageCost: 567.24602782, lastPrice: 552.05, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "ARM", name: "Arm Holdings", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: -2281.5383, averageCost: 328.46, lastPrice: 322.24, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "ASML", name: "ASML Holding", theme: "Semi capex / materials", pair: "ASML / AMAT", quantity: 671.3074, averageCost: 1860.5337, lastPrice: 1825.07, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "AVGO", name: "Broadcom", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: -2661.8145, averageCost: 375.59624224, lastPrice: 373.9, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "AXTI", name: "AXT", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 4601.7824, averageCost: 65.20331101, lastPrice: 63.52, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "CRWV", name: "CoreWeave", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: -14559.3201, averageCost: 85.87335138, lastPrice: 86.46, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "INTC", name: "Intel", theme: "Compute semis", pair: "INTC / AMD", quantity: 9905.3737, averageCost: 126.2098848, lastPrice: 122.2, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "NBIS", name: "Nebius", theme: "AI cloud demand", pair: "NBIS / CRWV", quantity: 6749.1198, averageCost: 222.29992312, lastPrice: 213.02, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "QCOM", name: "Qualcomm", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: -2673.4236, averageCost: 186.875, lastPrice: 186.48, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "SNDK", name: "SanDisk", theme: "Storage hierarchy", pair: "WDC / SNDK", quantity: -552.3184, averageCost: 1810.67, lastPrice: 1744.43, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "SOI.PA", name: "Soitec", theme: "Semi capex / materials", pair: "AXTI + SOI.PA", quantity: 5531.4770, averageCost: 135.3608, lastPrice: 117.67956, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "TSM", name: "Taiwan Semiconductor", theme: "Compute semis", pair: "TSM / ARM+AVGO+QCOM", quantity: 3271.5956, averageCost: 458.19, lastPrice: 451.79, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" },
+        { symbol: "WDC", name: "Western Digital", theme: "Storage hierarchy", pair: "WDC / SNDK", quantity: 2540.2953, averageCost: 590.56311017, lastPrice: 577.46, realizedPnl: 0, updatedAt: "2026-07-07 18:04:12 HKT" }
+      ],
+      trades: [
+        { time: "2026-07-07 10:49:50 HKT", symbol: "1888.HK", side: "short", quantity: 82874.7729, price: 9.03975, notes: "short 1.5% NAV 1888.HK Kingboard Laminates; USD-equivalent price: HKD 70.9 * HKDUSD 0.1275; source FMP 1888.HK timestamp 1783391652 and HKDUSD timestamp 1783392552" },
+        { time: "2026-07-07 10:49:50 HKT", symbol: "2513.HK", side: "buy", quantity: 3580.6346, price: 209.2275, notes: "buy 1.5% NAV 2513.HK Knowledge Atlas Tech / Z.ai; USD-equivalent price: HKD 1641 * HKDUSD 0.1275; source FMP 2513.HK timestamp 1783391650 and HKDUSD timestamp 1783392552" },
+        { time: "2026-07-07 10:49:49 HKT", symbol: "6981.T", side: "short", quantity: 12759.6428, price: 58.713809, notes: "short 1.5% NAV Murata 6981.T; USD-equivalent price: JPY 9506 * JPYUSD 0.0061765; source FMP 6981.T timestamp 1783391400 and JPYUSD timestamp 1783392551" },
+        { time: "2026-07-07 10:49:49 HKT", symbol: "285A.T", side: "buy", quantity: 1673.0092, price: 447.79625, notes: "buy 1.5% NAV Kioxia 285A.T; USD-equivalent price: JPY 72500 * JPYUSD 0.0061765; source FMP 285A.T timestamp 1783391400 and JPYUSD timestamp 1783392551" },
+        { time: "2026-07-07 00:31:04 HKT", symbol: "SOI.PA", side: "buy", quantity: 5531.4770, price: 135.3608, notes: "buy Soitec Paris line using USD-equivalent price: SOI.PA EUR 118.40 * EURUSD 1.14325; source FMP SOI.PA timestamp 1783352106 and EURUSD timestamp 1783355431" },
+        { time: "2026-07-07 00:30:57 HKT", symbol: "SLOIY", side: "sell", quantity: 11175.3008, price: 67, notes: "rotate out of illiquid Soitec OTC ADR SLOIY at current theoretical price; source FMP quote timestamp 1783353975" },
+        { time: "2026-07-06 23:55:33 HKT", symbol: "AMAT", side: "short", quantity: 1247.7196, price: 600.27, notes: "short 1.5% NAV AMAT; source FMP quote timestamp 1783353274" },
+        { time: "2026-07-06 23:55:22 HKT", symbol: "SLOIY", side: "buy", quantity: 11175.3008, price: 67.02, notes: "long 1.5% NAV Soitec via USD OTC ADR SLOIY; SOI.PA also quoted but ledger is USD-base; source FMP quote timestamp 1783351527" },
+        { time: "2026-07-06 23:38:38 HKT", symbol: "ASML", side: "buy", quantity: 671.3074, price: 1860.5337, notes: "long 2.5% NAV ASML; source FMP quote timestamp 1783352258" },
+        { time: "2026-07-06 23:38:32 HKT", symbol: "QCOM", side: "short", quantity: 2673.4236, price: 186.875, notes: "short 1.0% NAV QCOM; source FMP quote timestamp 1783352258" },
+        { time: "2026-07-06 23:38:21 HKT", symbol: "ARM", side: "short", quantity: 2281.5383, price: 328.46, notes: "short 1.5% NAV ARM; source FMP quote timestamp 1783352257" },
+        { time: "2026-07-06 23:38:03 HKT", symbol: "AVGO", side: "short", quantity: 1336.9622, price: 373.68, notes: "add 1.0% NAV to AVGO short; source FMP quote timestamp 1783352258" }
+      ]
+    };
+
+    const state = {
+      side: "all",
+      pair: "all",
+      query: ""
+    };
+
+    const money = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 0
+    });
+
+    const number = new Intl.NumberFormat("en-US", {
+      maximumFractionDigits: 2
+    });
+
+    function marketValue(position) {
+      return position.quantity * position.lastPrice;
+    }
+
+    function unrealizedPnl(position) {
+      if (position.quantity >= 0) {
+        return (position.lastPrice - position.averageCost) * position.quantity;
+      }
+      return (position.averageCost - position.lastPrice) * Math.abs(position.quantity);
+    }
+
+    function unrealizedPct(position) {
+      const basis = Math.abs(position.quantity) * position.averageCost;
+      return basis ? unrealizedPnl(position) / basis : 0;
+    }
+
+    function pct(value) {
+      return `${(value * 100).toFixed(2)}%`;
+    }
+
+    function signedMoney(value) {
+      const prefix = value > 0 ? "+" : "";
+      return `${prefix}${money.format(value)}`;
+    }
+
+    function metricClass(value) {
+      if (value > 0) return "positive";
+      if (value < 0) return "negative";
+      return "neutral";
+    }
+
+    function sideOf(position) {
+      return position.quantity >= 0 ? "long" : "short";
+    }
+
+    function renderOverview() {
+      const s = book.summary;
+      const metrics = [
+        { label: "Total equity", value: money.format(s.totalEquity), footLeft: "Initial $50.0m", footRight: "USD base", className: metricClass(s.totalPnl) },
+        { label: "Cash", value: money.format(s.cash), footLeft: "Cash buffer", footRight: pct(s.cash / s.totalEquity), className: "neutral" },
+        { label: "Total PnL", value: `${signedMoney(s.totalPnl)} <span class="metric-subvalue">${pct(s.returnPct)}</span>`, footLeft: "Realized " + signedMoney(s.realizedPnl), footRight: "UPnL " + signedMoney(s.unrealizedPnl), className: metricClass(s.totalPnl) },
+        { label: "Gross exposure", value: money.format(s.grossExposure), footLeft: "Long " + pct(s.longMarketValue / s.totalEquity), footRight: "Short " + pct(s.shortMarketValue / s.totalEquity), className: "neutral" },
+        { label: "Net exposure", value: money.format(s.netMarketValue), footLeft: "Net % NAV", footRight: pct(s.netExposurePct), className: metricClass(s.netMarketValue) },
+        { label: "Largest leg", value: "3.00%", footLeft: "NBIS / TSM", footRight: "single-name", className: "neutral" }
+      ];
+
+      document.getElementById("overview").innerHTML = metrics.map((item) => `
+        <article class="metric">
+          <div class="metric-label">${item.label}</div>
+          <div class="metric-value ${item.className}">${item.value}</div>
+          <div class="metric-foot"><span>${item.footLeft}</span><span>${item.footRight}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderExposureStack() {
+      const s = book.summary;
+      const rows = [
+        { name: "Long market value", value: s.longMarketValue, pct: s.longMarketValue / s.totalEquity, className: "long" },
+        { name: "Short market value", value: s.shortMarketValue, pct: s.shortMarketValue / s.totalEquity, className: "short" },
+        { name: "Net market value", value: s.netMarketValue, pct: Math.abs(s.netExposurePct), className: "net" }
+      ];
+
+      document.getElementById("exposureStack").innerHTML = rows.map((row) => `
+        <div class="exposure-row">
+          <div>${row.name}</div>
+          <div class="bar-track"><div class="bar-fill ${row.className}" style="width:${Math.min(row.pct * 100, 100)}%"></div></div>
+          <strong>${pct(row.pct)}</strong>
+        </div>
+      `).join("");
+    }
+
+    function groupBy(items, key) {
+      return items.reduce((groups, item) => {
+        const name = item[key] || "Other";
+        groups[name] = groups[name] || [];
+        groups[name].push(item);
+        return groups;
+      }, {});
+    }
+
+    function pairRows() {
+      const pairs = groupBy(book.positions, "pair");
+      return Object.entries(pairs).map(([pair, positions]) => {
+        const longValue = positions.reduce((sum, item) => sum + Math.max(marketValue(item), 0), 0);
+        const shortValue = positions.reduce((sum, item) => sum + Math.abs(Math.min(marketValue(item), 0)), 0);
+        const netValue = longValue - shortValue;
+        const pnl = positions.reduce((sum, item) => sum + unrealizedPnl(item), 0);
+        const symbols = positions.map((item) => item.symbol).join(" / ");
+        return {
+          pair,
+          symbols,
+          longValue,
+          shortValue,
+          netValue,
+          pnl,
+          gross: longValue + shortValue,
+          longPct: longValue / book.summary.totalEquity,
+          shortPct: shortValue / book.summary.totalEquity,
+          netPct: netValue / book.summary.totalEquity
+        };
+      }).sort((a, b) => b.gross - a.gross);
+    }
+
+    function renderPairBars() {
+      const rows = pairRows();
+      const maxPairGross = Math.max(...rows.map((row) => row.gross));
+
+      document.getElementById("pairBars").innerHTML = rows.map((row) => {
+        const longWidth = maxPairGross ? (row.longValue / maxPairGross) * 100 : 0;
+        const shortWidth = maxPairGross ? (row.shortValue / maxPairGross) * 100 : 0;
+        return `
+          <div class="pair-line">
+            <div class="pair-line-name" title="${row.pair}">${row.pair}</div>
+            <div class="split-track">
+              <div class="split-half"><div class="split-fill short" style="width:${shortWidth}%"></div></div>
+              <div class="split-half"><div class="split-fill long" style="width:${longWidth}%"></div></div>
+            </div>
+            <strong>${pct(row.gross / book.summary.totalEquity)}</strong>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderPairs() {
+      const rows = pairRows();
+      const maxPairSide = Math.max(...rows.flatMap((row) => [row.longPct, row.shortPct]));
+      document.getElementById("pairGrid").innerHTML = rows.map((row) => {
+        const longWidth = maxPairSide ? (row.longPct / maxPairSide) * 100 : 0;
+        const shortWidth = maxPairSide ? (row.shortPct / maxPairSide) * 100 : 0;
+        return `
+          <article class="pair-tile">
+            <div class="pair-top">
+              <div>
+                <div class="pair-name">${row.pair}</div>
+                <div class="pair-symbols">${row.symbols}</div>
+              </div>
+              <span class="side-badge ${row.netValue >= 0 ? "long" : "short"}">${row.netValue >= 0 ? "Net long" : "Net short"}</span>
+            </div>
+            <div class="pair-cover">
+              <div class="pair-cover-labels">
+                <span class="short-side">Short ${pct(row.shortPct)}</span>
+                <span class="long-side">Long ${pct(row.longPct)}</span>
+              </div>
+              <div class="pair-cover-track">
+                <div class="pair-cover-half"><div class="pair-cover-fill short" style="width:${shortWidth}%"></div></div>
+                <div class="pair-cover-half"><div class="pair-cover-fill long" style="width:${longWidth}%"></div></div>
+              </div>
+            </div>
+            <div class="pair-stats">
+              <div class="mini-stat"><span>Gross</span><strong>${pct(row.gross / book.summary.totalEquity)}</strong></div>
+              <div class="mini-stat"><span>Net</span><strong>${pct(row.netPct)}</strong></div>
+              <div class="mini-stat"><span>UPnL</span><strong class="${metricClass(row.pnl)}">${signedMoney(row.pnl)}</strong></div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function populatePairFilter() {
+      const select = document.getElementById("pairFilter");
+      const pairs = [...new Set(book.positions.map((item) => item.pair))].sort();
+      select.innerHTML = `<option value="all">All pairs</option>` + pairs.map((pair) => `<option value="${pair}">${pair}</option>`).join("");
+    }
+
+    function filteredPositions() {
+      const query = state.query.trim().toLowerCase();
+      return book.positions.filter((position) => {
+        const sideMatch = state.side === "all" || sideOf(position) === state.side;
+        const pairMatch = state.pair === "all" || position.pair === state.pair;
+        const queryTarget = `${position.symbol} ${position.name} ${position.pair}`.toLowerCase();
+        const queryMatch = !query || queryTarget.includes(query);
+        return sideMatch && pairMatch && queryMatch;
+      }).sort((a, b) => Math.abs(marketValue(b)) - Math.abs(marketValue(a)));
+    }
+
+    function renderPositions() {
+      const rows = filteredPositions();
+      document.getElementById("positionRows").innerHTML = rows.map((position) => {
+        const mv = marketValue(position);
+        const upnl = unrealizedPnl(position);
+        const side = sideOf(position);
+        return `
+          <tr>
+            <td>
+              <div class="symbol-cell">
+                <span class="symbol-main">${position.symbol}</span>
+                <span class="symbol-sub">${position.name}</span>
+              </div>
+            </td>
+            <td><span class="pair-tag">${position.pair}</span></td>
+            <td><span class="side-badge ${side}">${side === "long" ? "Long" : "Short"}</span></td>
+            <td>${number.format(position.quantity)}</td>
+            <td>${money.format(position.averageCost)}</td>
+            <td>${money.format(position.lastPrice)}</td>
+            <td class="${metricClass(mv)}">${signedMoney(mv)}</td>
+            <td>${pct(Math.abs(mv) / book.summary.totalEquity)}</td>
+            <td class="${metricClass(upnl)}">${signedMoney(upnl)}</td>
+            <td class="${metricClass(upnl)}">${pct(unrealizedPct(position))}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function renderBlotter() {
+      document.getElementById("blotter").innerHTML = book.trades.map((trade) => {
+        const side = trade.side === "buy" ? "long" : trade.side === "short" ? "short" : "neutral";
+        return `
+          <div class="trade-row">
+            <div class="trade-time">${trade.time.slice(5, 16)}</div>
+            <span class="side-badge ${side === "neutral" ? "long" : side}">${trade.side}</span>
+            <div class="trade-note">
+              <strong>${trade.symbol} @ ${money.format(trade.price)}</strong>
+              <span>${trade.notes}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderScenario() {
+      const side = document.getElementById("scenarioSide").value;
+      const pctNav = Number(document.getElementById("scenarioPct").value || 0) / 100;
+      const notional = book.summary.totalEquity * pctNav;
+      const gross = book.summary.grossExposure + Math.abs(notional);
+      const net = book.summary.netMarketValue + (side === "long" ? notional : -notional);
+      document.getElementById("scenarioResult").innerHTML = `
+        <div><span>Paper notional</span><strong>${money.format(notional)}</strong></div>
+        <div><span>Gross after</span><strong>${pct(gross / book.summary.totalEquity)}</strong></div>
+        <div><span>Net after</span><strong class="${metricClass(net)}">${pct(net / book.summary.totalEquity)}</strong></div>
+        <div><span>Cash impact</span><strong>${side === "long" ? "-" : "+"}${money.format(notional)}</strong></div>
+      `;
+    }
+
+    function bindControls() {
+      document.querySelectorAll("[data-side]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.side = button.dataset.side;
+          document.querySelectorAll("[data-side]").forEach((item) => item.classList.toggle("active", item === button));
+          renderPositions();
+        });
+      });
+
+      document.getElementById("pairFilter").addEventListener("change", (event) => {
+        state.pair = event.target.value;
+        renderPositions();
+      });
+
+      document.getElementById("searchBox").addEventListener("input", (event) => {
+        state.query = event.target.value;
+        renderPositions();
+      });
+
+      document.getElementById("scenarioSide").addEventListener("change", renderScenario);
+      document.getElementById("scenarioPct").addEventListener("input", renderScenario);
+    }
+
+    renderOverview();
+    renderExposureStack();
+    renderPairBars();
+    renderPairs();
+    populatePairFilter();
+    renderPositions();
+    renderBlotter();
+    renderScenario();
+    bindControls();
+  </script>
+</body>
+</html>

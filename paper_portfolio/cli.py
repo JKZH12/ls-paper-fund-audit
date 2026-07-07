@@ -4,7 +4,14 @@ import argparse
 from datetime import date
 from pathlib import Path
 
-from .audit import ensure_genesis_event, git_anchor, record_audit_event, verify_audit_chain, write_manifest
+from .audit import (
+    ensure_genesis_event,
+    git_anchor,
+    record_audit_event,
+    restore_database_from_event_log,
+    verify_audit_chain,
+    write_manifest,
+)
 from .core import apply_trade
 from .core import portfolio_metrics
 from .db import (
@@ -74,6 +81,11 @@ def build_parser() -> argparse.ArgumentParser:
     audit_subparsers.add_parser("init", help="create the genesis audit event if missing")
     audit_subparsers.add_parser("verify", help="verify audit hash chain")
     audit_subparsers.add_parser("manifest", help="write today's audit manifest")
+
+    rebuild_parser = audit_subparsers.add_parser("rebuild", help="rebuild the SQLite ledger from audit/events.jsonl")
+    rebuild_parser.add_argument("--events", type=Path, default=Path("audit/events.jsonl"))
+    rebuild_parser.add_argument("--force", action="store_true", help="overwrite the target --db if it already exists")
+    rebuild_parser.add_argument("--no-manifest", action="store_true", help="skip writing an audit manifest after rebuild")
 
     anchor_parser = audit_subparsers.add_parser("anchor", help="commit audit artifacts to git and push if remote exists")
     anchor_parser.add_argument("--include-code", action="store_true")
@@ -181,6 +193,18 @@ def handle_price(conn, args, portfolio_id: int) -> None:
 def main(argv: list[str] | None = None) -> None:
     parser = build_parser()
     args = parser.parse_args(argv)
+
+    if args.command == "audit" and args.audit_command == "rebuild":
+        result = restore_database_from_event_log(
+            event_log_path=args.events,
+            db_path=args.db,
+            force=args.force,
+            write_restored_manifest=not args.no_manifest,
+        )
+        print(f"Rebuilt ledger database: {args.db}")
+        print(f"Audit OK: {result.event_count} events, head {result.head_hash}")
+        return
+
     conn = connect(args.db)
 
     if args.command == "init":

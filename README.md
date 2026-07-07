@@ -28,6 +28,18 @@ Initialize the database and default portfolio:
 python3 -m paper_portfolio init --name "LS Paper Fund" --initial-cash 50000000 --base-currency USD --strategy-type long_short_hedge_fund
 ```
 
+Or rebuild the local SQLite ledger from the append-only audit log after cloning
+the repository on another machine:
+
+```bash
+python3 -m paper_portfolio audit rebuild --events audit/events.jsonl
+python3 -m paper_portfolio audit verify
+python3 -m paper_portfolio summary
+```
+
+`data/portfolio.sqlite` is a local runtime database and is intentionally ignored
+by git. The cross-device source of truth is the audit log plus reports.
+
 Record a simulated order:
 
 ```bash
@@ -68,6 +80,9 @@ Anchor the audit artifacts to git:
 ```bash
 python3 -m paper_portfolio audit anchor
 ```
+
+The anchor command stages audit files, daily reports, and the dashboard. Use
+`--include-code` when code, tests, README, or AGENTS.md changed too.
 
 ## Simulated Order Intake Format
 
