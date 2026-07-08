@@ -1,32 +1,32 @@
 {
   "audit": {
     "chain_ok": true,
-    "event_count": 367,
+    "event_count": 370,
     "events_file": "audit/events.jsonl",
-    "events_file_sha256": "9433bba5271cde7fdb53a2f20d6fdc511a7abedd2b2f6e52c837b4bac00f0a5f",
-    "head_hash": "9d9e278677e2296724216d1966658e22e91dffd9f9adbd1de3a88c0204a2e3f0"
+    "events_file_sha256": "38efb82e50382cdcac2af3734fb9cc6ae6916c51c83679ab7d7bb9001408b707",
+    "head_hash": "c624cd517eaea4f7dc9fddcd253816ee6fb89f4aa7c6184c2e59dbb9515fefe0"
   },
   "files": {
     "daily_report": {
       "path": "reports/daily/2026-07-08.md",
-      "sha256": "e6514346bac5a89e1f865709b4d9bb49af3b02423ecb739daee7db744c18f0c8"
+      "sha256": "9774d89470c538ef3476c7e85b879ae72cf9b4caec5df18668418ba68e22233b"
     },
     "database": {
       "path": "data/portfolio.sqlite",
-      "sha256": "16cda451df21743afef93d0a4610cc6482f3d7702205d3116f7511d484ec8791",
+      "sha256": "c1cc8a302007cc90ac0f560f4fb63a19bfecb05c21a3dfc3508428dbd5782d58",
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-07-08T01:47:03Z",
+  "generated_at": "2026-07-08T01:51:44Z",
   "manifest_date": "2026-07-08",
   "manifest_version": 1,
   "metrics": {
-    "cash": 48571163.136938624,
-    "gross_exposure": 33373550.764256366,
-    "gross_exposure_pct": 0.6733831062135489,
-    "long_market_value": 17181701.711990867,
-    "net_exposure_pct": 0.01997240459692097,
-    "net_market_value": 989852.6597253648,
+    "cash": 47827747.89993863,
+    "gross_exposure": 34116966.00125636,
+    "gross_exposure_pct": 0.6883831062145586,
+    "long_market_value": 17925116.948990863,
+    "net_exposure_pct": 0.034972404597930606,
+    "net_market_value": 1733267.896725363,
     "realized_pnl": 0.0,
     "return_pct": -0.008779684066720158,
     "short_market_value": 16191849.0522655,
@@ -36,7 +36,7 @@
   },
   "portfolio": {
     "base_currency": "USD",
-    "cash": 48571163.136938624,
+    "cash": 47827747.89993863,
     "id": 1,
     "initial_cash": 50000000.0,
     "name": "LS Paper Fund",
