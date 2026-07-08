@@ -1,23 +1,23 @@
 {
   "audit": {
     "chain_ok": true,
-    "event_count": 370,
+    "event_count": 372,
     "events_file": "audit/events.jsonl",
-    "events_file_sha256": "38efb82e50382cdcac2af3734fb9cc6ae6916c51c83679ab7d7bb9001408b707",
-    "head_hash": "c624cd517eaea4f7dc9fddcd253816ee6fb89f4aa7c6184c2e59dbb9515fefe0"
+    "events_file_sha256": "a7b263914304a67725790e96f6c55269964d34626ff64253066063ffd899ff25",
+    "head_hash": "ab1c07b0eddf6a7f873140afe5ea7ff27d2012f1aee0221bbc2d96357fe9024b"
   },
   "files": {
     "daily_report": {
       "path": "reports/daily/2026-07-08.md",
-      "sha256": "9774d89470c538ef3476c7e85b879ae72cf9b4caec5df18668418ba68e22233b"
+      "sha256": "d88a10b3b1121c0f5704d9a0f36b21c3eed317decad7b158ce855d8cb640fa8e"
     },
     "database": {
       "path": "data/portfolio.sqlite",
-      "sha256": "c1cc8a302007cc90ac0f560f4fb63a19bfecb05c21a3dfc3508428dbd5782d58",
+      "sha256": "ab293888cc4761e44638c174bc176330b96d702deb7b37e41cd525b4e593ce72",
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-07-08T01:51:44Z",
+  "generated_at": "2026-07-08T01:52:22Z",
   "manifest_date": "2026-07-08",
   "manifest_version": 1,
   "metrics": {
@@ -32,7 +32,7 @@
     "short_market_value": 16191849.0522655,
     "total_equity": 49561015.79666399,
     "total_pnl": -438984.2033360079,
-    "unrealized_pnl": -565258.190999126
+    "unrealized_pnl": -565258.1909991258
   },
   "portfolio": {
     "base_currency": "USD",
