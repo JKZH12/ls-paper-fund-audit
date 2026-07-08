@@ -1,5 +1,6 @@
 import unittest
 import tempfile
+import json
 from pathlib import Path
 
 from paper_portfolio.audit import (
@@ -97,6 +98,44 @@ class CoreTest(unittest.TestCase):
             manifest = write_manifest(conn, portfolio_id=portfolio_id, workspace=workspace, db_path=db_path)
             self.assertTrue(manifest.exists())
             self.assertTrue((workspace / "audit/events.jsonl").exists())
+
+    def test_manifest_realized_pnl_uses_transactions_after_closed_position(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp)
+            db_path = workspace / "portfolio.sqlite"
+            conn = connect(db_path)
+            portfolio_id = create_portfolio(
+                conn,
+                name="LS Paper Fund",
+                initial_cash=1_000_000,
+                base_currency="USD",
+                strategy_type="long_short_hedge_fund",
+            )
+            with conn:
+                ensure_genesis_event(conn, portfolio_id)
+
+            state = load_state(conn, portfolio_id)
+            state = apply_trade(state, symbol="NVDA", side="buy", quantity=10, price=100)
+            state = apply_trade(state, symbol="NVDA", side="sell", quantity=10, price=120)
+            with conn:
+                save_state(conn, portfolio_id, state)
+                record_transaction(
+                    conn,
+                    portfolio_id=portfolio_id,
+                    symbol="NVDA",
+                    side="sell",
+                    quantity=10,
+                    price=120,
+                    fee=0,
+                    realized_pnl=200,
+                    notes="closed profitable long",
+                )
+
+            manifest = write_manifest(conn, portfolio_id=portfolio_id, workspace=workspace, db_path=db_path)
+            data = json.loads(manifest.read_text())
+            self.assertAlmostEqual(data["metrics"]["total_pnl"], 200)
+            self.assertAlmostEqual(data["metrics"]["realized_pnl"], 200)
+            self.assertAlmostEqual(data["metrics"]["unrealized_pnl"], 0)
 
     def test_rebuild_database_from_event_log(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -170,7 +170,14 @@ def latest_event_hash(conn: sqlite3.Connection, portfolio_id: int) -> str:
 def portfolio_snapshot(conn: sqlite3.Connection, portfolio_id: int) -> dict[str, Any]:
     portfolio = get_portfolio(conn, portfolio_id)
     state = load_state(conn, portfolio_id)
-    metrics = portfolio_metrics(state)
+    metrics = dict(portfolio_metrics(state))
+    realized_row = conn.execute(
+        "SELECT COALESCE(SUM(realized_pnl), 0) AS realized_pnl FROM transactions WHERE portfolio_id = ?",
+        (portfolio_id,),
+    ).fetchone()
+    realized_pnl = float(realized_row["realized_pnl"])
+    metrics["realized_pnl"] = realized_pnl
+    metrics["unrealized_pnl"] = metrics["total_pnl"] - realized_pnl
     return {
         "portfolio": {
             "id": portfolio_id,

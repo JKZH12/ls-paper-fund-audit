@@ -17,7 +17,7 @@
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-07-08T07:18:12Z",
+  "generated_at": "2026-07-08T14:04:49Z",
   "manifest_date": "2026-07-08",
   "manifest_version": 1,
   "metrics": {
@@ -27,12 +27,12 @@
     "long_market_value": 17940587.15960088,
     "net_exposure_pct": 0.03687413489662847,
     "net_market_value": 1831128.0921471145,
-    "realized_pnl": 0.0,
+    "realized_pnl": 126273.98766311951,
     "return_pct": -0.006822480158285201,
     "short_market_value": 16109459.067453766,
     "total_equity": 49658875.99208574,
     "total_pnl": -341124.00791426003,
-    "unrealized_pnl": -467397.99557737453
+    "unrealized_pnl": -467397.99557737954
   },
   "portfolio": {
     "base_currency": "USD",
