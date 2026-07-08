@@ -792,9 +792,9 @@
       </div>
       <div class="status-strip" aria-label="book status">
         <span class="pill"><span class="dot long"></span>Simulated only</span>
-        <span class="pill"><span class="dot"></span>28 positions</span>
-        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-08 09:46:15 HKT</span>
-        <span class="pill mono">Audit 367 events</span>
+        <span class="pill"><span class="dot"></span>29 positions</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-08 09:52:11 HKT</span>
+        <span class="pill mono">Audit 372 events</span>
       </div>
     </div>
   </header>
@@ -812,7 +812,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Exposure Stack</div>
-          <span class="pill">Gross 67.34%</span>
+          <span class="pill">Gross 68.84%</span>
         </div>
         <div class="panel-body">
           <div id="exposureStack" class="exposure-stack"></div>
@@ -871,7 +871,7 @@
           <div class="watch-list">
             <div class="watch-item">
               <strong>FX-linked marks</strong>
-              <span>SOI.PA, 285A.T, 6981.T, 2513.HK, 1888.HK need visible local price x FX trace.</span>
+              <span>4062.T, SOI.PA, 285A.T, 6981.T, 2513.HK, 1888.HK need visible local price x FX trace.</span>
             </div>
             <div class="watch-item">
               <strong>Pair attribution</strong>
@@ -938,7 +938,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Audit / Report</div>
-          <span class="pill mono">9d9e...e3f0</span>
+          <span class="pill mono">ab1c...024b</span>
         </div>
         <div class="panel-body">
           <div class="watch-list">
@@ -952,7 +952,7 @@
             </div>
             <div class="watch-item">
               <strong>Head hash</strong>
-              <span class="mono">9d9e278677e2296724216d1966658e22e91dffd9f9adbd1de3a88c0204a2e3f0</span>
+              <span class="mono">ab1c07b0eddf6a7f873140afe5ea7ff27d2012f1aee0221bbc2d96357fe9024b</span>
             </div>
           </div>
           <div class="footnote">All order-related actions remain local paper-trading actions only.</div>
@@ -963,20 +963,20 @@
 
   <script>
     const book = {
-      "asOf": "2026-07-08 09:46:15 HKT",
+      "asOf": "2026-07-08 09:52:11 HKT",
       "summary": {
             "totalEquity": 49561015.79666399,
-            "cash": 48571163.136938624,
-            "longMarketValue": 17181701.711990867,
+            "cash": 47827747.89993863,
+            "longMarketValue": 17925116.948990863,
             "shortMarketValue": 16191849.0522655,
-            "netMarketValue": 989852.6597253648,
-            "grossExposure": 33373550.764256366,
+            "netMarketValue": 1733267.896725363,
+            "grossExposure": 34116966.00125636,
             "totalPnl": -438984.2033360079,
             "returnPct": -0.008779684066720158,
             "realizedPnl": 126273.98766311951,
-            "unrealizedPnl": -565258.190999126,
-            "grossExposurePct": 0.6733831062135489,
-            "netExposurePct": 0.01997240459692097
+            "unrealizedPnl": -565258.1909991258,
+            "grossExposurePct": 0.6883831062145586,
+            "netExposurePct": 0.034972404597930606
       },
       "positions": [
             {
@@ -1011,6 +1011,17 @@
                   "lastPrice": 460.5019702,
                   "realizedPnl": 0.0,
                   "updatedAt": "2026-07-08 09:46:13 HKT"
+            },
+            {
+                  "symbol": "4062.T",
+                  "name": "Ibiden",
+                  "theme": "AI substrates / packaging",
+                  "pair": "4062.T substrate long",
+                  "quantity": 6067.085721607,
+                  "averageCost": 122.53250919999999,
+                  "lastPrice": 122.5325092,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-08 09:52:11 HKT"
             },
             {
                   "symbol": "6981.T",
@@ -1290,6 +1301,14 @@
       ],
       "trades": [
             {
+                  "time": "2026-07-08 09:51:26 HKT",
+                  "symbol": "4062.T",
+                  "side": "buy",
+                  "quantity": 6067.085721607,
+                  "price": 122.5325092,
+                  "notes": "2026-07-08 simulated buy: buy Ibiden / 4062.T 1.5% NAV; sizing NAV 49,561,015.80; target notional 743,415.24; FMP quote JPY 19,895 * JPYUSD 0.00615896 = USD 122.5325092; FMP timestamps 4062.T 1783474549 JPYUSD 1783475459"
+            },
+            {
                   "time": "2026-07-07 23:02:43 HKT",
                   "symbol": "NBIS",
                   "side": "buy",
@@ -1376,14 +1395,6 @@
                   "quantity": 471.7347886755,
                   "price": 1581.64,
                   "notes": "buy 1.5% NAV SNDK after short cover; sizing NAV 49740974.08; notional 746114.61; source FMP SNDK quote timestamp 1783432750"
-            },
-            {
-                  "time": "2026-07-07 21:59:38 HKT",
-                  "symbol": "SNDK",
-                  "side": "cover",
-                  "quantity": 552.3184459657,
-                  "price": 1581.64,
-                  "notes": "cover existing SNDK short before rotating to 1.5% NAV long; sizing NAV 49740974.08; source FMP SNDK quote timestamp 1783432750"
             }
       ]
 };
