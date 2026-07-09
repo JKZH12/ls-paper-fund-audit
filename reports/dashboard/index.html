@@ -792,9 +792,9 @@
       </div>
       <div class="status-strip" aria-label="book status">
         <span class="pill"><span class="dot long"></span>Simulated only</span>
-        <span class="pill"><span class="dot"></span>30 positions</span>
-        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-09 01:08:42 HKT</span>
-        <span class="pill mono">Audit 533 events</span>
+        <span class="pill"><span class="dot"></span>36 positions</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-09 08:42:52 HKT</span>
+        <span class="pill mono">Audit 576 events</span>
       </div>
     </div>
   </header>
@@ -812,7 +812,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Exposure Stack</div>
-          <span class="pill">Gross 73.14%</span>
+          <span class="pill">Gross 80.86%</span>
         </div>
         <div class="panel-body">
           <div id="exposureStack" class="exposure-stack"></div>
@@ -871,7 +871,7 @@
           <div class="watch-list">
             <div class="watch-item">
               <strong>FX-linked marks</strong>
-              <span>4062.T, SOI.PA, 285A.T, 6981.T, 2513.HK, 1888.HK need visible local price x FX trace.</span>
+              <span>JP/HK/EU positions need visible local price x FX trace in notes/source, especially the new JP semi/optical basket.</span>
             </div>
             <div class="watch-item">
               <strong>Pair attribution</strong>
@@ -938,7 +938,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Audit / Report</div>
-          <span class="pill mono">3304...c801</span>
+          <span class="pill mono">292e...8105</span>
         </div>
         <div class="panel-body">
           <div class="watch-list">
@@ -952,7 +952,7 @@
             </div>
             <div class="watch-item">
               <strong>Head hash</strong>
-              <span class="mono">3304091a72e48731af08de5a9ae757cd633e175d2794b671bb030481f65ac801</span>
+              <span class="mono">292eaddc36320ad96ecce0d4831049887287875639c93cea25d0840f30118105</span>
             </div>
           </div>
           <div class="footnote">All order-related actions remain local paper-trading actions only.</div>
@@ -963,20 +963,20 @@
 
   <script>
     const book = {
-      "asOf": "2026-07-09 01:08:42 HKT",
+      "asOf": "2026-07-09 08:42:52 HKT",
       "summary": {
-            "totalEquity": 49574389.878813505,
-            "cash": 47578980.56461864,
-            "longMarketValue": 19126516.07497053,
-            "shortMarketValue": 17131106.76077566,
-            "netMarketValue": 1995409.3141948693,
-            "grossExposure": 36257622.835746184,
-            "totalPnl": -425610.1211864948,
-            "returnPct": -0.008512202423729897,
+            "totalEquity": 49744579.92656373,
+            "cash": 48074724.463406764,
+            "longMarketValue": 20947129.44105287,
+            "shortMarketValue": 19277273.977895897,
+            "netMarketValue": 1669855.4631569707,
+            "grossExposure": 40224403.41894877,
+            "totalPnl": -255420.07343626767,
+            "returnPct": -0.005108401468725353,
             "realizedPnl": 56669.260847291465,
-            "unrealizedPnl": -482279.38203378627,
-            "grossExposurePct": 0.7313780951087715,
-            "netExposurePct": 0.04025080932055289
+            "unrealizedPnl": -312089.3342835591,
+            "grossExposurePct": 0.8086188179361594,
+            "netExposurePct": 0.033568591103234215
       },
       "positions": [
             {
@@ -986,9 +986,9 @@
                   "pair": "2513.HK / 1888.HK",
                   "quantity": -82874.77290301,
                   "averageCost": 9.03975,
-                  "lastPrice": 8.51463,
+                  "lastPrice": 8.5152975,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:11 HKT"
+                  "updatedAt": "2026-07-09 08:42:15 HKT"
             },
             {
                   "symbol": "2513.HK",
@@ -997,9 +997,9 @@
                   "pair": "2513.HK / 1888.HK",
                   "quantity": 3580.63461232,
                   "averageCost": 209.2275,
-                  "lastPrice": 232.797,
+                  "lastPrice": 232.81525,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:12 HKT"
+                  "updatedAt": "2026-07-09 08:42:16 HKT"
             },
             {
                   "symbol": "285A.T",
@@ -1008,9 +1008,9 @@
                   "pair": "285A.T / 6981.T",
                   "quantity": 1673.00916064,
                   "averageCost": 447.79625,
-                  "lastPrice": 442.3641622,
+                  "lastPrice": 474.208289,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:13 HKT"
+                  "updatedAt": "2026-07-09 08:42:17 HKT"
             },
             {
                   "symbol": "4062.T",
@@ -1019,9 +1019,75 @@
                   "pair": "4062.T substrate long",
                   "quantity": 6067.085721607,
                   "averageCost": 122.53250919999999,
-                  "lastPrice": 117.561646,
+                  "lastPrice": 120.33758775,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:14 HKT"
+                  "updatedAt": "2026-07-09 08:42:18 HKT"
+            },
+            {
+                  "symbol": "5801.T",
+                  "name": "Furukawa Electric",
+                  "theme": "Japan optical / cables",
+                  "pair": "Kokusai+Furukawa+Advantest / Fujikura+Sumitomo+Sony",
+                  "quantity": 22538.1483228566,
+                  "averageCost": 21.99576876,
+                  "lastPrice": 22.0049393,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-09 08:42:19 HKT"
+            },
+            {
+                  "symbol": "5802.T",
+                  "name": "Sumitomo Electric",
+                  "theme": "Japan optical / cables",
+                  "pair": "Kokusai+Furukawa+Advantest / Fujikura+Sumitomo+Sony",
+                  "quantity": -33776.490794732,
+                  "averageCost": 14.677187805,
+                  "lastPrice": 14.681247275,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-09 08:42:21 HKT"
+            },
+            {
+                  "symbol": "5803.T",
+                  "name": "Fujikura",
+                  "theme": "Japan optical / cables",
+                  "pair": "Kokusai+Furukawa+Advantest / Fujikura+Sumitomo+Sony",
+                  "quantity": -15929.217611643,
+                  "averageCost": 31.12167282,
+                  "lastPrice": 31.1172253,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-09 08:42:22 HKT"
+            },
+            {
+                  "symbol": "6525.T",
+                  "name": "Kokusai Electric",
+                  "theme": "Japan semicap / test",
+                  "pair": "Kokusai+Furukawa+Advantest / Fujikura+Sumitomo+Sony",
+                  "quantity": 7534.512476298,
+                  "averageCost": 65.79641355,
+                  "lastPrice": 65.78701075,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-09 08:42:23 HKT"
+            },
+            {
+                  "symbol": "6758.T",
+                  "name": "Sony Group",
+                  "theme": "Japan large-cap funding short",
+                  "pair": "Kokusai+Furukawa+Advantest / Fujikura+Sumitomo+Sony",
+                  "quantity": -47231.6021174794,
+                  "averageCost": 20.99204247,
+                  "lastPrice": 21.00135645,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-09 08:42:24 HKT"
+            },
+            {
+                  "symbol": "6857.T",
+                  "name": "Advantest",
+                  "theme": "Japan semicap / test",
+                  "pair": "Kokusai+Furukawa+Advantest / Fujikura+Sumitomo+Sony",
+                  "quantity": 2739.7061701291,
+                  "averageCost": 180.94783455,
+                  "lastPrice": 181.506886,
+                  "realizedPnl": 0.0,
+                  "updatedAt": "2026-07-09 08:42:25 HKT"
             },
             {
                   "symbol": "6981.T",
@@ -1030,9 +1096,9 @@
                   "pair": "285A.T / 6981.T",
                   "quantity": -12759.64276734,
                   "averageCost": 58.713809,
-                  "lastPrice": 55.56172662,
+                  "lastPrice": 57.61058115,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:15 HKT"
+                  "updatedAt": "2026-07-09 08:42:26 HKT"
             },
             {
                   "symbol": "AMAT",
@@ -1041,9 +1107,9 @@
                   "pair": "ASML / AMAT",
                   "quantity": -1706.7745466384,
                   "averageCost": 584.4873984307543,
-                  "lastPrice": 574.425,
+                  "lastPrice": 570.5,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:17 HKT"
+                  "updatedAt": "2026-07-09 08:42:27 HKT"
             },
             {
                   "symbol": "AMD",
@@ -1052,9 +1118,9 @@
                   "pair": "INTC / AMD",
                   "quantity": -2727.3803827202,
                   "averageCost": 549.5520332361541,
-                  "lastPrice": 512.79,
+                  "lastPrice": 517.405,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:18 HKT"
+                  "updatedAt": "2026-07-09 08:42:28 HKT"
             },
             {
                   "symbol": "ARM",
@@ -1063,9 +1129,9 @@
                   "pair": "TSM / NVDA+ARM+AVGO+QCOM",
                   "quantity": -2281.5382691075,
                   "averageCost": 328.46,
-                  "lastPrice": 297.1114,
+                  "lastPrice": 300.24,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:19 HKT"
+                  "updatedAt": "2026-07-09 08:42:29 HKT"
             },
             {
                   "symbol": "ASML",
@@ -1074,9 +1140,9 @@
                   "pair": "ASML / AMAT",
                   "quantity": 958.1915949108,
                   "averageCost": 1822.4217537073473,
-                  "lastPrice": 1773.7789,
+                  "lastPrice": 1768.65,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:20 HKT"
+                  "updatedAt": "2026-07-09 08:42:30 HKT"
             },
             {
                   "symbol": "AVGO",
@@ -1085,9 +1151,9 @@
                   "pair": "TSM / NVDA+ARM+AVGO+QCOM",
                   "quantity": -4656.603596293,
                   "averageCost": 374.967964468805,
-                  "lastPrice": 394.47501,
+                  "lastPrice": 388.69,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:21 HKT"
+                  "updatedAt": "2026-07-09 08:42:31 HKT"
             },
             {
                   "symbol": "AXTI",
@@ -1096,9 +1162,9 @@
                   "pair": "AXTI + SOI.PA",
                   "quantity": 12793.5702018422,
                   "averageCost": 62.339283436702694,
-                  "lastPrice": 59.43,
+                  "lastPrice": 60.12,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:22 HKT"
+                  "updatedAt": "2026-07-09 08:42:32 HKT"
             },
             {
                   "symbol": "CIEN",
@@ -1107,9 +1173,9 @@
                   "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
                   "quantity": -2965.9333449397,
                   "averageCost": 419.18,
-                  "lastPrice": 436.49,
+                  "lastPrice": 440.97,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:23 HKT"
+                  "updatedAt": "2026-07-09 08:42:33 HKT"
             },
             {
                   "symbol": "COHR",
@@ -1118,9 +1184,9 @@
                   "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
                   "quantity": 5374.2862722383,
                   "averageCost": 323.7357690488585,
-                  "lastPrice": 313.39,
+                  "lastPrice": 317.05,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:24 HKT"
+                  "updatedAt": "2026-07-09 08:42:34 HKT"
             },
             {
                   "symbol": "CRWV",
@@ -1129,9 +1195,9 @@
                   "pair": "NBIS / CRWV",
                   "quantity": -14559.3200662287,
                   "averageCost": 85.87335138282015,
-                  "lastPrice": 85.575,
+                  "lastPrice": 90.0,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:25 HKT"
+                  "updatedAt": "2026-07-09 08:42:35 HKT"
             },
             {
                   "symbol": "ENR.DE",
@@ -1140,9 +1206,9 @@
                   "pair": "GEV / ON+ENR.DE",
                   "quantity": -2813.9725488527,
                   "averageCost": 176.9028576,
-                  "lastPrice": 173.4880165788,
+                  "lastPrice": 173.604991,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:26 HKT"
+                  "updatedAt": "2026-07-09 08:42:36 HKT"
             },
             {
                   "symbol": "FN",
@@ -1151,9 +1217,9 @@
                   "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
                   "quantity": -2539.4677304542,
                   "averageCost": 489.57501,
-                  "lastPrice": 468.01,
+                  "lastPrice": 480.07,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:27 HKT"
+                  "updatedAt": "2026-07-09 08:42:37 HKT"
             },
             {
                   "symbol": "GEV",
@@ -1162,9 +1228,9 @@
                   "pair": "GEV / ON+ENR.DE",
                   "quantity": 1390.3547585357,
                   "averageCost": 1073.9139200802979,
-                  "lastPrice": 1088.68,
+                  "lastPrice": 1070.99,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:28 HKT"
+                  "updatedAt": "2026-07-09 08:42:38 HKT"
             },
             {
                   "symbol": "GLW",
@@ -1173,9 +1239,9 @@
                   "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
                   "quantity": -3989.069324701,
                   "averageCost": 187.0,
-                  "lastPrice": 185.575,
+                  "lastPrice": 184.03,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:29 HKT"
+                  "updatedAt": "2026-07-09 08:42:39 HKT"
             },
             {
                   "symbol": "INTC",
@@ -1184,9 +1250,9 @@
                   "pair": "INTC / AMD",
                   "quantity": 9642.473587676799,
                   "averageCost": 122.65193212099902,
-                  "lastPrice": 107.55,
+                  "lastPrice": 110.24,
                   "realizedPnl": -69604.72681582803,
-                  "updatedAt": "2026-07-09 01:08:30 HKT"
+                  "updatedAt": "2026-07-09 08:42:40 HKT"
             },
             {
                   "symbol": "LITE",
@@ -1195,9 +1261,9 @@
                   "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
                   "quantity": 2437.8834354538003,
                   "averageCost": 713.6718163507745,
-                  "lastPrice": 699.5923,
+                  "lastPrice": 707.1,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:32 HKT"
+                  "updatedAt": "2026-07-09 08:42:41 HKT"
             },
             {
                   "symbol": "MU",
@@ -1206,9 +1272,9 @@
                   "pair": "WDC / SNDK+MU",
                   "quantity": -2182.6144586193,
                   "averageCost": 911.6087740416866,
-                  "lastPrice": 944.395,
+                  "lastPrice": 948.8,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:33 HKT"
+                  "updatedAt": "2026-07-09 08:42:42 HKT"
             },
             {
                   "symbol": "NBIS",
@@ -1217,9 +1283,9 @@
                   "pair": "NBIS / CRWV",
                   "quantity": 9218.325030422999,
                   "averageCost": 216.7311662576031,
-                  "lastPrice": 206.79,
+                  "lastPrice": 216.48,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:34 HKT"
+                  "updatedAt": "2026-07-09 08:42:43 HKT"
             },
             {
                   "symbol": "NOK",
@@ -1228,9 +1294,9 @@
                   "pair": "COHR+LITE / FN+GLW+CIEN+NOK",
                   "quantity": -40812.8006411754,
                   "averageCost": 12.185,
-                  "lastPrice": 11.805,
+                  "lastPrice": 11.94,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:35 HKT"
+                  "updatedAt": "2026-07-09 08:42:45 HKT"
             },
             {
                   "symbol": "NVDA",
@@ -1239,9 +1305,9 @@
                   "pair": "TSM / NVDA+ARM+AVGO+QCOM",
                   "quantity": -7765.8377940808,
                   "averageCost": 192.25,
-                  "lastPrice": 200.924,
+                  "lastPrice": 204.12,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:36 HKT"
+                  "updatedAt": "2026-07-09 08:42:46 HKT"
             },
             {
                   "symbol": "ON",
@@ -1250,9 +1316,9 @@
                   "pair": "GEV / ON+ENR.DE",
                   "quantity": -5433.5710445537,
                   "averageCost": 91.59,
-                  "lastPrice": 92.83,
+                  "lastPrice": 93.79,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:37 HKT"
+                  "updatedAt": "2026-07-09 08:42:47 HKT"
             },
             {
                   "symbol": "QCOM",
@@ -1261,9 +1327,9 @@
                   "pair": "TSM / NVDA+ARM+AVGO+QCOM",
                   "quantity": -6755.0134015482,
                   "averageCost": 184.41275790647683,
-                  "lastPrice": 186.155,
+                  "lastPrice": 186.56,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:38 HKT"
+                  "updatedAt": "2026-07-09 08:42:48 HKT"
             },
             {
                   "symbol": "SNDK",
@@ -1272,9 +1338,9 @@
                   "pair": "WDC / SNDK+MU",
                   "quantity": 1129.5682402615,
                   "averageCost": 1541.1481751272577,
-                  "lastPrice": 1653.68,
+                  "lastPrice": 1727.18,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:39 HKT"
+                  "updatedAt": "2026-07-09 08:42:49 HKT"
             },
             {
                   "symbol": "SOI.PA",
@@ -1283,9 +1349,9 @@
                   "pair": "AXTI + SOI.PA",
                   "quantity": 5531.4770225654,
                   "averageCost": 135.3608,
-                  "lastPrice": 112.3160808,
+                  "lastPrice": 112.3918026,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:40 HKT"
+                  "updatedAt": "2026-07-09 08:42:50 HKT"
             },
             {
                   "symbol": "TSM",
@@ -1294,9 +1360,9 @@
                   "pair": "TSM / NVDA+ARM+AVGO+QCOM",
                   "quantity": 4408.4692617324,
                   "averageCost": 452.9175616219673,
-                  "lastPrice": 439.4,
+                  "lastPrice": 436.98,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:41 HKT"
+                  "updatedAt": "2026-07-09 08:42:51 HKT"
             },
             {
                   "symbol": "WDC",
@@ -1305,12 +1371,60 @@
                   "pair": "WDC / SNDK+MU",
                   "quantity": 3930.3147898864,
                   "averageCost": 571.6196492233518,
-                  "lastPrice": 536.0,
+                  "lastPrice": 550.3,
                   "realizedPnl": 0.0,
-                  "updatedAt": "2026-07-09 01:08:42 HKT"
+                  "updatedAt": "2026-07-09 08:42:52 HKT"
             }
       ],
       "trades": [
+            {
+                  "time": "2026-07-09 08:41:57 HKT",
+                  "symbol": "6758.T",
+                  "side": "short",
+                  "quantity": 47231.6021174794,
+                  "price": 20.99204247,
+                  "notes": "2026-07-09 simulated JP basket: short Sony Group / 6758.T 2.0% NAV; sizing NAV 49,574,389.88; target notional 991,487.80; FMP quote JPY 3409 * JPYUSD 0.00615783 = USD 20.99204247; FMP timestamps 6758.T 1783556814 JPYUSD 1783557702"
+            },
+            {
+                  "time": "2026-07-09 08:41:55 HKT",
+                  "symbol": "5802.T",
+                  "side": "short",
+                  "quantity": 33776.490794732,
+                  "price": 14.677187805,
+                  "notes": "2026-07-09 simulated JP basket: short Sumitomo Electric / 5802.T 1.0% NAV; sizing NAV 49,574,389.88; target notional 495,743.90; FMP quote JPY 2383.5 * JPYUSD 0.00615783 = USD 14.677187805; FMP timestamps 5802.T 1783556814 JPYUSD 1783557702"
+            },
+            {
+                  "time": "2026-07-09 08:41:54 HKT",
+                  "symbol": "5803.T",
+                  "side": "short",
+                  "quantity": 15929.217611643,
+                  "price": 31.12167282,
+                  "notes": "2026-07-09 simulated JP basket: short Fujikura / 5803.T 1.0% NAV; sizing NAV 49,574,389.88; target notional 495,743.90; FMP quote JPY 5054 * JPYUSD 0.00615783 = USD 31.12167282; FMP timestamps 5803.T 1783556812 JPYUSD 1783557702; interpreted user text 'short 1的藤仓' as short 1% NAV"
+            },
+            {
+                  "time": "2026-07-09 08:41:53 HKT",
+                  "symbol": "6857.T",
+                  "side": "buy",
+                  "quantity": 2739.7061701291,
+                  "price": 180.94783455,
+                  "notes": "2026-07-09 simulated JP basket: buy Advantest / 6857.T 1.0% NAV; sizing NAV 49,574,389.88; target notional 495,743.90; FMP quote JPY 29385 * JPYUSD 0.00615783 = USD 180.94783455; FMP timestamps 6857.T 1783556810 JPYUSD 1783557702"
+            },
+            {
+                  "time": "2026-07-09 08:41:51 HKT",
+                  "symbol": "5801.T",
+                  "side": "buy",
+                  "quantity": 22538.1483228566,
+                  "price": 21.99576876,
+                  "notes": "2026-07-09 simulated JP basket: buy Furukawa Electric / 5801.T 1.0% NAV; sizing NAV 49,574,389.88; target notional 495,743.90; FMP quote JPY 3572 * JPYUSD 0.00615783 = USD 21.99576876; FMP timestamps 5801.T 1783556810 JPYUSD 1783557702"
+            },
+            {
+                  "time": "2026-07-09 08:41:50 HKT",
+                  "symbol": "6525.T",
+                  "side": "buy",
+                  "quantity": 7534.512476298,
+                  "price": 65.79641355,
+                  "notes": "2026-07-09 simulated JP basket: buy Kokusai Electric / 6525.T 1.0% NAV; sizing NAV 49,574,389.88; target notional 495,743.90; FMP quote JPY 10685 * JPYUSD 0.00615783 = USD 65.79641355; FMP timestamps 6525.T 1783556808 JPYUSD 1783557702"
+            },
             {
                   "time": "2026-07-09 01:07:55 HKT",
                   "symbol": "INTC",
@@ -1358,54 +1472,6 @@
                   "quantity": 700.0912985676,
                   "price": 709.32,
                   "notes": "2026-07-08 simulated add: buy LITE 1.0% NAV; sizing NAV 49,658,875.99; target notional 496,588.76; FMP quote 709.32 timestamp 1783519636"
-            },
-            {
-                  "time": "2026-07-08 09:51:26 HKT",
-                  "symbol": "4062.T",
-                  "side": "buy",
-                  "quantity": 6067.085721607,
-                  "price": 122.5325092,
-                  "notes": "2026-07-08 simulated buy: buy Ibiden / 4062.T 1.5% NAV; sizing NAV 49,561,015.80; target notional 743,415.24; FMP quote JPY 19,895 * JPYUSD 0.00615896 = USD 122.5325092; FMP timestamps 4062.T 1783474549 JPYUSD 1783475459"
-            },
-            {
-                  "time": "2026-07-07 23:02:43 HKT",
-                  "symbol": "NBIS",
-                  "side": "buy",
-                  "quantity": 2469.2051912662,
-                  "price": 201.50999,
-                  "notes": "2026-07-07 simulated add: buy NBIS 1.0% NAV; sizing NAV 49,756,951.34; target notional 497,569.51; FMP quote 201.50999 timestamp 1783436536"
-            },
-            {
-                  "time": "2026-07-07 22:52:28 HKT",
-                  "symbol": "AXTI",
-                  "side": "buy",
-                  "quantity": 8191.7877932633,
-                  "price": 60.7304,
-                  "notes": "2026-07-07 simulated add: buy AXTI 1.0% NAV; sizing NAV 49,749,054.94; target notional 497,490.55; FMP quote 60.7304 timestamp 1783435917"
-            },
-            {
-                  "time": "2026-07-07 22:52:23 HKT",
-                  "symbol": "SNDK",
-                  "side": "buy",
-                  "quantity": 324.6585632525,
-                  "price": 1532.35,
-                  "notes": "2026-07-07 simulated add: buy SNDK 1.0% NAV; sizing NAV 49,749,054.94; target notional 497,490.55; FMP quote 1532.35 timestamp 1783435917"
-            },
-            {
-                  "time": "2026-07-07 22:45:41 HKT",
-                  "symbol": "SNDK",
-                  "side": "buy",
-                  "quantity": 333.1748883335,
-                  "price": 1492.39,
-                  "notes": "2026-07-07 simulated add: buy SNDK 1.0% NAV; sizing NAV 49,722,687.16; target notional 497,226.87; FMP quote 1492.39 timestamp 1783435479"
-            },
-            {
-                  "time": "2026-07-07 22:45:38 HKT",
-                  "symbol": "MU",
-                  "side": "short",
-                  "quantity": 835.2075110862,
-                  "price": 893.0,
-                  "notes": "2026-07-07 simulated add: short MU 1.5% NAV; sizing NAV 49,722,687.16; target notional 745,840.31; FMP quote 893.00 timestamp 1783435478"
             }
       ]
 };
