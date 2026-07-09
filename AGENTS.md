@@ -58,5 +58,6 @@ python3 -m paper_portfolio summary
 
 - `reports/dashboard/index.html` is a read-only analytics view over the ledger, audit trail, and reports.
 - Do not add mutation, order-entry, broker, or real-execution behavior to the dashboard.
+- When the user asks for a dashboard, default to refreshing live FMP marks first, regenerating the daily report, and then updating the dashboard unless the user explicitly asks for a read-only/no-write view.
 - Keep pair/basket labels, cross-market FX traces, quote freshness, latest audit head, and report links visible when updating the dashboard.
 - When dashboard data is refreshed, verify the JavaScript syntax and keep the daily report/audit manifest in sync.
