@@ -61,3 +61,4 @@ python3 -m paper_portfolio summary
 - When the user asks for a dashboard, default to refreshing live FMP marks first, regenerating the daily report, and then updating the dashboard unless the user explicitly asks for a read-only/no-write view.
 - Keep pair/basket labels, cross-market FX traces, quote freshness, latest audit head, and report links visible when updating the dashboard.
 - When dashboard data is refreshed, verify the JavaScript syntax and keep the daily report/audit manifest in sync.
+- If the dashboard is already open in a browser, reload it with a cache-busting query string after refreshing so the visible tab cannot keep showing stale PnL or audit metrics.
