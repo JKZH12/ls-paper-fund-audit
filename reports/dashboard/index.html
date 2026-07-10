@@ -793,8 +793,8 @@
       <div class="status-strip" aria-label="book status">
         <span class="pill"><span class="dot long"></span>Simulated only</span>
         <span class="pill"><span class="dot"></span>43 positions</span>
-        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-10 09:08:26 HKT</span>
-        <span class="pill mono">Audit 822 events</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-10 09:16:25 HKT</span>
+        <span class="pill mono">Audit 826 events</span>
       </div>
     </div>
   </header>
@@ -938,7 +938,7 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Audit / Report</div>
-          <span class="pill mono">57b5...e6dc</span>
+          <span class="pill mono">80da...8f85</span>
         </div>
         <div class="panel-body">
           <div class="watch-list">
@@ -952,7 +952,7 @@
             </div>
             <div class="watch-item">
               <strong>Head hash</strong>
-              <span class="mono">57b5174c8c354c731132cdb9cbc7daf8f2450d87db363476e3fde311c004e6dc</span>
+              <span class="mono">80da31d3a143ed369f32922e9acb384c4bcfc3318e389b40b5fc902c8f758f85</span>
             </div>
           </div>
           <div class="footnote">All order-related actions remain local paper-trading actions only.</div>
@@ -963,20 +963,20 @@
 
   <script>
     const book = {
-      "asOf": "2026-07-10 09:08:26 HKT",
+      "asOf": "2026-07-10 09:16:25 HKT",
       "summary": {
-            "totalEquity": 49913352.39954169,
-            "cash": 49080120.039598815,
-            "longMarketValue": 23549926.070726026,
+            "totalEquity": 49928392.48056338,
+            "cash": 48331194.15239882,
+            "longMarketValue": 24313892.03894772,
             "shortMarketValue": 22716693.710783154,
-            "netMarketValue": 833232.359942874,
-            "grossExposure": 46266619.781509176,
-            "totalPnl": -86647.60045830905,
-            "returnPct": -0.0017329520091661811,
+            "netMarketValue": 1597198.3281645658,
+            "grossExposure": 47030585.74973087,
+            "totalPnl": -71607.51943662018,
+            "returnPct": -0.0014321503887324036,
             "realizedPnl": 74622.6681673844,
-            "unrealizedPnl": -161270.26862569345,
-            "grossExposurePct": 0.9269387359750655,
-            "netExposurePct": 0.016693576365560348
+            "unrealizedPnl": -146230.18760400458,
+            "grossExposurePct": 0.9419607444409391,
+            "netExposurePct": 0.03198978074021388
       },
       "positions": [
             {
@@ -1039,11 +1039,11 @@
                   "name": "Ibiden",
                   "theme": "AI substrates / packaging",
                   "pair": "4062.T substrate long",
-                  "quantity": 6067.085721607,
-                  "averageCost": 122.53250919999999,
-                  "lastPrice": 125.08870499999999,
+                  "quantity": 11937.898435687497,
+                  "averageCost": 125.00869665122553,
+                  "lastPrice": 127.567668,
                   "realizedPnl": 0,
-                  "updatedAt": "2026-07-10 09:08:24 HKT"
+                  "updatedAt": "2026-07-10 09:16:25 HKT"
             },
             {
                   "symbol": "5016.T",
@@ -1455,6 +1455,14 @@
       ],
       "trades": [
             {
+                  "time": "2026-07-10 09:16:24 HKT",
+                  "symbol": "4062.T",
+                  "side": "buy",
+                  "quantity": 5870.812714080498,
+                  "price": 127.567668,
+                  "notes": "2026-07-10 simulated add-on: buy Ibiden / 4062.T 1.5% NAV incremental; sizing NAV 49928392.48; target notional 748925.89; FMP quote JPY 20630.0 * JPYUSD 0.0061836 = USD 127.567668; FMP timestamps 4062.T 1783645282 JPYUSD 1783646184; user request 加多1.5%的ibiden的long"
+            },
+            {
                   "time": "2026-07-10 09:08:26 HKT",
                   "symbol": "5016.T",
                   "side": "short",
@@ -1541,14 +1549,6 @@
                   "quantity": 2681.6209943646,
                   "price": 557.85999,
                   "notes": "2026-07-09 simulated pair rotation: long AMD 3.0% NAV after unwind; sizing NAV 49,865,635.37; target notional 1,495,969.06; FMP quote AMD 557.85999 timestamp 1783608090; user request long 3%的AMD"
-            },
-            {
-                  "time": "2026-07-09 22:42:35 HKT",
-                  "symbol": "INTC",
-                  "side": "sell",
-                  "quantity": 9642.4735876768,
-                  "price": 112.9,
-                  "notes": "2026-07-09 simulated pair unwind: sell full INTC long before rotating AMD/INTC pair; sold quantity 9,642.4735876768; FMP quote INTC 112.90 timestamp 1783608090; user request unwind AMD/Intel pair"
             }
       ]
 };
