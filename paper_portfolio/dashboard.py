@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -117,6 +117,8 @@ def refresh_dashboard(
     content = re.sub(r"(<div class=\"panel-title\">Exposure Stack</div>\s*<span class=\"pill\">Gross )[^<]+", rf"\g<1>{metrics['gross_exposure_pct'] * 100:.2f}%", content)
     content = re.sub(r"<span class=\"pill mono\">[0-9a-f]+\.\.\.[0-9a-f]+</span>", f'<span class="pill mono">{head_hash[:4]}...{head_hash[-4:]}</span>', content)
     content = re.sub(r"(<strong>Head hash</strong>\s*<span class=\"mono\">)[0-9a-f]+", rf"\g<1>{head_hash}", content)
+    report_path = f"reports/daily/{date.today().isoformat()}.md"
+    content = re.sub(r"(<strong>Daily report</strong>\s*<span class=\"mono\">)reports/daily/\d{4}-\d{2}-\d{2}\.md", rf"\g<1>{report_path}", content)
     content = re.sub(
         r"(<strong>FX-linked marks</strong>\s*<span>).*?(</span>)",
         r"\g<1>Live FMP marks use JPYUSD, HKDUSD, and EURUSD; each converted mark retains its quote and FX timestamps in the audit source.\g<2>",
