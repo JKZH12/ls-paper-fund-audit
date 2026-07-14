@@ -258,6 +258,73 @@
       padding: 14px;
     }
 
+    .performance-wrap {
+      display: grid;
+      gap: 8px;
+    }
+
+    .performance-summary {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .performance-summary strong {
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .performance-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 220px;
+    }
+
+    .performance-chart .grid-line,
+    .performance-chart .zero-line {
+      stroke: var(--line);
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .performance-chart .zero-line {
+      stroke: var(--line-strong);
+    }
+
+    .performance-chart .performance-area {
+      fill: rgba(37, 99, 235, 0.08);
+    }
+
+    .performance-chart .performance-line {
+      fill: none;
+      stroke: var(--blue);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .performance-chart .performance-point {
+      fill: var(--surface);
+      stroke: var(--blue);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .performance-chart text {
+      fill: var(--muted);
+      font-size: 11px;
+    }
+
+    .performance-chart .latest-label {
+      fill: var(--ink);
+      font-weight: 720;
+    }
+
     .exposure-stack {
       display: grid;
       gap: 12px;
@@ -793,7 +860,7 @@
       <div class="status-strip" aria-label="book status">
         <span class="pill"><span class="dot long"></span>Simulated only</span>
         <span class="pill"><span class="dot"></span>44 positions</span>
-        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-14 14:29:01 HKT</span>
+        <span class="pill"><span class="dot warn"></span>Last mark 2026-07-14 14:34:21 HKT</span>
         <span class="pill mono">Audit 2363 events</span>
       </div>
     </div>
@@ -806,6 +873,18 @@
         <div class="subtle">USD-base ledger snapshot</div>
       </div>
       <div id="overview" class="overview-grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Performance Curve</h2>
+        <div class="subtle">Daily final local snapshot · return vs initial $50.0m</div>
+      </div>
+      <div class="panel">
+        <div class="panel-body">
+          <div id="performanceChart" class="performance-wrap"></div>
+        </div>
+      </div>
     </section>
 
     <section class="section layout-3">
@@ -879,7 +958,7 @@
             </div>
             <div class="watch-item">
               <strong>Quote freshness</strong>
-              <span>44 FMP-sourced marks refreshed 2026-07-14 14:29:01 HKT; regional exchange quotes can reflect the latest market close.</span>
+              <span>44 FMP-sourced marks refreshed 2026-07-14 14:34:21 HKT; regional exchange quotes can reflect the latest market close.</span>
             </div>
           </div>
         </div>
@@ -963,7 +1042,7 @@
 
   <script>
     const book = {
-  "asOf": "2026-07-14 14:29:01 HKT",
+  "asOf": "2026-07-14 14:34:21 HKT",
   "summary": {
     "cash": 47810785.34971166,
     "long_market_value": 25011932.413876925,
@@ -999,7 +1078,7 @@
       "averageCost": 448.3669670930904,
       "lastPrice": 435.026262,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "3110.T",
@@ -1010,7 +1089,7 @@
       "averageCost": 21.313946,
       "lastPrice": 21.313946,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "4062.T",
@@ -1021,7 +1100,7 @@
       "averageCost": 125.00869665122553,
       "lastPrice": 110.2965905,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "5016.T",
@@ -1032,7 +1111,7 @@
       "averageCost": 24.19617074,
       "lastPrice": 23.8457471,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "5801.T",
@@ -1043,7 +1122,7 @@
       "averageCost": 21.82288970165353,
       "lastPrice": 21.6527515,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "5802.T",
@@ -1054,7 +1133,7 @@
       "averageCost": 14.677187805,
       "lastPrice": 15.1045652,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "5803.T",
@@ -1065,7 +1144,7 @@
       "averageCost": 31.12167282,
       "lastPrice": 29.4883987,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "6525.T",
@@ -1076,7 +1155,7 @@
       "averageCost": 65.79641355,
       "lastPrice": 63.3566285,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "6752.T",
@@ -1087,7 +1166,7 @@
       "averageCost": 27.499209359999995,
       "lastPrice": 25.7676983,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "6758.T",
@@ -1098,7 +1177,7 @@
       "averageCost": 20.949079114475648,
       "lastPrice": 20.7964976,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "6857.T",
@@ -1109,7 +1188,7 @@
       "averageCost": 180.94783455,
       "lastPrice": 182.33896,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "6976.T",
@@ -1120,7 +1199,7 @@
       "averageCost": 78.35986297369271,
       "lastPrice": 73.1511875,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "6981.T",
@@ -1131,7 +1210,7 @@
       "averageCost": 57.667325057059806,
       "lastPrice": 55.9583484,
       "realizedPnl": 17927.96667512707,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "8035.T",
@@ -1142,7 +1221,7 @@
       "averageCost": 429.6328232,
       "lastPrice": 436.196681,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "AMAT",
@@ -1153,7 +1232,7 @@
       "averageCost": 595.4029306241056,
       "lastPrice": 575.39,
       "realizedPnl": -19165.157547054103,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "AMD",
@@ -1164,7 +1243,7 @@
       "averageCost": 557.85999,
       "lastPrice": 534.39,
       "realizedPnl": -10018.773414261412,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "ARM",
@@ -1175,7 +1254,7 @@
       "averageCost": 331.1691618239027,
       "lastPrice": 298.99,
       "realizedPnl": 38727.24877005107,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "ASML",
@@ -1186,7 +1265,7 @@
       "averageCost": 1822.4217537073473,
       "lastPrice": 1726.04,
       "realizedPnl": -12084.934617002204,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "AVGO",
@@ -1197,7 +1276,7 @@
       "averageCost": 378.4017499983133,
       "lastPrice": 384.05,
       "realizedPnl": -8908.202931280179,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "CBRS",
@@ -1208,7 +1287,7 @@
       "averageCost": 211.73,
       "lastPrice": 204.62,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "CIEN",
@@ -1219,7 +1298,7 @@
       "averageCost": 419.18,
       "lastPrice": 445.44,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "COHR",
@@ -1230,7 +1309,7 @@
       "averageCost": 323.7357690488585,
       "lastPrice": 307.39,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "CRWV",
@@ -1241,7 +1320,7 @@
       "averageCost": 85.87335138282015,
       "lastPrice": 83.31,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "ENR.DE",
@@ -1252,7 +1331,7 @@
       "averageCost": 176.9028576,
       "lastPrice": 171.579316,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "FN",
@@ -1263,7 +1342,7 @@
       "averageCost": 489.57501,
       "lastPrice": 474.64,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "GEV",
@@ -1274,7 +1353,7 @@
       "averageCost": 1073.9139200802979,
       "lastPrice": 1042.6,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "GLW",
@@ -1285,7 +1364,7 @@
       "averageCost": 187.0,
       "lastPrice": 183.36,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "INTC",
@@ -1296,7 +1375,7 @@
       "averageCost": 112.9,
       "lastPrice": 103.12,
       "realizedPnl": 28728.703984343712,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "KLAC",
@@ -1307,7 +1386,7 @@
       "averageCost": 222.4942608084675,
       "lastPrice": 222.25,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "LITE",
@@ -1318,7 +1397,7 @@
       "averageCost": 720.4747261317136,
       "lastPrice": 768.15,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "LRCX",
@@ -1329,7 +1408,7 @@
       "averageCost": 327.92,
       "lastPrice": 329.92,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "MU",
@@ -1340,7 +1419,7 @@
       "averageCost": 911.6087740416866,
       "lastPrice": 937.0,
       "realizedPnl": -86531.34624384395,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "NBIS",
@@ -1351,7 +1430,7 @@
       "averageCost": 216.34643733029725,
       "lastPrice": 210.51,
       "realizedPnl": -5506.525025683421,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "NOK",
@@ -1362,7 +1441,7 @@
       "averageCost": 12.185,
       "lastPrice": 11.675,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "NVDA",
@@ -1373,7 +1452,7 @@
       "averageCost": 196.1787708738218,
       "lastPrice": 203.53,
       "realizedPnl": -15773.277195734347,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "ON",
@@ -1384,7 +1463,7 @@
       "averageCost": 91.59,
       "lastPrice": 90.37,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "ONTO",
@@ -1395,7 +1474,7 @@
       "averageCost": 300.01,
       "lastPrice": 304.21,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "QCOM",
@@ -1406,7 +1485,7 @@
       "averageCost": 184.41275790647683,
       "lastPrice": 183.98,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "SNDK",
@@ -1417,7 +1496,7 @@
       "averageCost": 1541.1481751272577,
       "lastPrice": 1673.97,
       "realizedPnl": 251206.98377654393,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "SOI.PA",
@@ -1428,7 +1507,7 @@
       "averageCost": 135.3608,
       "lastPrice": 111.433182,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "TSEM",
@@ -1439,7 +1518,7 @@
       "averageCost": 234.5,
       "lastPrice": 229.68,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "TSM",
@@ -1450,7 +1529,7 @@
       "averageCost": 452.9175616219673,
       "lastPrice": 421.58,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "UMC",
@@ -1461,7 +1540,7 @@
       "averageCost": 24.92,
       "lastPrice": 23.46,
       "realizedPnl": 0.0,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     },
     {
       "symbol": "WDC",
@@ -1472,7 +1551,7 @@
       "averageCost": 564.7827233331521,
       "lastPrice": 555.55,
       "realizedPnl": 41584.47574864919,
-      "updatedAt": "2026-07-14 14:29:01 HKT"
+      "updatedAt": "2026-07-14 14:34:21 HKT"
     }
   ],
   "trades": [
@@ -1572,6 +1651,56 @@
       "price": 575.33,
       "notes": "2026-07-14 simulated add: buy AMAT 1.0% NAV; sizing NAV 49625610.10; FMP live quote 575.33 timestamp 1783962549; user request"
     }
+  ],
+  "performanceHistory": [
+    {
+      "date": "2026-07-06",
+      "totalEquity": 49931244.06,
+      "totalPnl": -68755.94,
+      "returnPct": -0.0014
+    },
+    {
+      "date": "2026-07-07",
+      "totalEquity": 49756951.34,
+      "totalPnl": -243048.66,
+      "returnPct": -0.0049
+    },
+    {
+      "date": "2026-07-08",
+      "totalEquity": 49779978.51,
+      "totalPnl": -220021.49,
+      "returnPct": -0.0044
+    },
+    {
+      "date": "2026-07-09",
+      "totalEquity": 49924256.43,
+      "totalPnl": -75743.57,
+      "returnPct": -0.0015
+    },
+    {
+      "date": "2026-07-10",
+      "totalEquity": 49696473.76,
+      "totalPnl": -303526.24,
+      "returnPct": -0.0061
+    },
+    {
+      "date": "2026-07-11",
+      "totalEquity": 49835488.44,
+      "totalPnl": -164511.56,
+      "returnPct": -0.0033
+    },
+    {
+      "date": "2026-07-13",
+      "totalEquity": 49707060.24,
+      "totalPnl": -292939.76,
+      "returnPct": -0.0059
+    },
+    {
+      "date": "2026-07-14",
+      "totalEquity": 49644558.2,
+      "totalPnl": -355441.8,
+      "returnPct": -0.0071
+    }
   ]
 };
 
@@ -1648,6 +1777,63 @@
           <div class="metric-foot"><span>${item.footLeft}</span><span>${item.footRight}</span></div>
         </article>
       `).join("");
+    }
+
+    function renderPerformance() {
+      const data = book.performanceHistory || [];
+      const root = document.getElementById("performanceChart");
+      if (!data.length) {
+        root.innerHTML = '<div class="subtle">No dated performance snapshots yet.</div>';
+        return;
+      }
+
+      const width = 1120;
+      const height = 250;
+      const margin = { top: 20, right: 54, bottom: 34, left: 54 };
+      const plotWidth = width - margin.left - margin.right;
+      const plotHeight = height - margin.top - margin.bottom;
+      const returns = data.map((item) => item.returnPct);
+      const rawMin = Math.min(0, ...returns);
+      const rawMax = Math.max(0, ...returns);
+      const padding = Math.max((rawMax - rawMin) * 0.12, 0.0005);
+      const yMin = rawMin - padding;
+      const yMax = rawMax + padding;
+      const x = (index) => margin.left + (data.length === 1 ? plotWidth / 2 : (index / (data.length - 1)) * plotWidth);
+      const y = (value) => margin.top + ((yMax - value) / (yMax - yMin)) * plotHeight;
+      const points = data.map((item, index) => `${x(index)},${y(item.returnPct)}`).join(" ");
+      const zeroY = y(0);
+      const areaPath = `M ${x(0)} ${zeroY} L ${points.replaceAll(" ", " L ")} L ${x(data.length - 1)} ${zeroY} Z`;
+      const gridValues = Array.from({ length: 5 }, (_, index) => yMin + ((yMax - yMin) * index) / 4);
+      const latest = data[data.length - 1];
+      const latestX = x(data.length - 1);
+      const latestY = y(latest.returnPct);
+      const latestAnchor = latestX > width - 130 ? "end" : "start";
+      const latestLabelX = latestAnchor === "end" ? latestX - 10 : latestX + 10;
+
+      root.innerHTML = `
+        <div class="performance-summary">
+          <span>${data[0].date} → ${latest.date} · ${data.length} snapshots</span>
+          <strong class="${metricClass(latest.totalPnl)}">${signedMoney(latest.totalPnl)} · ${pct(latest.returnPct)}</strong>
+        </div>
+        <svg class="performance-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Daily portfolio return curve from ${data[0].date} to ${latest.date}">
+          <title>LS Paper Fund daily performance curve</title>
+          <desc>Each point is the final local daily report snapshot, measured against initial equity of 50 million US dollars.</desc>
+          ${gridValues.map((value) => `
+            <line class="grid-line" x1="${margin.left}" x2="${width - margin.right}" y1="${y(value)}" y2="${y(value)}"></line>
+            <text x="${margin.left - 10}" y="${y(value) + 4}" text-anchor="end">${pct(value)}</text>
+          `).join("")}
+          <line class="zero-line" x1="${margin.left}" x2="${width - margin.right}" y1="${zeroY}" y2="${zeroY}"></line>
+          <path class="performance-area" d="${areaPath}"></path>
+          <polyline class="performance-line" points="${points}"></polyline>
+          ${data.map((item, index) => `
+            <circle class="performance-point" cx="${x(index)}" cy="${y(item.returnPct)}" r="4">
+              <title>${item.date}: ${money.format(item.totalEquity)}, ${pct(item.returnPct)}</title>
+            </circle>
+            <text x="${x(index)}" y="${height - 10}" text-anchor="middle">${item.date.slice(5).replace("-", "/")}</text>
+          `).join("")}
+          <text class="latest-label" x="${latestLabelX}" y="${Math.max(latestY - 10, 16)}" text-anchor="${latestAnchor}">${pct(latest.returnPct)}</text>
+        </svg>
+      `;
     }
 
     function renderExposureStack() {
@@ -1893,6 +2079,7 @@
     }
 
     renderOverview();
+    renderPerformance();
     renderExposureStack();
     renderPairBars();
     renderPairs();

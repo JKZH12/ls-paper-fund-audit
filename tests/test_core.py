@@ -11,6 +11,7 @@ from paper_portfolio.audit import (
     write_manifest,
 )
 from paper_portfolio.core import Holding, PortfolioState, apply_trade, holding_unrealized_pnl, portfolio_metrics
+from paper_portfolio.dashboard import _load_performance_history
 from paper_portfolio.db import connect, create_portfolio, load_state, record_transaction, save_state, update_price
 
 
@@ -19,6 +20,29 @@ def empty_state(cash=1_000_000):
 
 
 class CoreTest(unittest.TestCase):
+    def test_load_performance_history_uses_final_dated_report_snapshots(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            report_dir = Path(tmp)
+            (report_dir / "2026-07-06.md").write_text(
+                "| Total equity | 49,931,244.06 |\n"
+                "| Total PnL | -68,755.94 |\n"
+                "| Return | -0.14% |\n",
+                encoding="utf-8",
+            )
+            (report_dir / "notes.md").write_text("not a dated report", encoding="utf-8")
+
+            self.assertEqual(
+                _load_performance_history(report_dir),
+                [
+                    {
+                        "date": "2026-07-06",
+                        "totalEquity": 49_931_244.06,
+                        "totalPnl": -68_755.94,
+                        "returnPct": -0.0014,
+                    }
+                ],
+            )
+
     def test_buy_success(self):
         state = apply_trade(empty_state(), symbol="NVDA", side="buy", quantity=10, price=100, fee=1)
         self.assertAlmostEqual(state.cash, 998_999)

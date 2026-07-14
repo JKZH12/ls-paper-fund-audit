@@ -16,6 +16,7 @@ from .report import realized_pnl_from_transactions
 
 DEFAULT_DASHBOARD_PATH = Path("reports/dashboard/index.html")
 _BOOK_RE = re.compile(r"const book = (?P<book>\{.*?\n\};)", re.DOTALL)
+_REPORT_METRIC_RE = re.compile(r"^\| (?P<label>Total equity|Total PnL|Return) \| (?P<value>[^|]+) \|$", re.MULTILINE)
 _HKT = ZoneInfo("Asia/Hong_Kong")
 
 
@@ -35,6 +36,27 @@ def _read_book(path: Path) -> tuple[str, dict[str, object]]:
     if not match:
         raise ValueError(f"could not find embedded book JSON in {path}")
     return content, json.loads(match.group("book")[:-1])
+
+
+def _load_performance_history(report_dir: Path) -> list[dict[str, object]]:
+    """Load each dated report's final local snapshot for the performance curve."""
+    history: list[dict[str, object]] = []
+    for path in sorted(report_dir.glob("????-??-??.md")):
+        metrics = {
+            match.group("label"): match.group("value").strip()
+            for match in _REPORT_METRIC_RE.finditer(path.read_text(encoding="utf-8"))
+        }
+        if not {"Total equity", "Total PnL", "Return"}.issubset(metrics):
+            continue
+        history.append(
+            {
+                "date": path.stem,
+                "totalEquity": float(metrics["Total equity"].replace(",", "")),
+                "totalPnl": float(metrics["Total PnL"].replace(",", "")),
+                "returnPct": round(float(metrics["Return"].removesuffix("%")) / 100, 6),
+            }
+        )
+    return history
 
 
 def refresh_dashboard(
@@ -91,6 +113,7 @@ def refresh_dashboard(
     book.update(
         {
             "asOf": updated_at,
+            "performanceHistory": _load_performance_history(dashboard_path.parent.parent / "daily"),
             "summary": {
                 **metrics,
                 "realizedPnl": realized_pnl,
