@@ -43,6 +43,15 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "theme": "AI compute systems",
         "pair": "CBRS / MRVL",
     },
+    "WDC": {
+        "pair": "WDC / MU+SKHY",
+    },
+    "MU": {
+        "pair": "WDC / MU+SKHY",
+    },
+    "SKHY": {
+        "pair": "WDC / MU+SKHY",
+    },
 }
 
 
