@@ -18,6 +18,20 @@ DEFAULT_DASHBOARD_PATH = Path("reports/dashboard/index.html")
 _BOOK_RE = re.compile(r"const book = (?P<book>\{.*?\n\};)", re.DOTALL)
 _REPORT_METRIC_RE = re.compile(r"^\| (?P<label>Total equity|Total PnL|Return) \| (?P<value>[^|]+) \|$", re.MULTILINE)
 _HKT = ZoneInfo("Asia/Hong_Kong")
+_DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
+    "TSEM": {
+        "symbol": "TSEM",
+        "name": "Tower Semiconductor",
+        "theme": "Specialty foundry / networking",
+        "pair": "TSEM / CSCO",
+    },
+    "CSCO": {
+        "symbol": "CSCO",
+        "name": "Cisco Systems",
+        "theme": "Specialty foundry / networking",
+        "pair": "TSEM / CSCO",
+    },
+}
 
 
 def _hkt(value: str | None = None) -> str:
@@ -80,12 +94,17 @@ def refresh_dashboard(
     for holding in sorted(state.holdings.values(), key=lambda item: item.symbol):
         metadata = dict(positions_meta.get(holding.symbol, {}))
         if not metadata:
-            metadata = {
-                "symbol": holding.symbol,
-                "name": holding.symbol,
-                "theme": "Unclassified",
-                "pair": "Unclassified",
-            }
+            metadata = dict(
+                _DEFAULT_POSITION_METADATA.get(
+                    holding.symbol,
+                    {
+                        "symbol": holding.symbol,
+                        "name": holding.symbol,
+                        "theme": "Unclassified",
+                        "pair": "Unclassified",
+                    },
+                )
+            )
         metadata.update(
             {
                 "quantity": holding.quantity,
