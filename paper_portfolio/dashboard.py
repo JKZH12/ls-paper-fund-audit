@@ -31,6 +31,18 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
         "theme": "Specialty foundry / networking",
         "pair": "TSEM / CSCO",
     },
+    "MRVL": {
+        "symbol": "MRVL",
+        "name": "Marvell Technology",
+        "theme": "AI compute systems",
+        "pair": "CBRS / MRVL",
+    },
+}
+_POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
+    "CBRS": {
+        "theme": "AI compute systems",
+        "pair": "CBRS / MRVL",
+    },
 }
 
 
@@ -105,6 +117,7 @@ def refresh_dashboard(
                     },
                 )
             )
+        metadata.update(_POSITION_METADATA_OVERRIDES.get(holding.symbol, {}))
         metadata.update(
             {
                 "quantity": holding.quantity,
