@@ -43,6 +43,24 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
         "theme": "Semi capex / materials",
         "pair": "AMAT / UCTT",
     },
+    "SNDK": {
+        "symbol": "SNDK",
+        "name": "SanDisk",
+        "theme": "Storage hierarchy",
+        "pair": "SNDK / WDC",
+    },
+    "AEHR": {
+        "symbol": "AEHR",
+        "name": "Aehr Test Systems",
+        "theme": "SiC / power semicap",
+        "pair": "AEHR / WOLF",
+    },
+    "WOLF": {
+        "symbol": "WOLF",
+        "name": "Wolfspeed",
+        "theme": "SiC / power semicap",
+        "pair": "AEHR / WOLF",
+    },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     "CBRS": {
@@ -50,7 +68,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "pair": "CBRS / MRVL",
     },
     "WDC": {
-        "pair": "WDC / MU+SKHY",
+        "pair": "SNDK / WDC",
     },
     "MU": {
         "pair": "MU+SKHY storage shorts",
