@@ -37,6 +37,12 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
         "theme": "AI compute systems",
         "pair": "CBRS / MRVL",
     },
+    "UCTT": {
+        "symbol": "UCTT",
+        "name": "Ultra Clean Holdings",
+        "theme": "Semi capex / materials",
+        "pair": "AMAT / UCTT",
+    },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     "CBRS": {
@@ -47,10 +53,19 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "pair": "WDC / MU+SKHY",
     },
     "MU": {
-        "pair": "WDC / MU+SKHY",
+        "pair": "MU+SKHY storage shorts",
     },
     "SKHY": {
-        "pair": "WDC / MU+SKHY",
+        "pair": "MU+SKHY storage shorts",
+    },
+    "ASML": {
+        "pair": "ASML / KLAC",
+    },
+    "AMAT": {
+        "pair": "AMAT / UCTT",
+    },
+    "KLAC": {
+        "pair": "ASML / KLAC",
     },
 }
 
