@@ -78,6 +78,16 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "theme": "Japan semicap",
         "pair": "Kokusai / Advantest",
     },
+    "5801.T": {
+        "name": "Furukawa Electric",
+        "theme": "Japan optical / cables",
+        "pair": "Furukawa / Sumitomo",
+    },
+    "5802.T": {
+        "name": "Sumitomo Electric",
+        "theme": "Japan optical / cables",
+        "pair": "Furukawa / Sumitomo",
+    },
     "CBRS": {
         "theme": "AI compute systems",
         "pair": "CBRS / MRVL",
