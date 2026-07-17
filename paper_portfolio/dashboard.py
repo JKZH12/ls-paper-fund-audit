@@ -63,6 +63,21 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
+    "285A.T": {
+        "name": "Kioxia Holdings",
+        "theme": "NAND / storage hierarchy",
+        "pair": "Kioxia / Sony",
+    },
+    "6525.T": {
+        "name": "Kokusai Electric",
+        "theme": "Japan semicap",
+        "pair": "Kokusai / Advantest",
+    },
+    "6857.T": {
+        "name": "Advantest",
+        "theme": "Japan semicap",
+        "pair": "Kokusai / Advantest",
+    },
     "CBRS": {
         "theme": "AI compute systems",
         "pair": "CBRS / MRVL",
