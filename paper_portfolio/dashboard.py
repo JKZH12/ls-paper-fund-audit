@@ -58,8 +58,8 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
     "WOLF": {
         "symbol": "WOLF",
         "name": "Wolfspeed",
-        "theme": "SiC / power semicap",
-        "pair": "AEHR / WOLF",
+        "theme": "AI compute systems",
+        "pair": "CBRS / WOLF",
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
@@ -90,7 +90,17 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     },
     "CBRS": {
         "theme": "AI compute systems",
-        "pair": "CBRS / MRVL",
+        "pair": "CBRS / WOLF",
+    },
+    "CRDO": {
+        "name": "Credo Technology Group",
+        "theme": "AI connectivity / interconnect",
+        "pair": "CRDO / ALAB",
+    },
+    "ALAB": {
+        "name": "Astera Labs",
+        "theme": "AI connectivity / interconnect",
+        "pair": "CRDO / ALAB",
     },
     "WDC": {
         "pair": "SNDK / WDC",
