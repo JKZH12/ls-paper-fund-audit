@@ -102,6 +102,12 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "theme": "AI connectivity / interconnect",
         "pair": "CRDO / ALAB",
     },
+    "GEV": {
+        "pair": "GEV / ENR.DE",
+    },
+    "ENR.DE": {
+        "pair": "GEV / ENR.DE",
+    },
     "WDC": {
         "pair": "SNDK / WDC",
     },
