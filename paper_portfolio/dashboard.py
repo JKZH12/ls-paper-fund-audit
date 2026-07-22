@@ -66,7 +66,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     "285A.T": {
         "name": "Kioxia Holdings",
         "theme": "NAND / storage hierarchy",
-        "pair": "Kioxia",
+        "pair": "Kioxia / Sony",
     },
     "6525.T": {
         "name": "Kokusai Electric",
@@ -87,6 +87,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "name": "Sumitomo Electric",
         "theme": "Japan optical / cables",
         "pair": "Furukawa / Sumitomo",
+    },
+    "6758.T": {
+        "name": "Sony Group",
+        "theme": "Japan electronics / imaging",
+        "pair": "Kioxia / Sony",
     },
     "CBRS": {
         "theme": "AI compute systems",
