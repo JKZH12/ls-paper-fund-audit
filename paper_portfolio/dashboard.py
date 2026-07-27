@@ -134,6 +134,16 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     "KLAC": {
         "pair": "ASML / KLAC",
     },
+    "AMD": {
+        "name": "Advanced Micro Devices",
+        "theme": "AI compute / x86",
+        "pair": "AMD / INTC",
+    },
+    "INTC": {
+        "name": "Intel",
+        "theme": "AI compute / x86",
+        "pair": "AMD / INTC",
+    },
 }
 
 
