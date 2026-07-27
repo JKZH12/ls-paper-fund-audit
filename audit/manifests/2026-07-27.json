@@ -1,42 +1,42 @@
 {
   "audit": {
     "chain_ok": true,
-    "event_count": 5090,
+    "event_count": 5130,
     "events_file": "audit/events.jsonl",
-    "events_file_sha256": "4f015336769fefc7bc7db96fd4329e3e5d44e9456b57eb1e936c0710124052ab",
-    "head_hash": "75cde3349aefefd42bd171e3e412171a0ce620dbee411b54c2845c78f4f2d82a"
+    "events_file_sha256": "2dc203a12fe5688bbc198ad97c341930e7f3883a2fe04742c525089ca5ddf1d0",
+    "head_hash": "8723ac3f41f404475645cc4edcc05cdf635ada647508ec5a53ccf6511cb51dea"
   },
   "files": {
     "daily_report": {
       "path": "reports/daily/2026-07-27.md",
-      "sha256": "646a24384eaab506d9547cae4b685c69f9f85057aaad7f223514906612d6e103"
+      "sha256": "a268eabe7ad635f61e12bf84e8d0dd94061358a7121598f6db9946ee316befa0"
     },
     "database": {
       "path": "data/portfolio.sqlite",
-      "sha256": "9982fa96a128ca5d12200abadf37eff179aa25ff224ba37d0a3c4653d2b95f51",
+      "sha256": "7536c26d3839a55b0c7ddd128d0852bfec950671f9061024987b1a58024b70e2",
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-07-27T13:55:00Z",
+  "generated_at": "2026-07-27T13:57:29Z",
   "manifest_date": "2026-07-27",
   "manifest_version": 1,
   "metrics": {
-    "cash": 48415421.45718836,
-    "gross_exposure": 28290973.42911473,
-    "gross_exposure_pct": 0.5686714914443428,
-    "long_market_value": 14812395.0364626,
-    "net_exposure_pct": 0.02681079539555184,
-    "net_market_value": 1333816.6438104718,
-    "realized_pnl": -267323.76655322494,
-    "return_pct": -0.005015237980023324,
-    "short_market_value": 13478578.392652128,
-    "total_equity": 49749238.100998834,
-    "total_pnl": -250761.89900116622,
-    "unrealized_pnl": 16561.867552058713
+    "cash": 48533448.0557566,
+    "gross_exposure": 27138718.832190193,
+    "gross_exposure_pct": 0.5458776692766119,
+    "long_market_value": 14160511.391968684,
+    "net_exposure_pct": 0.023781274626374437,
+    "net_market_value": 1182303.9517471734,
+    "realized_pnl": -220680.93685744586,
+    "return_pct": -0.005684959849924594,
+    "short_market_value": 12978207.44022151,
+    "total_equity": 49715752.00750377,
+    "total_pnl": -284247.9924962297,
+    "unrealized_pnl": -63567.055638783844
   },
   "portfolio": {
     "base_currency": "USD",
-    "cash": 48415421.45718836,
+    "cash": 48533448.0557566,
     "id": 1,
     "initial_cash": 50000000.0,
     "name": "LS Paper Fund",
