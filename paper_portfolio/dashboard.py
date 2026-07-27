@@ -53,7 +53,7 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
         "symbol": "AEHR",
         "name": "Aehr Test Systems",
         "theme": "SiC / power semicap",
-        "pair": "AEHR / WOLF",
+        "pair": "AEHR standalone",
     },
     "WOLF": {
         "symbol": "WOLF",
@@ -96,6 +96,9 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     "CBRS": {
         "theme": "AI compute systems",
         "pair": "CBRS / WOLF",
+    },
+    "AEHR": {
+        "pair": "AEHR standalone",
     },
     "CRDO": {
         "name": "Credo Technology Group",
