@@ -75,8 +75,13 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     },
     "6857.T": {
         "name": "Advantest",
-        "theme": "Japan semicap",
-        "pair": "Kokusai / Advantest",
+        "theme": "Semiconductor test",
+        "pair": "Advantest / Nikon",
+    },
+    "7731.T": {
+        "name": "Nikon",
+        "theme": "Japan precision / lithography",
+        "pair": "Advantest / Nikon",
     },
     "5801.T": {
         "name": "Furukawa Electric",
