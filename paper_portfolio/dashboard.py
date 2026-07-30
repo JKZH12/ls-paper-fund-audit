@@ -83,6 +83,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
         "theme": "Japan precision / lithography",
         "pair": "Advantest / Nikon",
     },
+    "9434.T": {
+        "name": "SoftBank Corp.",
+        "theme": "Japan telecom / defensive funding short",
+        "pair": "SoftBank Corp. standalone short",
+    },
     "5801.T": {
         "name": "Furukawa Electric",
         "theme": "Japan optical / cables",
