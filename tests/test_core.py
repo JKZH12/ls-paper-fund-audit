@@ -20,6 +20,9 @@ def empty_state(cash=1_000_000):
 
 
 class CoreTest(unittest.TestCase):
+    def test_aapl_is_classified_as_a_standalone_short(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["AAPL"]["pair"], "AAPL standalone short")
+
     def test_be_crwv_pair_allocation_preserves_existing_nbis_hedge(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["BE"]["pair"], "BE / CRWV")
         self.assertEqual(
