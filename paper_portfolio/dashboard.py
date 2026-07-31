@@ -18,7 +18,7 @@ DEFAULT_DASHBOARD_PATH = Path("reports/dashboard/index.html")
 _BOOK_RE = re.compile(r"const book = (?P<book>\{.*?\n\};)", re.DOTALL)
 _REPORT_METRIC_RE = re.compile(r"^\| (?P<label>Total equity|Total PnL|Return) \| (?P<value>[^|]+) \|$", re.MULTILINE)
 _HKT = ZoneInfo("Asia/Hong_Kong")
-_DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
+_DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     "TSEM": {
         "symbol": "TSEM",
         "name": "Tower Semiconductor",
@@ -62,7 +62,7 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, str]] = {
         "pair": "CBRS / WOLF",
     },
 }
-_POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
+_POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "285A.T": {
         "name": "Kioxia Holdings",
         "theme": "NAND / storage hierarchy",
@@ -109,6 +109,25 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, str]] = {
     },
     "AEHR": {
         "pair": "AEHR standalone",
+    },
+    "BE": {
+        "name": "Bloom Energy",
+        "theme": "AI power / onsite generation",
+        "pair": "BE / CRWV",
+    },
+    "NBIS": {
+        "name": "Nebius",
+        "theme": "AI cloud demand",
+        "pair": "NBIS / CRWV",
+    },
+    "CRWV": {
+        "name": "CoreWeave",
+        "theme": "AI cloud demand",
+        "pair": "NBIS / CRWV",
+        "pairAllocations": [
+            {"pair": "BE / CRWV", "navPct": 0.015},
+            {"pair": "NBIS / CRWV", "remainder": True},
+        ],
     },
     "CRDO": {
         "name": "Credo Technology Group",

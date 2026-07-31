@@ -11,7 +11,7 @@ from paper_portfolio.audit import (
     write_manifest,
 )
 from paper_portfolio.core import Holding, PortfolioState, apply_trade, holding_unrealized_pnl, portfolio_metrics
-from paper_portfolio.dashboard import _load_performance_history
+from paper_portfolio.dashboard import _POSITION_METADATA_OVERRIDES, _load_performance_history
 from paper_portfolio.db import connect, create_portfolio, load_state, record_transaction, save_state, update_price
 
 
@@ -20,6 +20,16 @@ def empty_state(cash=1_000_000):
 
 
 class CoreTest(unittest.TestCase):
+    def test_be_crwv_pair_allocation_preserves_existing_nbis_hedge(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["BE"]["pair"], "BE / CRWV")
+        self.assertEqual(
+            _POSITION_METADATA_OVERRIDES["CRWV"]["pairAllocations"],
+            [
+                {"pair": "BE / CRWV", "navPct": 0.015},
+                {"pair": "NBIS / CRWV", "remainder": True},
+            ],
+        )
+
     def test_load_performance_history_uses_final_dated_report_snapshots(self):
         with tempfile.TemporaryDirectory() as tmp:
             report_dir = Path(tmp)
