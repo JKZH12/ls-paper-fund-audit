@@ -93,6 +93,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Passive components / MLCC",
         "pair": "Murata / Taiyo Yuden",
     },
+    "7011.T": {
+        "name": "Mitsubishi Heavy Industries",
+        "theme": "Japan industrials / defense",
+        "pair": "Mitsubishi Heavy Industries standalone short",
+    },
     "5016.T": {
         "name": "JX Advanced Metals",
         "theme": "Semiconductor materials / metals",
