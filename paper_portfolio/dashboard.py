@@ -63,10 +63,15 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "NVDA": {
+        "name": "NVIDIA",
+        "theme": "AI compute / accelerators",
+        "pair": "NVDA / AAPL",
+    },
     "AAPL": {
         "name": "Apple",
-        "theme": "Mega-cap consumer technology",
-        "pair": "AAPL standalone short",
+        "theme": "AI compute / mega-cap technology hedge",
+        "pair": "NVDA / AAPL",
     },
     "285A.T": {
         "name": "Kioxia Holdings",
