@@ -83,6 +83,26 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Semiconductor test",
         "pair": "Advantest / Nikon",
     },
+    "6981.T": {
+        "name": "Murata Manufacturing",
+        "theme": "Passive components / MLCC",
+        "pair": "Murata / Taiyo Yuden",
+    },
+    "6976.T": {
+        "name": "Taiyo Yuden",
+        "theme": "Passive components / MLCC",
+        "pair": "Murata / Taiyo Yuden",
+    },
+    "5016.T": {
+        "name": "JX Advanced Metals",
+        "theme": "Semiconductor materials / metals",
+        "pair": "JX Advanced Metals standalone short",
+    },
+    "3436.T": {
+        "name": "SUMCO",
+        "theme": "Silicon wafers",
+        "pair": "SUMCO standalone short",
+    },
     "7731.T": {
         "name": "Nikon",
         "theme": "Japan precision / lithography",
