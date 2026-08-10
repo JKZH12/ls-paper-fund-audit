@@ -208,6 +208,31 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI compute / x86",
         "pair": "AMD / INTC",
     },
+    "1888.HK": {
+        "name": "Kingboard Laminates",
+        "theme": "PCB materials / copper-clad laminates",
+        "pair": "Kingboard Laminates standalone short",
+    },
+    "3277.HK": {
+        "name": "Gpixel Changchun Microelectronics",
+        "theme": "Image sensors / semiconductors",
+        "pair": "Gpixel standalone short",
+    },
+    "3308.HK": {
+        "name": "Zhongji Innolight",
+        "theme": "AI optical transceivers",
+        "pair": "Zhongji Innolight standalone long",
+    },
+    "AAOI": {
+        "name": "Applied Optoelectronics",
+        "theme": "AI optical transceivers",
+        "pair": "AAOI standalone long",
+    },
+    "TER": {
+        "name": "Teradyne",
+        "theme": "Semiconductor test",
+        "pair": "Teradyne standalone long",
+    },
 }
 
 

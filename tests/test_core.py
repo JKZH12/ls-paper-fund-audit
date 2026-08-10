@@ -34,6 +34,19 @@ class CoreTest(unittest.TestCase):
             ],
         )
 
+    def test_unpaired_hk_us_positions_use_standalone_classifications(self):
+        expected = {
+            "1888.HK": "Kingboard Laminates standalone short",
+            "3277.HK": "Gpixel standalone short",
+            "3308.HK": "Zhongji Innolight standalone long",
+            "AAOI": "AAOI standalone long",
+            "TER": "Teradyne standalone long",
+        }
+        self.assertEqual(
+            {symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"] for symbol in expected},
+            expected,
+        )
+
     def test_load_performance_history_uses_final_dated_report_snapshots(self):
         with tempfile.TemporaryDirectory() as tmp:
             report_dir = Path(tmp)
