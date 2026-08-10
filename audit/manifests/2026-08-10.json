@@ -1,10 +1,10 @@
 {
   "audit": {
     "chain_ok": true,
-    "event_count": 9071,
+    "event_count": 9085,
     "events_file": "audit/events.jsonl",
-    "events_file_sha256": "792d1993a4ab724acf3527ab5a6a82f0d225a45d98f02d2692ce6637c549c61b",
-    "head_hash": "d9f14a11bf863c9a78c08e580e6acba5577674dbe2adb5b815c4268b2e4e3395"
+    "events_file_sha256": "994cd86024c3102fbc260204d7a4432f3d95458caaf4e72b943d2d4e2620b633",
+    "head_hash": "dc4ed9b080780bd489901cd1129542dfd8b46e2d67423ac644c1344dc32b83b2"
   },
   "files": {
     "daily_report": {
@@ -13,30 +13,30 @@
     },
     "database": {
       "path": "data/portfolio.sqlite",
-      "sha256": "a485dc05def3c575d94edf7c2c898b8728ac987a73ad1843035f71f9c2f9b7ac",
+      "sha256": "e50a13662ceeb4dd8788954b0f625cb23a77c8959363224d9dbeabc2f9e93f6f",
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-08-10T14:58:10Z",
+  "generated_at": "2026-08-10T16:00:00Z",
   "manifest_date": "2026-08-10",
   "manifest_version": 1,
   "metrics": {
-    "cash": 50924514.67024105,
-    "gross_exposure": 71625612.34510407,
-    "gross_exposure_pct": 1.4038756676763209,
-    "long_market_value": 35860504.595713854,
-    "net_exposure_pct": 0.0018697963890562494,
-    "net_market_value": 95396.846323642,
+    "cash": 50669415.11264105,
+    "gross_exposure": 71887749.83166462,
+    "gross_exposure_pct": 1.4089044888911635,
+    "long_market_value": 36121098.93417862,
+    "net_exposure_pct": 0.006946711103689646,
+    "net_market_value": 354448.03669261717,
     "realized_pnl": -195541.33340471672,
-    "return_pct": 0.02039823033129379,
-    "short_market_value": 35765107.74939021,
-    "total_equity": 51019911.51656469,
-    "total_pnl": 1019911.5165646896,
-    "unrealized_pnl": 1215452.8499694064
+    "return_pct": 0.020477262986673416,
+    "short_market_value": 35766650.897486,
+    "total_equity": 51023863.14933367,
+    "total_pnl": 1023863.1493336707,
+    "unrealized_pnl": 1219404.4827383875
   },
   "portfolio": {
     "base_currency": "USD",
-    "cash": 50924514.67024105,
+    "cash": 50669415.11264105,
     "id": 1,
     "initial_cash": 50000000.0,
     "name": "LS Paper Fund",
