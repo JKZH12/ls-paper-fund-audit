@@ -20,7 +20,14 @@ from pathlib import Path
 
 DEFAULT_DB = Path("data/portfolio.sqlite")
 FMP_API = "/Users/jack/.local/bin/fmp-api"
-FX_BY_SUFFIX = {".T": "JPYUSD", ".HK": "HKDUSD", ".DE": "EURUSD", ".PA": "EURUSD"}
+FX_BY_SUFFIX = {
+    ".T": "JPYUSD",
+    ".HK": "HKDUSD",
+    ".SZ": "CNYUSD",
+    ".SS": "CNYUSD",
+    ".DE": "EURUSD",
+    ".PA": "EURUSD",
+}
 
 
 @dataclass(frozen=True)
