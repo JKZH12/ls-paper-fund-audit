@@ -223,6 +223,16 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI optical transceivers",
         "pair": "Zhongji Innolight standalone long",
     },
+    "000636.SZ": {
+        "name": "Fenghua Advanced Technology",
+        "theme": "Passive components / MLCC",
+        "pair": "Fenghua Advanced Technology standalone short",
+    },
+    "300661.SZ": {
+        "name": "SG Micro",
+        "theme": "Analog semiconductors",
+        "pair": "SG Micro standalone short",
+    },
     "AAOI": {
         "name": "Applied Optoelectronics",
         "theme": "AI optical transceivers",

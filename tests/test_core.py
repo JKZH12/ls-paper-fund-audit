@@ -13,6 +13,7 @@ from paper_portfolio.audit import (
 from paper_portfolio.core import Holding, PortfolioState, apply_trade, holding_unrealized_pnl, portfolio_metrics
 from paper_portfolio.dashboard import _POSITION_METADATA_OVERRIDES, _load_performance_history
 from paper_portfolio.db import connect, create_portfolio, load_state, record_transaction, save_state, update_price
+from scripts.refresh_live_marks import fx_symbol
 
 
 def empty_state(cash=1_000_000):
@@ -34,11 +35,13 @@ class CoreTest(unittest.TestCase):
             ],
         )
 
-    def test_unpaired_hk_us_positions_use_standalone_classifications(self):
+    def test_unpaired_cross_market_positions_use_standalone_classifications(self):
         expected = {
             "1888.HK": "Kingboard Laminates standalone short",
             "3277.HK": "Gpixel standalone short",
             "3308.HK": "Zhongji Innolight standalone long",
+            "000636.SZ": "Fenghua Advanced Technology standalone short",
+            "300661.SZ": "SG Micro standalone short",
             "AAOI": "AAOI standalone long",
             "TER": "Teradyne standalone long",
         }
@@ -46,6 +49,10 @@ class CoreTest(unittest.TestCase):
             {symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"] for symbol in expected},
             expected,
         )
+
+    def test_live_mark_fx_mapping_supports_mainland_china_listings(self):
+        self.assertEqual(fx_symbol("000636.SZ"), "CNYUSD")
+        self.assertEqual(fx_symbol("600000.SS"), "CNYUSD")
 
     def test_load_performance_history_uses_final_dated_report_snapshots(self):
         with tempfile.TemporaryDirectory() as tmp:
