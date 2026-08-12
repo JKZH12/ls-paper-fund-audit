@@ -1,0 +1,49 @@
+{
+  "audit": {
+    "chain_ok": true,
+    "event_count": 9296,
+    "events_file": "audit/events.jsonl",
+    "events_file_sha256": "3fc62a1d53f05cc03d055af1093ec40079375c3212e7c3875b8bb3e080cd99fc",
+    "head_hash": "1598dec8159dcacb5f93540fcc13ac0fd85e041e032ed42d1e5b990a84132641"
+  },
+  "files": {
+    "daily_report": {
+      "path": "reports/daily/2026-08-12.md",
+      "sha256": "15ca399b7a897466948882a681844b07a39fd74306ece15cbef59f3fb0d1a1bb"
+    },
+    "database": {
+      "path": "data/portfolio.sqlite",
+      "sha256": "fce69fd35c14c95108d93a98da1d042e994c1b6f7b8b9dd153b6233d5fe264d6",
+      "tracked_by_git": false
+    }
+  },
+  "generated_at": "2026-08-12T13:52:58Z",
+  "manifest_date": "2026-08-12",
+  "manifest_version": 1,
+  "metrics": {
+    "cash": 50924183.782925725,
+    "gross_exposure": 77731536.25132164,
+    "gross_exposure_pct": 1.5158809397773478,
+    "long_market_value": 39042740.03255234,
+    "net_exposure_pct": 0.006902432486746315,
+    "net_market_value": 353943.81378304533,
+    "realized_pnl": -195541.33340471672,
+    "return_pct": 0.025562551934175344,
+    "short_market_value": 38688796.2187693,
+    "total_equity": 51278127.59670877,
+    "total_pnl": 1278127.596708767,
+    "unrealized_pnl": 1473668.930113484
+  },
+  "portfolio": {
+    "base_currency": "USD",
+    "cash": 50924183.782925725,
+    "id": 1,
+    "initial_cash": 50000000.0,
+    "name": "LS Paper Fund",
+    "strategy_type": "long_short_hedge_fund"
+  },
+  "verification": {
+    "github_anchor": "git commit history anchors this manifest once pushed",
+    "local_command": "python3 -m paper_portfolio audit verify"
+  }
+}
