@@ -243,6 +243,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Semiconductor test",
         "pair": "Teradyne standalone long",
     },
+    "SMCI": {
+        "name": "Super Micro Computer",
+        "theme": "AI compute / server systems",
+        "pair": "SMCI standalone short",
+    },
 }
 
 

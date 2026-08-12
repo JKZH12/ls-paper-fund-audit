@@ -44,6 +44,7 @@ class CoreTest(unittest.TestCase):
             "300661.SZ": "SG Micro standalone short",
             "AAOI": "AAOI standalone long",
             "TER": "Teradyne standalone long",
+            "SMCI": "SMCI standalone short",
         }
         self.assertEqual(
             {symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"] for symbol in expected},
