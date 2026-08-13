@@ -47,7 +47,7 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
         "symbol": "SNDK",
         "name": "SanDisk",
         "theme": "Storage hierarchy",
-        "pair": "SNDK / WDC",
+        "pair": "SNDK / MU",
     },
     "AEHR": {
         "symbol": "AEHR",
@@ -63,6 +63,9 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "SNDK": {
+        "pair": "SNDK / MU",
+    },
     "NVDA": {
         "name": "NVIDIA",
         "theme": "AI compute / accelerators",
@@ -181,10 +184,15 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "pair": "GEV / ENR.DE",
     },
     "WDC": {
-        "pair": "SNDK / WDC",
+        "pair": "WDC / STX",
     },
     "MU": {
-        "pair": "MU+SKHY storage shorts",
+        "pair": "SNDK / MU",
+    },
+    "STX": {
+        "name": "Seagate Technology",
+        "theme": "Storage hierarchy",
+        "pair": "WDC / STX",
     },
     "SKHY": {
         "pair": "MU+SKHY storage shorts",

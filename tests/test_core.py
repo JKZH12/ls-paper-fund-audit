@@ -11,7 +11,11 @@ from paper_portfolio.audit import (
     write_manifest,
 )
 from paper_portfolio.core import Holding, PortfolioState, apply_trade, holding_unrealized_pnl, portfolio_metrics
-from paper_portfolio.dashboard import _POSITION_METADATA_OVERRIDES, _load_performance_history
+from paper_portfolio.dashboard import (
+    _DEFAULT_POSITION_METADATA,
+    _POSITION_METADATA_OVERRIDES,
+    _load_performance_history,
+)
 from paper_portfolio.db import connect, create_portfolio, load_state, record_transaction, save_state, update_price
 from scripts.refresh_live_marks import fx_symbol
 
@@ -21,6 +25,13 @@ def empty_state(cash=1_000_000):
 
 
 class CoreTest(unittest.TestCase):
+    def test_storage_hedges_use_requested_pair_taxonomy(self):
+        self.assertEqual(_DEFAULT_POSITION_METADATA["SNDK"]["pair"], "SNDK / MU")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["SNDK"]["pair"], "SNDK / MU")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["MU"]["pair"], "SNDK / MU")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["WDC"]["pair"], "WDC / STX")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["STX"]["pair"], "WDC / STX")
+
     def test_nvda_and_aapl_are_classified_as_a_pair(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["NVDA"]["pair"], "NVDA / AAPL")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["AAPL"]["pair"], "NVDA / AAPL")
