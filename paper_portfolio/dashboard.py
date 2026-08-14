@@ -298,6 +298,41 @@ def _load_performance_history(report_dir: Path) -> list[dict[str, object]]:
     return history
 
 
+def _drawdown_metrics(
+    history: list[dict[str, object]],
+    *,
+    current_equity: float,
+    previous_peak_equity: float = 0.0,
+    previous_peak_date: str | None = None,
+) -> dict[str, object]:
+    """Return drawdown from the persisted daily/intraday high-water mark."""
+    snapshots = [
+        (str(item["date"]), float(item["totalEquity"]))
+        for item in history
+        if float(item["totalEquity"]) > 0
+    ]
+    if previous_peak_equity > 0:
+        snapshots.append(
+            (previous_peak_date or date.today().isoformat(), previous_peak_equity)
+        )
+    if snapshots:
+        peak_date, peak_equity = max(snapshots, key=lambda item: item[1])
+    else:
+        peak_date, peak_equity = date.today().isoformat(), current_equity
+
+    if current_equity > peak_equity:
+        peak_date, peak_equity = date.today().isoformat(), current_equity
+
+    drawdown_value = current_equity - peak_equity
+    drawdown_pct = drawdown_value / peak_equity if peak_equity else 0.0
+    return {
+        "peakEquity": peak_equity,
+        "peakDate": peak_date,
+        "drawdownFromPeakValue": drawdown_value,
+        "drawdownFromPeakPct": drawdown_pct,
+    }
+
+
 def refresh_dashboard(
     *,
     db_path: Path = DEFAULT_DB_PATH,
@@ -314,6 +349,18 @@ def refresh_dashboard(
     realized_pnl = realized_pnl_from_transactions(conn, portfolio_id)
     event_count, head_hash = audit_status(conn, portfolio_id)
     updated_at = _hkt()
+    performance_history = _load_performance_history(dashboard_path.parent.parent / "daily")
+    previous_summary = book.get("summary", {})
+    drawdown = _drawdown_metrics(
+        performance_history,
+        current_equity=metrics["total_equity"],
+        previous_peak_equity=float(
+            previous_summary.get("peakEquity", previous_summary.get("totalEquity", 0.0))
+        ),
+        previous_peak_date=str(
+            previous_summary.get("peakDate", str(book.get("asOf", ""))[:10])
+        ),
+    )
 
     positions = []
     for holding in sorted(state.holdings.values(), key=lambda item: item.symbol):
@@ -358,9 +405,10 @@ def refresh_dashboard(
     book.update(
         {
             "asOf": updated_at,
-            "performanceHistory": _load_performance_history(dashboard_path.parent.parent / "daily"),
+            "performanceHistory": performance_history,
             "summary": {
                 **metrics,
+                **drawdown,
                 "realizedPnl": realized_pnl,
                 "grossExposurePct": metrics["gross_exposure_pct"],
                 "netExposurePct": metrics["net_exposure_pct"],

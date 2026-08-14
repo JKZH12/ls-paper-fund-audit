@@ -14,6 +14,7 @@ from paper_portfolio.core import Holding, PortfolioState, apply_trade, holding_u
 from paper_portfolio.dashboard import (
     _DEFAULT_POSITION_METADATA,
     _POSITION_METADATA_OVERRIDES,
+    _drawdown_metrics,
     _load_performance_history,
 )
 from paper_portfolio.db import connect, create_portfolio, load_state, record_transaction, save_state, update_price
@@ -88,6 +89,37 @@ class CoreTest(unittest.TestCase):
                     }
                 ],
             )
+
+    def test_drawdown_metrics_use_peak_daily_snapshot(self):
+        history = [
+            {"date": "2026-08-12", "totalEquity": 52_000_000},
+            {"date": "2026-08-13", "totalEquity": 51_500_000},
+        ]
+
+        self.assertEqual(
+            _drawdown_metrics(history, current_equity=51_480_000),
+            {
+                "peakEquity": 52_000_000,
+                "peakDate": "2026-08-12",
+                "drawdownFromPeakValue": -520_000,
+                "drawdownFromPeakPct": -0.01,
+            },
+        )
+
+    def test_drawdown_metrics_preserve_intraday_high_water_mark(self):
+        history = [{"date": "2026-08-14", "totalEquity": 51_650_000}]
+
+        result = _drawdown_metrics(
+            history,
+            current_equity=51_640_000,
+            previous_peak_equity=51_700_000,
+            previous_peak_date="2026-08-14",
+        )
+
+        self.assertEqual(result["peakEquity"], 51_700_000)
+        self.assertEqual(result["peakDate"], "2026-08-14")
+        self.assertAlmostEqual(result["drawdownFromPeakValue"], -60_000)
+        self.assertAlmostEqual(result["drawdownFromPeakPct"], -60_000 / 51_700_000)
 
     def test_buy_success(self):
         state = apply_trade(empty_state(), symbol="NVDA", side="buy", quantity=10, price=100, fee=1)
