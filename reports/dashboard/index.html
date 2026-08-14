@@ -160,7 +160,7 @@
 
     .overview-grid {
       display: grid;
-      grid-template-columns: repeat(7, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 10px;
     }
 
@@ -2092,7 +2092,6 @@
       }, { position: null, exposure: 0 });
       const metrics = [
         { label: "Total equity", value: money.format(s.totalEquity), footLeft: "Initial $50.0m", footRight: "USD base", className: metricClass(s.totalPnl) },
-        { label: "Cash", value: money.format(s.cash), footLeft: "Cash buffer", footRight: pct(s.cash / s.totalEquity), className: "neutral" },
         { label: "Total PnL", value: `${signedMoney(s.totalPnl)} <span class="metric-subvalue">${pct(s.returnPct)}</span>`, footLeft: "Realized " + signedMoney(s.realizedPnl), footRight: "UPnL " + signedMoney(s.unrealizedPnl), className: metricClass(s.totalPnl) },
         { label: "Gross exposure", value: money.format(s.grossExposure), footLeft: "Long " + pct(s.longMarketValue / s.totalEquity), footRight: "Short " + pct(s.shortMarketValue / s.totalEquity), className: "neutral" },
         { label: "Net exposure", value: money.format(s.netMarketValue), footLeft: "Net % NAV", footRight: pct(s.netExposurePct), className: metricClass(s.netMarketValue) },
