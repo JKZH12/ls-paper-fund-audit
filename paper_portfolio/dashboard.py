@@ -136,6 +136,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Japan optical / cables",
         "pair": "Furukawa / Sumitomo",
     },
+    "5803.T": {
+        "name": "Fujikura",
+        "theme": "Japan optical / cables",
+        "pair": "Fujikura standalone long",
+    },
     "6758.T": {
         "name": "Sony Group",
         "theme": "Japan electronics / imaging",

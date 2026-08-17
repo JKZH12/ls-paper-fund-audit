@@ -63,6 +63,12 @@ class CoreTest(unittest.TestCase):
             expected,
         )
 
+    def test_fujikura_is_classified_as_a_standalone_long(self):
+        self.assertEqual(
+            _POSITION_METADATA_OVERRIDES["5803.T"]["pair"],
+            "Fujikura standalone long",
+        )
+
     def test_live_mark_fx_mapping_supports_mainland_china_listings(self):
         self.assertEqual(fx_symbol("000636.SZ"), "CNYUSD")
         self.assertEqual(fx_symbol("600000.SS"), "CNYUSD")
