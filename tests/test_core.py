@@ -57,6 +57,7 @@ class CoreTest(unittest.TestCase):
             "AAOI": "AAOI standalone long",
             "ORCL": "Oracle standalone short",
             "TER": "Teradyne standalone long",
+            "SMTC": "Semtech standalone long",
             "SMCI": "SMCI standalone short",
         }
         self.assertEqual(

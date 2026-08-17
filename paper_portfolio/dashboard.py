@@ -261,6 +261,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Semiconductor test",
         "pair": "Teradyne standalone long",
     },
+    "SMTC": {
+        "name": "Semtech",
+        "theme": "Analog / mixed-signal semiconductors",
+        "pair": "Semtech standalone long",
+    },
     "SMCI": {
         "name": "Super Micro Computer",
         "theme": "AI compute / server systems",
