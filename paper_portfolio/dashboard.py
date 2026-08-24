@@ -168,7 +168,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI cloud demand",
         "pair": "NBIS / CRWV",
         "pairAllocations": [
-            {"pair": "BE / CRWV", "navPct": 0.0045},
+            {"pair": "BE / CRWV", "navPct": 0.00225},
             {"pair": "NBIS / CRWV", "remainder": True},
         ],
     },

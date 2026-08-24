@@ -42,7 +42,7 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(
             _POSITION_METADATA_OVERRIDES["CRWV"]["pairAllocations"],
             [
-                {"pair": "BE / CRWV", "navPct": 0.0045},
+                {"pair": "BE / CRWV", "navPct": 0.00225},
                 {"pair": "NBIS / CRWV", "remainder": True},
             ],
         )
