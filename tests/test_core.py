@@ -37,6 +37,10 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["NVDA"]["pair"], "NVDA / AAPL")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["AAPL"]["pair"], "NVDA / AAPL")
 
+    def test_tsem_and_avgo_are_classified_as_a_pair(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["TSEM"]["pair"], "TSEM / AVGO")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["AVGO"]["pair"], "TSEM / AVGO")
+
     def test_closed_be_crwv_allocation_leaves_nbis_crwv_remainder(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["BE"]["pair"], "BE standalone long")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["NBIS"]["pair"], "NBIS / CRWV")

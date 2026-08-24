@@ -63,6 +63,16 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "TSEM": {
+        "name": "Tower Semiconductor",
+        "theme": "Specialty foundry / semiconductor hedge",
+        "pair": "TSEM / AVGO",
+    },
+    "AVGO": {
+        "name": "Broadcom",
+        "theme": "Specialty foundry / semiconductor hedge",
+        "pair": "TSEM / AVGO",
+    },
     "0992.HK": {
         "name": "Lenovo Group",
         "theme": "PCs / AI devices and infrastructure",
