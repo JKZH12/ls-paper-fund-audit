@@ -37,15 +37,14 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["NVDA"]["pair"], "NVDA / AAPL")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["AAPL"]["pair"], "NVDA / AAPL")
 
-    def test_be_crwv_pair_allocation_preserves_existing_nbis_hedge(self):
-        self.assertEqual(_POSITION_METADATA_OVERRIDES["BE"]["pair"], "BE / CRWV")
-        self.assertEqual(
-            _POSITION_METADATA_OVERRIDES["CRWV"]["pairAllocations"],
-            [
-                {"pair": "BE / CRWV", "navPct": 0.00225},
-                {"pair": "NBIS / CRWV", "remainder": True},
-            ],
-        )
+    def test_closed_be_crwv_allocation_leaves_nbis_crwv_remainder(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["BE"]["pair"], "BE standalone long")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["NBIS"]["pair"], "NBIS / CRWV")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["CRWV"]["pair"], "NBIS / CRWV")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["CRWV"]["pairAllocations"], [])
+
+    def test_qcom_is_standalone_after_arm_cover(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["QCOM"]["pair"], "QCOM standalone short")
 
     def test_unpaired_cross_market_positions_use_standalone_classifications(self):
         expected = {

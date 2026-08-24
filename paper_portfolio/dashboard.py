@@ -71,6 +71,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI compute / accelerators",
         "pair": "NVDA / AAPL",
     },
+    "QCOM": {
+        "name": "Qualcomm",
+        "theme": "Compute semis",
+        "pair": "QCOM standalone short",
+    },
     "AAPL": {
         "name": "Apple",
         "theme": "AI compute / mega-cap technology hedge",
@@ -156,7 +161,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "BE": {
         "name": "Bloom Energy",
         "theme": "AI power / onsite generation",
-        "pair": "BE / CRWV",
+        "pair": "BE standalone long",
     },
     "NBIS": {
         "name": "Nebius",
@@ -167,10 +172,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "name": "CoreWeave",
         "theme": "AI cloud demand",
         "pair": "NBIS / CRWV",
-        "pairAllocations": [
-            {"pair": "BE / CRWV", "navPct": 0.00225},
-            {"pair": "NBIS / CRWV", "remainder": True},
-        ],
+        "pairAllocations": [],
     },
     "CRDO": {
         "name": "Credo Technology Group",
