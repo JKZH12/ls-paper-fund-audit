@@ -63,6 +63,11 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "0992.HK": {
+        "name": "Lenovo Group",
+        "theme": "PCs / AI devices and infrastructure",
+        "pair": "Lenovo Group standalone short",
+    },
     "SNDK": {
         "pair": "SNDK / MU",
     },
