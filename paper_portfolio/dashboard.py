@@ -161,6 +161,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Japan optical / cables",
         "pair": "Fujikura standalone long",
     },
+    "6327.T": {
+        "name": "Kitagawa Seiki",
+        "theme": "AI substrates / PCB equipment",
+        "pair": "Kitagawa Seiki standalone long",
+    },
     "6758.T": {
         "name": "Sony Group",
         "theme": "Japan electronics / imaging",

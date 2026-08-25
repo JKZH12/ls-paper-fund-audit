@@ -75,6 +75,16 @@ class CoreTest(unittest.TestCase):
             "Fujikura standalone long",
         )
 
+    def test_kitagawa_is_classified_as_a_standalone_long(self):
+        self.assertEqual(
+            _POSITION_METADATA_OVERRIDES["6327.T"],
+            {
+                "name": "Kitagawa Seiki",
+                "theme": "AI substrates / PCB equipment",
+                "pair": "Kitagawa Seiki standalone long",
+            },
+        )
+
     def test_live_mark_fx_mapping_supports_mainland_china_listings(self):
         self.assertEqual(fx_symbol("000636.SZ"), "CNYUSD")
         self.assertEqual(fx_symbol("600000.SS"), "CNYUSD")
