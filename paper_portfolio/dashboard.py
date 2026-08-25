@@ -273,6 +273,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI optical transceivers",
         "pair": "AAOI standalone long",
     },
+    "COHR": {
+        "name": "Coherent",
+        "theme": "Optical networking",
+        "pair": "COHR standalone long",
+    },
     "ORCL": {
         "name": "Oracle",
         "theme": "Cloud infrastructure / enterprise software",

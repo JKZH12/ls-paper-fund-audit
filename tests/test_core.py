@@ -59,6 +59,7 @@ class CoreTest(unittest.TestCase):
             "000636.SZ": "Fenghua Advanced Technology standalone short",
             "300661.SZ": "SG Micro standalone short",
             "AAOI": "AAOI standalone long",
+            "COHR": "COHR standalone long",
             "ORCL": "Oracle standalone short",
             "TER": "Teradyne standalone long",
             "SMTC": "Semtech standalone long",
