@@ -37,6 +37,11 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["NVDA"]["pair"], "NVDA / AAPL")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["AAPL"]["pair"], "NVDA / AAPL")
 
+    def test_smtc_and_wolf_are_classified_as_a_pair(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["SMTC"]["pair"], "SMTC / WOLF")
+        self.assertEqual(_DEFAULT_POSITION_METADATA["WOLF"]["pair"], "SMTC / WOLF")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["CBRS"]["pair"], "CBRS standalone long")
+
     def test_tsem_and_avgo_are_classified_as_a_pair(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["TSEM"]["pair"], "TSEM / AVGO")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["AVGO"]["pair"], "TSEM / AVGO")
@@ -60,7 +65,6 @@ class CoreTest(unittest.TestCase):
             "COHR": "COHR standalone long",
             "ORCL": "Oracle standalone short",
             "TER": "Teradyne standalone long",
-            "SMTC": "Semtech standalone long",
             "SMCI": "SMCI standalone short",
         }
         self.assertEqual(

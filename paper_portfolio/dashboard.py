@@ -59,7 +59,7 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
         "symbol": "WOLF",
         "name": "Wolfspeed",
         "theme": "AI compute systems",
-        "pair": "CBRS / WOLF",
+        "pair": "SMTC / WOLF",
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
@@ -173,7 +173,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     },
     "CBRS": {
         "theme": "AI compute systems",
-        "pair": "CBRS / WOLF",
+        "pair": "CBRS standalone long",
     },
     "AEHR": {
         "pair": "AEHR standalone",
@@ -311,7 +311,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "SMTC": {
         "name": "Semtech",
         "theme": "Analog / mixed-signal semiconductors",
-        "pair": "Semtech standalone long",
+        "pair": "SMTC / WOLF",
     },
     "SMCI": {
         "name": "Super Micro Computer",
