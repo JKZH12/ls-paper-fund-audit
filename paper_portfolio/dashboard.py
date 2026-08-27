@@ -75,8 +75,8 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     },
     "0992.HK": {
         "name": "Lenovo Group",
-        "theme": "PCs / AI devices and infrastructure",
-        "pair": "Lenovo Group standalone short",
+        "theme": "AI hardware / consumer and enterprise devices",
+        "pair": "Zhongji / Xiaomi + Lenovo",
     },
     "SNDK": {
         "pair": "SNDK / MU",
@@ -255,8 +255,28 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     },
     "3308.HK": {
         "name": "Zhongji Innolight",
-        "theme": "AI optical transceivers",
-        "pair": "Zhongji Innolight standalone long",
+        "theme": "AI optical transceivers / device demand hedge",
+        "pair": "Zhongji / Xiaomi + Lenovo",
+    },
+    "1810.HK": {
+        "name": "Xiaomi",
+        "theme": "AI hardware / consumer and enterprise devices",
+        "pair": "Zhongji / Xiaomi + Lenovo",
+    },
+    "2513.HK": {
+        "name": "Z.AI",
+        "theme": "Foundation models / AI applications",
+        "pair": "Z.AI / MiniMax",
+    },
+    "0100.HK": {
+        "name": "MiniMax",
+        "theme": "Foundation models / AI applications",
+        "pair": "Z.AI / MiniMax",
+    },
+    "6869.HK": {
+        "name": "YOFC",
+        "theme": "Optical fiber / telecom infrastructure",
+        "pair": "YOFC standalone long",
     },
     "000636.SZ": {
         "name": "Fenghua Advanced Technology",

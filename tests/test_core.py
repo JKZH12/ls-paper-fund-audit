@@ -52,10 +52,8 @@ class CoreTest(unittest.TestCase):
 
     def test_unpaired_cross_market_positions_use_standalone_classifications(self):
         expected = {
-            "0992.HK": "Lenovo Group standalone short",
             "1888.HK": "Kingboard Laminates standalone short",
             "3277.HK": "Gpixel standalone short",
-            "3308.HK": "Zhongji Innolight standalone long",
             "000636.SZ": "Fenghua Advanced Technology standalone short",
             "300661.SZ": "SG Micro standalone short",
             "AAOI": "AAOI standalone long",
@@ -68,6 +66,33 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(
             {symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"] for symbol in expected},
             expected,
+        )
+
+    def test_hk_ai_baskets_and_yofc_have_durable_taxonomy(self):
+        self.assertEqual(
+            {
+                symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"]
+                for symbol in ("3308.HK", "1810.HK", "0992.HK")
+            },
+            {
+                "3308.HK": "Zhongji / Xiaomi + Lenovo",
+                "1810.HK": "Zhongji / Xiaomi + Lenovo",
+                "0992.HK": "Zhongji / Xiaomi + Lenovo",
+            },
+        )
+        self.assertEqual(
+            {
+                symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"]
+                for symbol in ("2513.HK", "0100.HK")
+            },
+            {
+                "2513.HK": "Z.AI / MiniMax",
+                "0100.HK": "Z.AI / MiniMax",
+            },
+        )
+        self.assertEqual(
+            _POSITION_METADATA_OVERRIDES["6869.HK"]["pair"],
+            "YOFC standalone long",
         )
 
     def test_fujikura_is_classified_as_a_standalone_long(self):
