@@ -1,38 +1,38 @@
 {
   "audit": {
     "chain_ok": true,
-    "event_count": 14193,
+    "event_count": 14236,
     "events_file": "audit/events.jsonl",
-    "events_file_sha256": "f15b05d71d1a8101529a4f7104ad6afdf3569e4973b2bcc082304134c2fea600",
-    "head_hash": "4bc177d7c65419920b6887c6d439ecb0706df965954f6b59835ec13b0ee5c483"
+    "events_file_sha256": "9429b658fa5318959872e671befe1e9acf0f8dcd36916fdc5f5578c286278fca",
+    "head_hash": "7db5e40c1ea21804befc2c828a140ba1c68be91606e80a8df16d86b8e59e1847"
   },
   "files": {
     "daily_report": {
       "path": "reports/daily/2026-08-28.md",
-      "sha256": "a9f7797679a483579c43caf4fe058285bc56cd840920cc50a89ec99932c057d2"
+      "sha256": "8c27189ad0e9b1e21dcee384712ca5884f9a754599e9308dcc54b8a2c104f74d"
     },
     "database": {
       "path": "data/portfolio.sqlite",
-      "sha256": "91bd7ee54d649f97efc5d983f6ae6eebfe309b3b0c4a901314fd1436b760c2e4",
+      "sha256": "9635fa1d413fb9f6649f0c639e765902ee919d239e0bea930ce7aaa8ada8d6d0",
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-08-28T01:53:05Z",
+  "generated_at": "2026-08-28T10:12:32Z",
   "manifest_date": "2026-08-28",
   "manifest_version": 1,
   "metrics": {
     "cash": 49849320.10213604,
-    "gross_exposure": 29810413.679199886,
-    "gross_exposure_pct": 0.5768220351189639,
-    "long_market_value": 15820764.276974242,
-    "net_exposure_pct": 0.035431491154585125,
-    "net_market_value": 1831114.8747486,
+    "gross_exposure": 29438377.190456636,
+    "gross_exposure_pct": 0.5715851624763317,
+    "long_market_value": 15546051.784300065,
+    "net_exposure_pct": 0.0321092923848049,
+    "net_market_value": 1653726.3781434922,
     "realized_pnl": 1039304.2877885798,
-    "return_pct": 0.03360869953769281,
-    "short_market_value": 13989649.402225643,
-    "total_equity": 51680434.97688464,
-    "total_pnl": 1680434.9768846408,
-    "unrealized_pnl": 641130.6890960609
+    "return_pct": 0.030060929605590554,
+    "short_market_value": 13892325.406156572,
+    "total_equity": 51503046.48027953,
+    "total_pnl": 1503046.4802795276,
+    "unrealized_pnl": 463742.1924909478
   },
   "portfolio": {
     "base_currency": "USD",
