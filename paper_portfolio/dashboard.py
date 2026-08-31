@@ -251,7 +251,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "3277.HK": {
         "name": "Gpixel Changchun Microelectronics",
         "theme": "Image sensors / semiconductors",
-        "pair": "Gpixel standalone short",
+        "pair": "Gpixel standalone long",
     },
     "3308.HK": {
         "name": "Zhongji Innolight",

@@ -58,7 +58,7 @@ class CoreTest(unittest.TestCase):
     def test_unpaired_cross_market_positions_use_standalone_classifications(self):
         expected = {
             "1888.HK": "Kingboard Laminates standalone short",
-            "3277.HK": "Gpixel standalone short",
+            "3277.HK": "Gpixel standalone long",
             "000636.SZ": "Fenghua Advanced Technology standalone short",
             "300661.SZ": "SG Micro standalone short",
             "AAOI": "AAOI standalone long",
