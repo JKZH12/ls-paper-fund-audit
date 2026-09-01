@@ -111,6 +111,16 @@ class CoreTest(unittest.TestCase):
             },
         )
 
+    def test_mitsui_kinzoku_is_classified_as_a_standalone_short(self):
+        self.assertEqual(
+            _POSITION_METADATA_OVERRIDES["5706.T"],
+            {
+                "name": "Mitsui Kinzoku",
+                "theme": "Nonferrous metals / semiconductor materials",
+                "pair": "Mitsui Kinzoku standalone short",
+            },
+        )
+
     def test_kitagawa_is_classified_as_a_standalone_long(self):
         self.assertEqual(
             _POSITION_METADATA_OVERRIDES["6327.T"],

@@ -131,6 +131,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Semiconductor materials / metals",
         "pair": "JX Advanced Metals standalone short",
     },
+    "5706.T": {
+        "name": "Mitsui Kinzoku",
+        "theme": "Nonferrous metals / semiconductor materials",
+        "pair": "Mitsui Kinzoku standalone short",
+    },
     "3436.T": {
         "name": "SUMCO",
         "theme": "Silicon wafers",
