@@ -99,10 +99,16 @@ class CoreTest(unittest.TestCase):
             "YOFC standalone long",
         )
 
-    def test_fujikura_is_classified_as_a_standalone_long(self):
+    def test_fujikura_and_sumco_share_pair_classification(self):
         self.assertEqual(
-            _POSITION_METADATA_OVERRIDES["5803.T"]["pair"],
-            "Fujikura standalone long",
+            {
+                symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"]
+                for symbol in ("5803.T", "3436.T")
+            },
+            {
+                "5803.T": "Fujikura / SUMCO",
+                "3436.T": "Fujikura / SUMCO",
+            },
         )
 
     def test_kitagawa_is_classified_as_a_standalone_long(self):

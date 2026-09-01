@@ -134,7 +134,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "3436.T": {
         "name": "SUMCO",
         "theme": "Silicon wafers",
-        "pair": "SUMCO standalone short",
+        "pair": "Fujikura / SUMCO",
     },
     "7731.T": {
         "name": "Nikon",
@@ -159,7 +159,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "5803.T": {
         "name": "Fujikura",
         "theme": "Japan optical / cables",
-        "pair": "Fujikura standalone long",
+        "pair": "Fujikura / SUMCO",
     },
     "6327.T": {
         "name": "Kitagawa Seiki",
