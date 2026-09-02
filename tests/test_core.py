@@ -72,16 +72,16 @@ class CoreTest(unittest.TestCase):
             expected,
         )
 
-    def test_hk_ai_baskets_and_yofc_have_durable_taxonomy(self):
+    def test_hk_ai_positions_and_yofc_have_durable_taxonomy(self):
         self.assertEqual(
             {
                 symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"]
                 for symbol in ("3308.HK", "1810.HK", "0992.HK")
             },
             {
-                "3308.HK": "Zhongji / Xiaomi + Lenovo",
-                "1810.HK": "Zhongji / Xiaomi + Lenovo",
-                "0992.HK": "Zhongji / Xiaomi + Lenovo",
+                "3308.HK": "Zhongji standalone long",
+                "1810.HK": "Xiaomi standalone short",
+                "0992.HK": "Lenovo standalone short",
             },
         )
         self.assertEqual(

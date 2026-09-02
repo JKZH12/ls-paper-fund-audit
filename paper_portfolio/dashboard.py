@@ -76,7 +76,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "0992.HK": {
         "name": "Lenovo Group",
         "theme": "AI hardware / consumer and enterprise devices",
-        "pair": "Zhongji / Xiaomi + Lenovo",
+        "pair": "Lenovo standalone short",
     },
     "SNDK": {
         "pair": "SNDK / MU",
@@ -261,12 +261,12 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "3308.HK": {
         "name": "Zhongji Innolight",
         "theme": "AI optical transceivers / device demand hedge",
-        "pair": "Zhongji / Xiaomi + Lenovo",
+        "pair": "Zhongji standalone long",
     },
     "1810.HK": {
         "name": "Xiaomi",
         "theme": "AI hardware / consumer and enterprise devices",
-        "pair": "Zhongji / Xiaomi + Lenovo",
+        "pair": "Xiaomi standalone short",
     },
     "2513.HK": {
         "name": "Z.AI",
