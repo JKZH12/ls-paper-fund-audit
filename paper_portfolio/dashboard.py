@@ -301,7 +301,12 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "COHR": {
         "name": "Coherent",
         "theme": "Optical networking",
-        "pair": "COHR standalone long",
+        "pair": "COHR / CIEN",
+    },
+    "CIEN": {
+        "name": "Ciena",
+        "theme": "Optical networking",
+        "pair": "COHR / CIEN",
     },
     "ORCL": {
         "name": "Oracle",

@@ -55,6 +55,10 @@ class CoreTest(unittest.TestCase):
     def test_qcom_is_standalone_after_arm_cover(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["QCOM"]["pair"], "QCOM standalone short")
 
+    def test_cohr_cien_pair_has_durable_taxonomy(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["COHR"]["pair"], "COHR / CIEN")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["CIEN"]["pair"], "COHR / CIEN")
+
     def test_unpaired_cross_market_positions_use_standalone_classifications(self):
         expected = {
             "1888.HK": "Kingboard Laminates standalone short",
@@ -62,7 +66,6 @@ class CoreTest(unittest.TestCase):
             "000636.SZ": "Fenghua Advanced Technology standalone short",
             "300661.SZ": "SG Micro standalone short",
             "AAOI": "AAOI standalone long",
-            "COHR": "COHR standalone long",
             "ORCL": "Oracle standalone short",
             "TER": "Teradyne standalone long",
             "SMCI": "SMCI standalone short",
