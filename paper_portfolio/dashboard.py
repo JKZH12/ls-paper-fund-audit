@@ -188,6 +188,11 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI power / onsite generation",
         "pair": "BE standalone long",
     },
+    "DELL": {
+        "name": "Dell Technologies",
+        "theme": "AI infrastructure / servers and storage",
+        "pair": "DELL standalone long",
+    },
     "NBIS": {
         "name": "Nebius",
         "theme": "AI cloud demand",

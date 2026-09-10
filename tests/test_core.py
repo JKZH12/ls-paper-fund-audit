@@ -52,6 +52,16 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["CRWV"]["pair"], "NBIS / CRWV")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["CRWV"]["pairAllocations"], [])
 
+    def test_dell_is_classified_as_a_standalone_long(self):
+        self.assertEqual(
+            _POSITION_METADATA_OVERRIDES["DELL"],
+            {
+                "name": "Dell Technologies",
+                "theme": "AI infrastructure / servers and storage",
+                "pair": "DELL standalone long",
+            },
+        )
+
     def test_qcom_is_standalone_after_arm_cover(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["QCOM"]["pair"], "QCOM standalone short")
 
