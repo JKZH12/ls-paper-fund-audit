@@ -251,7 +251,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "INTC": {
         "name": "Intel",
         "theme": "AI compute / x86",
-        "pair": "AMD / INTC",
+        "pair": "INTC standalone long",
     },
     "1888.HK": {
         "name": "Kingboard Laminates",
