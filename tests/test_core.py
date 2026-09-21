@@ -65,6 +65,11 @@ class CoreTest(unittest.TestCase):
     def test_qcom_is_standalone_after_arm_cover(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["QCOM"]["pair"], "QCOM standalone short")
 
+    def test_intc_arm_and_swks_use_standalone_classifications(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["INTC"]["pair"], "INTC standalone long")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["ARM"]["pair"], "ARM standalone short")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["SWKS"]["pair"], "SWKS standalone short")
+
     def test_cohr_cien_pair_has_durable_taxonomy(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["COHR"]["pair"], "COHR / CIEN")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["CIEN"]["pair"], "COHR / CIEN")

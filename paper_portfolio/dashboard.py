@@ -253,6 +253,16 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "AI compute / x86",
         "pair": "INTC standalone long",
     },
+    "ARM": {
+        "name": "Arm Holdings",
+        "theme": "AI compute / CPU architecture",
+        "pair": "ARM standalone short",
+    },
+    "SWKS": {
+        "name": "Skyworks Solutions",
+        "theme": "Analog / connectivity semiconductors",
+        "pair": "SWKS standalone short",
+    },
     "1888.HK": {
         "name": "Kingboard Laminates",
         "theme": "PCB materials / copper-clad laminates",
