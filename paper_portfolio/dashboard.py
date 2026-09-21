@@ -323,6 +323,21 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "theme": "Optical networking",
         "pair": "COHR / CIEN",
     },
+    "LITE": {
+        "name": "Lumentum",
+        "theme": "Optical networking",
+        "pair": "LITE / NOK",
+    },
+    "NOK": {
+        "name": "Nokia",
+        "theme": "Optical networking / communications equipment",
+        "pair": "LITE / NOK",
+    },
+    "GLW": {
+        "name": "Corning",
+        "theme": "Optical fiber / connectivity",
+        "pair": "GLW standalone short",
+    },
     "ORCL": {
         "name": "Oracle",
         "theme": "Cloud infrastructure / enterprise software",

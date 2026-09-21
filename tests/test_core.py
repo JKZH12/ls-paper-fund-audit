@@ -74,6 +74,11 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["COHR"]["pair"], "COHR / CIEN")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["CIEN"]["pair"], "COHR / CIEN")
 
+    def test_lite_nok_pair_and_glw_short_have_durable_taxonomy(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["LITE"]["pair"], "LITE / NOK")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["NOK"]["pair"], "LITE / NOK")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["GLW"]["pair"], "GLW standalone short")
+
     def test_unpaired_cross_market_positions_use_standalone_classifications(self):
         expected = {
             "1888.HK": "Kingboard Laminates standalone short",
