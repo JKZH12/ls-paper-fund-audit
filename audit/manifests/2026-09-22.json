@@ -1,32 +1,32 @@
 {
   "audit": {
     "chain_ok": true,
-    "event_count": 16259,
+    "event_count": 16262,
     "events_file": "audit/events.jsonl",
-    "events_file_sha256": "7f6c7a234610ec3076be7e1ccfda527d82fe88c1372800edecd2bcf6b69496bf",
-    "head_hash": "cc96c72ed9ff3073136131060f361aa6be96b567bf2a444a072dbe5d37c7915b"
+    "events_file_sha256": "738ffa0fb8bcc6370c12532ce60471441737ddb0035e81d57881bca4047bc60b",
+    "head_hash": "d4c569d80e85f662ebfc0ed3e1ba2ec93345bb456a79c70efa966cd2321e10f4"
   },
   "files": {
     "daily_report": {
       "path": "reports/daily/2026-09-22.md",
-      "sha256": "118de308fbdcad3ff50512985467c7d0836626ac48a02ec467c563a18573b163"
+      "sha256": "952e1741e61927d076fb15547066672016fa9efd506d7569b576b143138fdadf"
     },
     "database": {
       "path": "data/portfolio.sqlite",
-      "sha256": "8f3fd56c1dd8cbfe997b92a76ff06b3de0f02e526f308e219d064fd1a20bd1c6",
+      "sha256": "02baa55d8c1fc79610aa922393d701e3606a39673c1f8f6cda79a24580e61500",
       "tracked_by_git": false
     }
   },
-  "generated_at": "2026-09-22T01:48:21Z",
+  "generated_at": "2026-09-22T01:54:35Z",
   "manifest_date": "2026-09-22",
   "manifest_version": 1,
   "metrics": {
-    "cash": 52035927.71393688,
-    "gross_exposure": 33755094.845181376,
-    "gross_exposure_pct": 0.6473471048371288,
-    "long_market_value": 16931450.260441322,
-    "net_exposure_pct": 0.002067471366035414,
-    "net_market_value": 107805.67570126161,
+    "cash": 50993053.04613687,
+    "gross_exposure": 34797969.512981385,
+    "gross_exposure_pct": 0.6673471048372678,
+    "long_market_value": 17974324.928241327,
+    "net_exposure_pct": 0.022067471366174343,
+    "net_market_value": 1150680.3435012687,
     "realized_pnl": 1142111.559775308,
     "return_pct": 0.04287466779276282,
     "short_market_value": 16823644.584740058,
@@ -36,7 +36,7 @@
   },
   "portfolio": {
     "base_currency": "USD",
-    "cash": 52035927.71393688,
+    "cash": 50993053.04613687,
     "id": 1,
     "initial_cash": 50000000.0,
     "name": "LS Paper Fund",
