@@ -63,6 +63,16 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "8035.T": {
+        "name": "Tokyo Electron",
+        "theme": "Semiconductor equipment",
+        "pair": "Tokyo Electron standalone long",
+    },
+    "P": {
+        "name": "Everpure",
+        "theme": "Enterprise data storage",
+        "pair": "Everpure standalone short",
+    },
     "TSEM": {
         "name": "Tower Semiconductor",
         "theme": "Specialty foundry / semiconductor hedge",
