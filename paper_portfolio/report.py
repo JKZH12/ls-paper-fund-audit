@@ -114,7 +114,7 @@ def render_report(conn: sqlite3.Connection, portfolio_id: int, report_date: date
             "## Notes",
             "",
             "- Simulated trading only; no real order was placed.",
-            "- Prices are manual marks unless a future data source is added.",
+            "- Marks may be manual or FMP-sourced; price_snapshots.source records provenance.",
             "",
             "## Audit",
             "",
