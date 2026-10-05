@@ -1,0 +1,652 @@
+{
+  "summary": {
+    "cash": 50371516.635366865,
+    "long_market_value": 20153927.797745936,
+    "short_market_value": 18100027.378002297,
+    "net_market_value": 2053900.4197436362,
+    "gross_exposure": 38253955.17574823,
+    "total_equity": 52425417.0551105,
+    "realized_pnl": 1142111.559775308,
+    "unrealized_pnl": 1283305.4953352695,
+    "total_pnl": 2425417.0551104993,
+    "return_pct": 0.04850834110220999,
+    "net_exposure_pct": 0.03917756949047331,
+    "gross_exposure_pct": 0.7296833735349213,
+    "peakEquity": 53283706.84,
+    "peakDate": "2026-08-18",
+    "drawdownFromPeakValue": -858289.7848895043,
+    "drawdownFromPeakPct": -0.01610792183559548,
+    "realizedPnl": 1142111.559775308,
+    "grossExposurePct": 0.7296833735349213,
+    "netExposurePct": 0.03917756949047331,
+    "totalEquity": 52425417.0551105,
+    "longMarketValue": 20153927.797745936,
+    "shortMarketValue": 18100027.378002297,
+    "netMarketValue": 2053900.4197436362,
+    "grossExposure": 38253955.17574823,
+    "totalPnl": 2425417.0551104993,
+    "returnPct": 0.04850834110220999,
+    "unrealizedPnl": 1283305.4953352695
+  },
+  "priorSummary": {
+    "cash": 50371516.635366865,
+    "long_market_value": 18617401.52872192,
+    "short_market_value": 17077712.27743648,
+    "net_market_value": 1539689.2512854415,
+    "gross_exposure": 35695113.8061584,
+    "total_equity": 51911205.886652306,
+    "realized_pnl": 1291134.5884726408,
+    "unrealized_pnl": 769094.3268770744,
+    "total_pnl": 1911205.8866523057,
+    "return_pct": 0.03822411773304611,
+    "net_exposure_pct": 0.02966005556964599,
+    "gross_exposure_pct": 0.6876186595260066,
+    "peakEquity": 53283706.84,
+    "peakDate": "2026-08-18",
+    "drawdownFromPeakValue": -1372500.9533476979,
+    "drawdownFromPeakPct": -0.025758360946415298,
+    "realizedPnl": 1142111.559775308,
+    "grossExposurePct": 0.6876186595260066,
+    "netExposurePct": 0.02966005556964599,
+    "totalEquity": 51911205.886652306,
+    "longMarketValue": 18617401.52872192,
+    "shortMarketValue": 17077712.27743648,
+    "netMarketValue": 1539689.2512854415,
+    "grossExposure": 35695113.8061584,
+    "totalPnl": 1911205.8866523057,
+    "returnPct": 0.03822411773304611,
+    "unrealizedPnl": 769094.3268770744
+  },
+  "priorAsOf": "2026-09-28 21:53:14 HKT",
+  "rows": [
+    {
+      "symbol": "0100.HK",
+      "quantity": -18744.696038245726,
+      "marketValue": -583350.8362124474,
+      "weightPct": -1.112725217997253,
+      "sincePriorMark": 14520.541296635056,
+      "vsPreviousClose": -3298.841566378727,
+      "quoteTimeHKT": "2026-10-05T16:08:03+08:00",
+      "markSource": "fmp-live quote=0100.HK ts=1791187683;fx=HKDUSD px=0.12744 ts=1791214595",
+      "usdMark": 31.120848
+    },
+    {
+      "symbol": "0992.HK",
+      "quantity": -169634.1287160663,
+      "marketValue": -776524.7872196316,
+      "weightPct": -1.4811990649560984,
+      "sincePriorMark": -8838.752349924878,
+      "vsPreviousClose": -34530.85894874543,
+      "quoteTimeHKT": "2026-10-05T16:08:03+08:00",
+      "markSource": "fmp-live quote=0992.HK ts=1791187683;fx=HKDUSD px=0.12744 ts=1791214595",
+      "usdMark": 4.5776448
+    },
+    {
+      "symbol": "1888.HK",
+      "quantity": -170939.4771512418,
+      "marketValue": -1204684.3413389302,
+      "weightPct": -2.2979013024780426,
+      "sincePriorMark": -180054.3803276911,
+      "vsPreviousClose": -128444.26501039733,
+      "quoteTimeHKT": "2026-10-05T16:08:03+08:00",
+      "markSource": "fmp-live quote=1888.HK ts=1791187683;fx=HKDUSD px=0.12744 ts=1791214595",
+      "usdMark": 7.047432
+    },
+    {
+      "symbol": "2513.HK",
+      "quantity": 5454.568389324604,
+      "marketValue": 462261.58003112586,
+      "weightPct": 0.8817508872560587,
+      "sincePriorMark": 29754.888746501354,
+      "vsPreviousClose": 26728.339657158715,
+      "quoteTimeHKT": "2026-10-05T16:08:03+08:00",
+      "markSource": "fmp-live quote=2513.HK ts=1791187683;fx=HKDUSD px=0.12744 ts=1791214595",
+      "usdMark": 84.7476
+    },
+    {
+      "symbol": "3110.T",
+      "quantity": -31136.391786430737,
+      "marketValue": -661981.5595811083,
+      "weightPct": -1.2627110984834358,
+      "sincePriorMark": -47933.335563270724,
+      "vsPreviousClose": 2845.296413310061,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=3110.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 21.2607024
+    },
+    {
+      "symbol": "3308.HK",
+      "quantity": 6317.6325706738,
+      "marketValue": 894487.3143302093,
+      "weightPct": 1.7062092484450984,
+      "sincePriorMark": 66565.10381764732,
+      "vsPreviousClose": 31331.919676302296,
+      "quoteTimeHKT": "2026-10-05T16:08:03+08:00",
+      "markSource": "fmp-live quote=3308.HK ts=1791187683;fx=HKDUSD px=0.12744 ts=1791214595",
+      "usdMark": 141.58584
+    },
+    {
+      "symbol": "3436.T",
+      "quantity": -33523.449103185194,
+      "marketValue": -773611.2728605737,
+      "weightPct": -1.475641618734936,
+      "sincePriorMark": -129548.58426634222,
+      "vsPreviousClose": -11512.082828250846,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=3436.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 23.07672073
+    },
+    {
+      "symbol": "4062.T",
+      "quantity": 9451.215557874462,
+      "marketValue": 733488.9101409509,
+      "weightPct": 1.399109346845815,
+      "sincePriorMark": 62786.687571964576,
+      "vsPreviousClose": 8913.803846748033,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=4062.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 77.60789135
+    },
+    {
+      "symbol": "5706.T",
+      "quantity": -14298.98887704227,
+      "marketValue": -239540.87307791112,
+      "weightPct": -0.45691743916143124,
+      "sincePriorMark": -29591.9577383782,
+      "vsPreviousClose": -8200.431084744117,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=5706.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 16.752294525
+    },
+    {
+      "symbol": "5801.T",
+      "quantity": 23591.335178411577,
+      "marketValue": 653531.6263465328,
+      "weightPct": 1.2465930898738091,
+      "sincePriorMark": 85475.94561653328,
+      "vsPreviousClose": -8484.50456067307,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=5801.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 27.70218902
+    },
+    {
+      "symbol": "5802.T",
+      "quantity": -37729.36950619496,
+      "marketValue": -588722.9296236745,
+      "weightPct": -1.1229723342110924,
+      "sincePriorMark": -60673.31369717058,
+      "vsPreviousClose": -2570.7502037084473,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=5802.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 15.60383694
+    },
+    {
+      "symbol": "5803.T",
+      "quantity": 10994.894626581601,
+      "marketValue": 387233.2173253171,
+      "weightPct": 0.7386364078291469,
+      "sincePriorMark": 40510.34412189759,
+      "vsPreviousClose": -2739.600093084204,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=5803.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 35.21936594
+    },
+    {
+      "symbol": "6857.T",
+      "quantity": 4017.946792355807,
+      "marketValue": 1024583.97373686,
+      "weightPct": 1.9543649460333328,
+      "sincePriorMark": 162413.73975610628,
+      "vsPreviousClose": 41163.46751274745,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=6857.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 255.001877
+    },
+    {
+      "symbol": "7731.T",
+      "quantity": -71552.35887856346,
+      "marketValue": -867929.3998199569,
+      "weightPct": -1.655550777798438,
+      "sincePriorMark": -16261.564359707758,
+      "vsPreviousClose": -6562.999159989294,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=7731.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 12.12999003
+    },
+    {
+      "symbol": "8035.T",
+      "quantity": 11013.528320356865,
+      "marketValue": 889581.255098707,
+      "weightPct": 1.6968510792457099,
+      "sincePriorMark": 100373.00392825797,
+      "vsPreviousClose": 45231.826760043,
+      "quoteTimeHKT": "2026-10-05T14:30:00+08:00",
+      "markSource": "fmp-live quote=8035.T ts=1791181800;fx=JPYUSD px=0.00632759 ts=1791214600",
+      "usdMark": 80.77168635
+    },
+    {
+      "symbol": "AAPL",
+      "quantity": -3338.242930037934,
+      "marketValue": -1113418.5189001511,
+      "weightPct": -2.1238143279426973,
+      "sincePriorMark": 29462.330627636053,
+      "vsPreviousClose": 519.7644242069877,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=AAPL ts=1791214597",
+      "usdMark": 333.5343
+    },
+    {
+      "symbol": "ALAB",
+      "quantity": -1604.049992614641,
+      "marketValue": -577850.9895894614,
+      "weightPct": -1.102234416145921,
+      "sincePriorMark": -2959.472236374044,
+      "vsPreviousClose": -15904.155676774199,
+      "quoteTimeHKT": "2026-10-05T23:36:34+08:00",
+      "markSource": "fmp-live quote=ALAB ts=1791214594",
+      "usdMark": 360.245
+    },
+    {
+      "symbol": "ARM",
+      "quantity": -3543.7293870133017,
+      "marketValue": -1072261.6379224847,
+      "weightPct": -2.0453087417412528,
+      "sincePriorMark": -65133.74613330432,
+      "vsPreviousClose": 17399.7112902354,
+      "quoteTimeHKT": "2026-10-05T23:36:36+08:00",
+      "markSource": "fmp-live quote=ARM ts=1791214596",
+      "usdMark": 302.58
+    },
+    {
+      "symbol": "AVGO",
+      "quantity": -2819.449954042624,
+      "marketValue": -1020415.3273671066,
+      "weightPct": -1.94641337100748,
+      "sincePriorMark": -28279.054844547994,
+      "vsPreviousClose": -19115.870688409075,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=AVGO ts=1791214597",
+      "usdMark": 361.92
+    },
+    {
+      "symbol": "AXTI",
+      "quantity": 13455.091398084336,
+      "marketValue": 1140915.0565365828,
+      "weightPct": 2.176263195650372,
+      "sincePriorMark": 153984.1024870968,
+      "vsPreviousClose": -14473.64181691929,
+      "quoteTimeHKT": "2026-10-05T23:36:36+08:00",
+      "markSource": "fmp-live quote=AXTI ts=1791214596",
+      "usdMark": 84.7943
+    },
+    {
+      "symbol": "BE",
+      "quantity": 6453.411910198112,
+      "marketValue": 1862325.6090449712,
+      "weightPct": 3.552333416989821,
+      "sincePriorMark": 136683.32879211497,
+      "vsPreviousClose": -3678.44478881288,
+      "quoteTimeHKT": "2026-10-05T23:36:29+08:00",
+      "markSource": "fmp-live quote=BE ts=1791214589",
+      "usdMark": 288.58
+    },
+    {
+      "symbol": "CIEN",
+      "quantity": -3443.935155479309,
+      "marketValue": -1348610.5675341424,
+      "weightPct": -2.5724365074987574,
+      "sincePriorMark": -158093.84331227746,
+      "vsPreviousClose": -860.9837888698272,
+      "quoteTimeHKT": "2026-10-05T23:36:38+08:00",
+      "markSource": "fmp-live quote=CIEN ts=1791214598",
+      "usdMark": 391.59
+    },
+    {
+      "symbol": "COHR",
+      "quantity": 3774.472072799589,
+      "marketValue": 1245953.2312311444,
+      "weightPct": 2.3766205425154308,
+      "sincePriorMark": 162528.76745475037,
+      "vsPreviousClose": -26194.83618522914,
+      "quoteTimeHKT": "2026-10-05T23:36:34+08:00",
+      "markSource": "fmp-live quote=COHR ts=1791214594",
+      "usdMark": 330.1
+    },
+    {
+      "symbol": "CRDO",
+      "quantity": 5618.36772136988,
+      "marketValue": 1183958.6299242747,
+      "weightPct": 2.2583675942523778,
+      "sincePriorMark": 67785.66274200473,
+      "vsPreviousClose": -44441.288676035736,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=CRDO ts=1791214597",
+      "usdMark": 210.73
+    },
+    {
+      "symbol": "CRWV",
+      "quantity": -19287.40913076688,
+      "marketValue": -1691698.6548595629,
+      "weightPct": -3.2268673286494223,
+      "sincePriorMark": -27966.743239611853,
+      "vsPreviousClose": 36838.95143976495,
+      "quoteTimeHKT": "2026-10-05T23:36:38+08:00",
+      "markSource": "fmp-live quote=CRWV ts=1791214598",
+      "usdMark": 87.71
+    },
+    {
+      "symbol": "FN",
+      "quantity": -2386.2972919862113,
+      "marketValue": -1090251.5067626603,
+      "weightPct": -2.0796239076487826,
+      "sincePriorMark": -111404.26521340339,
+      "vsPreviousClose": 16250.684558426105,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=FN ts=1791214597",
+      "usdMark": 456.88
+    },
+    {
+      "symbol": "GLW",
+      "quantity": -5024.482402644599,
+      "marketValue": -805374.2340750786,
+      "weightPct": -1.5362285687273702,
+      "sincePriorMark": -37231.36435877241,
+      "vsPreviousClose": 19595.531615138007,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=GLW ts=1791214597",
+      "usdMark": 160.28999
+    },
+    {
+      "symbol": "INTC",
+      "quantity": 11778.491233327757,
+      "marketValue": 1376081.1307896818,
+      "weightPct": 2.6248358298096544,
+      "sincePriorMark": -7656.019301663153,
+      "vsPreviousClose": -29446.228083319394,
+      "quoteTimeHKT": "2026-10-05T23:36:39+08:00",
+      "markSource": "fmp-live quote=INTC ts=1791214599",
+      "usdMark": 116.83
+    },
+    {
+      "symbol": "LITE",
+      "quantity": 1662.3972624726994,
+      "marketValue": 1801656.3143979826,
+      "weightPct": 3.436608453689649,
+      "sincePriorMark": 288908.21973280166,
+      "vsPreviousClose": -2742.9222351349395,
+      "quoteTimeHKT": "2026-10-05T23:36:36+08:00",
+      "markSource": "fmp-live quote=LITE ts=1791214596",
+      "usdMark": 1083.77002
+    },
+    {
+      "symbol": "MU",
+      "quantity": -279.6882754897547,
+      "marketValue": -297065.3080459332,
+      "weightPct": -0.5666436715871103,
+      "sincePriorMark": -1052.4949494955363,
+      "vsPreviousClose": 3568.822395249267,
+      "quoteTimeHKT": "2026-10-05T23:36:39+08:00",
+      "markSource": "fmp-live quote=MU ts=1791214599",
+      "usdMark": 1062.13
+    },
+    {
+      "symbol": "NBIS",
+      "quantity": 9405.640875628053,
+      "marketValue": 2209573.1545025418,
+      "weightPct": 4.214698286863031,
+      "sincePriorMark": -47780.655648190994,
+      "vsPreviousClose": -74210.50650870547,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=NBIS ts=1791214597",
+      "usdMark": 234.92
+    },
+    {
+      "symbol": "NOK",
+      "quantity": -77821.36222072417,
+      "marketValue": -796501.6423291118,
+      "weightPct": -1.5193043509636093,
+      "sincePriorMark": -8085.639534733142,
+      "vsPreviousClose": 28793.904021668022,
+      "quoteTimeHKT": "2026-10-05T23:36:39+08:00",
+      "markSource": "fmp-live quote=NOK ts=1791214599",
+      "usdMark": 10.235
+    },
+    {
+      "symbol": "NVDA",
+      "quantity": 2325.239194814135,
+      "marketValue": 549570.3069467127,
+      "weightPct": 1.048289814020926,
+      "sincePriorMark": 10101.327362503507,
+      "vsPreviousClose": 5580.597319945892,
+      "quoteTimeHKT": "2026-10-05T23:36:39+08:00",
+      "markSource": "fmp-live quote=NVDA ts=1791214599",
+      "usdMark": 236.35001
+    },
+    {
+      "symbol": "P",
+      "quantity": -2035.2623535433072,
+      "marketValue": -287379.04432031495,
+      "weightPct": -0.548167397539665,
+      "sincePriorMark": -28809.13861440547,
+      "vsPreviousClose": -2157.3780947559103,
+      "quoteTimeHKT": "2026-10-05T23:36:36+08:00",
+      "markSource": "fmp-live quote=P ts=1791214596",
+      "usdMark": 141.2
+    },
+    {
+      "symbol": "SMTC",
+      "quantity": 6933.631274448868,
+      "marketValue": 1331257.2046941826,
+      "weightPct": 2.539335458780885,
+      "sincePriorMark": 131184.30371257244,
+      "vsPreviousClose": -19968.85807041271,
+      "quoteTimeHKT": "2026-10-05T23:36:39+08:00",
+      "markSource": "fmp-live quote=SMTC ts=1791214599",
+      "usdMark": 192.0
+    },
+    {
+      "symbol": "SNDK",
+      "quantity": 205.73745956976973,
+      "marketValue": 351322.429397828,
+      "weightPct": 0.6701375957171917,
+      "sincePriorMark": -930.9620045532356,
+      "vsPreviousClose": -2543.9436875802044,
+      "quoteTimeHKT": "2026-10-05T23:36:40+08:00",
+      "markSource": "fmp-live quote=SNDK ts=1791214600",
+      "usdMark": 1707.625
+    },
+    {
+      "symbol": "STX",
+      "quantity": -295.13528913821966,
+      "marketValue": -261314.26067942538,
+      "weightPct": -0.4984495600764174,
+      "sincePriorMark": 3386.6774428610806,
+      "vsPreviousClose": -10747.351553968258,
+      "quoteTimeHKT": "2026-10-05T23:36:40+08:00",
+      "markSource": "fmp-live quote=STX ts=1791214600",
+      "usdMark": 885.405
+    },
+    {
+      "symbol": "SWKS",
+      "quantity": -13026.06080484292,
+      "marketValue": -1062666.0404590855,
+      "weightPct": -2.0270054110241844,
+      "sincePriorMark": 73128.30535838823,
+      "vsPreviousClose": 44939.90977670811,
+      "quoteTimeHKT": "2026-10-05T23:36:38+08:00",
+      "markSource": "fmp-live quote=SWKS ts=1791214598",
+      "usdMark": 81.58
+    },
+    {
+      "symbol": "TSEM",
+      "quantity": 4247.267005624828,
+      "marketValue": 1042661.577210839,
+      "weightPct": 1.9888474632729678,
+      "sincePriorMark": 99470.99327173352,
+      "vsPreviousClose": 19664.846236042933,
+      "quoteTimeHKT": "2026-10-05T23:36:37+08:00",
+      "markSource": "fmp-live quote=TSEM ts=1791214597",
+      "usdMark": 245.49
+    },
+    {
+      "symbol": "WDC",
+      "quantity": 2294.302703082107,
+      "marketValue": 1013485.27605949,
+      "weightPct": 1.9331944941784571,
+      "sincePriorMark": -5632.513136066496,
+      "vsPreviousClose": 60684.30649652171,
+      "quoteTimeHKT": "2026-10-05T23:36:40+08:00",
+      "markSource": "fmp-live quote=WDC ts=1791214600",
+      "usdMark": 441.74
+    },
+    {
+      "symbol": "WOLF",
+      "quantity": -29094.178791010432,
+      "marketValue": -978873.6454235461,
+      "weightPct": -1.867173787849007,
+      "sincePriorMark": -200895.30455192714,
+      "vsPreviousClose": 47568.982323302,
+      "quoteTimeHKT": "2026-10-05T23:36:39+08:00",
+      "markSource": "fmp-live quote=WOLF ts=1791214599",
+      "usdMark": 33.645
+    }
+  ],
+  "pairs": {
+    "Z.AI / MiniMax": {
+      "net": -121089.25618132151,
+      "gross": 1045612.4162435732,
+      "change": 44275.43004313641
+    },
+    "Lenovo standalone short": {
+      "net": -776524.7872196316,
+      "gross": 776524.7872196316,
+      "change": -8838.752349924878
+    },
+    "Kingboard Laminates standalone short": {
+      "net": -1204684.3413389302,
+      "gross": 1204684.3413389302,
+      "change": -180054.3803276911
+    },
+    "Ibiden / Nittobo": {
+      "net": 71507.35055984266,
+      "gross": 1395470.469722059,
+      "change": 14853.352008693852
+    },
+    "Zhongji standalone long": {
+      "net": 894487.3143302093,
+      "gross": 894487.3143302093,
+      "change": 66565.10381764732
+    },
+    "Fujikura / SUMCO": {
+      "net": -386378.05553525663,
+      "gross": 1160844.4901858908,
+      "change": -89038.24014444463
+    },
+    "Mitsui Kinzoku standalone short": {
+      "net": -239540.87307791112,
+      "gross": 239540.87307791112,
+      "change": -29591.9577383782
+    },
+    "Furukawa / Sumitomo": {
+      "net": 64808.69672285835,
+      "gross": 1242254.5559702073,
+      "change": 24802.6319193627
+    },
+    "Advantest / Nikon": {
+      "net": 156654.57391690311,
+      "gross": 1892513.373556817,
+      "change": 146152.17539639852
+    },
+    "Tokyo Electron standalone long": {
+      "net": 889581.255098707,
+      "gross": 889581.255098707,
+      "change": 100373.00392825797
+    },
+    "NVDA / AAPL": {
+      "net": -563848.2119534385,
+      "gross": 1662988.825846864,
+      "change": 39563.65799013956
+    },
+    "CRDO / ALAB": {
+      "net": 606107.6403348134,
+      "gross": 1761809.619513736,
+      "change": 64826.190505630686
+    },
+    "ARM standalone short": {
+      "net": -1072261.6379224847,
+      "gross": 1072261.6379224847,
+      "change": -65133.74613330432
+    },
+    "TSEM / AVGO": {
+      "net": 22246.249843732454,
+      "gross": 2063076.9045779456,
+      "change": 71191.93842718552
+    },
+    "AXTI / FN": {
+      "net": 50663.54977392242,
+      "gross": 2231166.5632992433,
+      "change": 42579.83727369341
+    },
+    "BE standalone long": {
+      "net": 1862325.6090449712,
+      "gross": 1862325.6090449712,
+      "change": 136683.32879211497
+    },
+    "COHR / CIEN": {
+      "net": -102657.33630299801,
+      "gross": 2594563.798765287,
+      "change": 4434.924142472912
+    },
+    "NBIS / CRWV": {
+      "net": 517874.4996429789,
+      "gross": 3901271.8093621046,
+      "change": -75747.39888780285
+    },
+    "GLW standalone short": {
+      "net": -805374.2340750786,
+      "gross": 805374.2340750786,
+      "change": -37231.36435877241
+    },
+    "INTC standalone long": {
+      "net": 1376081.1307896818,
+      "gross": 1376081.1307896818,
+      "change": -7656.019301663153
+    },
+    "LITE / NOK": {
+      "net": 1005154.6720688707,
+      "gross": 2598157.9567270945,
+      "change": 280822.5801980685
+    },
+    "SNDK / MU": {
+      "net": 54257.121351894806,
+      "gross": 648387.7374437612,
+      "change": -1983.4569540487719
+    },
+    "Everpure standalone short": {
+      "net": -287379.04432031495,
+      "gross": 287379.04432031495,
+      "change": -28809.13861440547
+    },
+    "SMTC / WOLF": {
+      "net": 352383.5592706365,
+      "gross": 2310130.8501177286,
+      "change": -69711.0008393547
+    },
+    "WDC / STX": {
+      "net": 752171.0153800647,
+      "gross": 1274799.5367389154,
+      "change": -2245.8356932054157
+    },
+    "SWKS standalone short": {
+      "net": -1062666.0404590855,
+      "gross": 1062666.0404590855,
+      "change": 73128.30535838823
+    }
+  },
+  "previousCloseByRegion": {
+    "HK": -108213.70619206049,
+    "Japan": 58084.02660239856,
+    "US": 34919.60204228236
+  },
+  "method": "Current ledger USD marks minus current split-adjusted quantities times FMP previousClose times FX previousClose. Different regional clocks; not a synchronized daily return. Since-prior-mark compares actual market values, preserving split economics."
+}

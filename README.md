@@ -96,3 +96,7 @@ Generate portfolio report
 ```
 
 All trades are paper trades only.
+
+## Verified stock splits
+
+Use `python3 -m paper_portfolio split SYMBOL RATIO --effective-date YYYY-MM-DD --source URL --mark-basis pre-split` for a verified corporate action. RATIO is new shares per old share. If a current post-split quote has already been marked, explicitly use `--mark-basis post-split` to avoid dividing it twice. The command adjusts quantity and unit cost, preserves cash and realized PnL, records a replayable audit event, and rejects a duplicate symbol/effective date. Verify the listing, ratio, effective date and existing mark basis first; do not represent splits as buy/sell orders.

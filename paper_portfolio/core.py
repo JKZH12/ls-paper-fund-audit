@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
+from math import isfinite
 from typing import Literal
 
 
@@ -21,6 +22,25 @@ class PortfolioState:
     initial_cash: float
     cash: float
     holdings: dict[str, Holding]
+
+
+def apply_split(state: PortfolioState, *, symbol: str, ratio: float, mark_basis: str) -> PortfolioState:
+    """Adjust share units without cash flow or realized PnL; preserve fractional shares."""
+    if not isfinite(ratio) or ratio <= 0 or ratio == 1:
+        raise ValueError("split ratio must be finite, positive and different from one")
+    if mark_basis not in {"pre-split", "post-split"}:
+        raise ValueError("explicit pre-split or post-split mark basis required")
+    symbol = symbol.upper()
+    holding = state.holdings.get(symbol)
+    if holding is None:
+        raise ValueError(f"no open holding: {symbol}")
+    price = holding.last_price
+    if price is not None and mark_basis == "pre-split":
+        price /= ratio
+    holdings = dict(state.holdings)
+    holdings[symbol] = replace(holding, quantity=holding.quantity * ratio,
+                               average_cost=holding.average_cost / ratio, last_price=price)
+    return replace(state, holdings=holdings)
 
 
 def apply_trade(

@@ -11,7 +11,7 @@ from typing import Any
 
 from .core import portfolio_metrics
 from .core import apply_trade
-from .db import DEFAULT_DB_PATH, connect, get_portfolio, load_state, save_state
+from .db import DEFAULT_DB_PATH, connect, get_portfolio, load_state, save_state, apply_split_to_ledger
 
 
 ZERO_HASH = "0" * 64
@@ -387,6 +387,10 @@ def restore_database_from_event_log(
                     _restore_trade_event(conn, event)
                 elif event.event_type == "price_mark_updated":
                     _restore_price_mark_event(conn, event)
+                elif event.event_type == "stock_split_applied":
+                    payload = event.payload
+                    apply_split_to_ledger(conn, event.portfolio_id, symbol=payload["symbol"],
+                                          ratio=float(payload["ratio"]), mark_basis=payload["mark_basis"])
                 elif event.event_type == "daily_report_generated":
                     pass
                 else:

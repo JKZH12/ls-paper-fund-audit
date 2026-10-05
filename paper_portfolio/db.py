@@ -3,7 +3,7 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
-from .core import Holding, PortfolioState
+from .core import Holding, PortfolioState, apply_split
 
 
 DEFAULT_DB_PATH = Path("data/portfolio.sqlite")
@@ -162,6 +162,18 @@ def save_state(conn: sqlite3.Connection, portfolio_id: int, state: PortfolioStat
                 holding.last_price,
             ),
         )
+
+
+def apply_split_to_ledger(conn: sqlite3.Connection, portfolio_id: int, *,
+                          symbol: str, ratio: float, mark_basis: str) -> Holding:
+    state = apply_split(load_state(conn, portfolio_id), symbol=symbol, ratio=ratio, mark_basis=mark_basis)
+    holding = state.holdings[symbol.upper()]
+    conn.execute(
+        """UPDATE holdings SET quantity = ?, average_cost = ?, last_price = ?,
+           updated_at = CURRENT_TIMESTAMP WHERE portfolio_id = ? AND symbol = ?""",
+        (holding.quantity, holding.average_cost, holding.last_price, portfolio_id, holding.symbol),
+    )
+    return holding
 
 
 def record_transaction(

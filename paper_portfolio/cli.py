@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from datetime import date
 from pathlib import Path
 
@@ -23,6 +24,7 @@ from .db import (
     record_transaction,
     save_state,
     update_price,
+    apply_split_to_ledger,
 )
 from .report import money, pct, render_report, write_daily_report
 
@@ -70,6 +72,13 @@ def build_parser() -> argparse.ArgumentParser:
     mark_parser.add_argument("--source", default="manual")
 
     subparsers.add_parser("summary", help="print current summary")
+
+    split_parser = subparsers.add_parser("split", help="record a verified stock split, not a trade")
+    split_parser.add_argument("symbol")
+    split_parser.add_argument("ratio", type=float, help="new shares per old share")
+    split_parser.add_argument("--effective-date", required=True)
+    split_parser.add_argument("--source", required=True, help="verified corporate-action source")
+    split_parser.add_argument("--mark-basis", required=True, choices=["pre-split", "post-split"])
 
     report_parser = subparsers.add_parser("report", help="write or print a daily report")
     report_parser.add_argument("--print", action="store_true", dest="print_report")
@@ -190,6 +199,35 @@ def handle_price(conn, args, portfolio_id: int) -> None:
     print(f"Audit manifest: {manifest_path}")
 
 
+def handle_split(conn, args, portfolio_id: int) -> None:
+    effective_date = date.fromisoformat(args.effective_date)
+    if effective_date > date.today() or not args.source.strip():
+        raise ValueError("split must be effective and have a verified source")
+    symbol = args.symbol.upper()
+    with conn:
+        # Lock before duplicate detection and read/modify/write.
+        conn.execute("BEGIN IMMEDIATE")
+        for row in conn.execute(
+            "SELECT payload_json FROM audit_events WHERE portfolio_id = ? AND event_type = 'stock_split_applied'",
+            (portfolio_id,),
+        ):
+            payload = json.loads(row["payload_json"])
+            if payload["symbol"] == symbol and payload["effective_date"] == effective_date.isoformat():
+                raise ValueError(f"split already applied: {symbol} {effective_date}")
+        before = load_state(conn, portfolio_id)
+        ensure_genesis_event(conn, portfolio_id)
+        holding = apply_split_to_ledger(conn, portfolio_id, symbol=symbol,
+                                       ratio=args.ratio, mark_basis=args.mark_basis)
+        record_audit_event(conn, portfolio_id=portfolio_id, event_type="stock_split_applied", payload={
+            "symbol": symbol, "ratio": args.ratio, "effective_date": effective_date.isoformat(),
+            "source": args.source, "mark_basis": args.mark_basis,
+            "before_holding": before.holdings[symbol].__dict__, "after_holding": holding.__dict__,
+            "cash_unchanged": before.cash,
+        })
+    write_manifest(conn, portfolio_id=portfolio_id, workspace=audit_workspace(args.db), db_path=args.db)
+    print(f"Applied stock split: {symbol} x{args.ratio:g}; cash and realized PnL unchanged")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -223,6 +261,10 @@ def main(argv: list[str] | None = None) -> None:
         return
 
     portfolio_id = resolve_portfolio_id(conn, args.portfolio_id)
+
+    if args.command == "split":
+        handle_split(conn, args, portfolio_id)
+        return
 
     if args.command == "trade" or args.command in TRADE_SIDES:
         handle_trade(conn, args, portfolio_id)
