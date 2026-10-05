@@ -1,0 +1,318 @@
+{
+  "sizingNav": 52425417.0551105,
+  "beforeHoldings": {
+    "0100.HK": {
+      "symbol": "0100.HK",
+      "quantity": -18744.696038245726,
+      "average_cost": 41.0779415723224,
+      "realized_pnl": 0.0,
+      "last_price": 31.120848
+    },
+    "0992.HK": {
+      "symbol": "0992.HK",
+      "quantity": -169634.1287160663,
+      "average_cost": 4.5991176,
+      "realized_pnl": 0.0,
+      "last_price": 4.5776448
+    },
+    "1888.HK": {
+      "symbol": "1888.HK",
+      "quantity": -170939.4771512418,
+      "average_cost": 6.04138246784604,
+      "realized_pnl": 0.0,
+      "last_price": 7.047432
+    },
+    "2513.HK": {
+      "symbol": "2513.HK",
+      "quantity": 5454.568389324604,
+      "average_cost": 141.87432708050093,
+      "realized_pnl": 0.0,
+      "last_price": 84.7476
+    },
+    "3110.T": {
+      "symbol": "3110.T",
+      "quantity": -31136.391786430737,
+      "average_cost": 19.711067459865642,
+      "realized_pnl": 104994.69884395304,
+      "last_price": 21.2607024
+    },
+    "3308.HK": {
+      "symbol": "3308.HK",
+      "quantity": 6317.6325706738,
+      "average_cost": 165.07365,
+      "realized_pnl": 0.0,
+      "last_price": 141.58584
+    },
+    "3436.T": {
+      "symbol": "3436.T",
+      "quantity": -33523.449103185194,
+      "average_cost": 21.296252702083454,
+      "realized_pnl": 3558.507916329539,
+      "last_price": 23.07672073
+    },
+    "4062.T": {
+      "symbol": "4062.T",
+      "quantity": 9451.215557874462,
+      "average_cost": 49.715218430476604,
+      "realized_pnl": 190288.06178180221,
+      "last_price": 77.60789135
+    },
+    "5706.T": {
+      "symbol": "5706.T",
+      "quantity": -14298.98887704227,
+      "average_cost": 17.849983520000002,
+      "realized_pnl": 0.0,
+      "last_price": 16.752294525
+    },
+    "5801.T": {
+      "symbol": "5801.T",
+      "quantity": 23591.335178411577,
+      "average_cost": 20.705003506149044,
+      "realized_pnl": 221752.96288956294,
+      "last_price": 27.70218902
+    },
+    "5802.T": {
+      "symbol": "5802.T",
+      "quantity": -37729.36950619496,
+      "average_cost": 14.37470799406354,
+      "realized_pnl": 12921.845428532106,
+      "last_price": 15.60383694
+    },
+    "5803.T": {
+      "symbol": "5803.T",
+      "quantity": 10994.894626581601,
+      "average_cost": 37.9649636,
+      "realized_pnl": -15744.29845665879,
+      "last_price": 35.21936594
+    },
+    "6857.T": {
+      "symbol": "6857.T",
+      "quantity": 4017.946792355807,
+      "average_cost": 208.6963412043234,
+      "realized_pnl": 38796.9180281332,
+      "last_price": 255.001877
+    },
+    "7731.T": {
+      "symbol": "7731.T",
+      "quantity": -71552.35887856346,
+      "average_cost": 11.994799571312402,
+      "realized_pnl": -6356.261853237082,
+      "last_price": 12.12999003
+    },
+    "8035.T": {
+      "symbol": "8035.T",
+      "quantity": 11013.528320356865,
+      "average_cost": 70.52829064,
+      "realized_pnl": 0.0,
+      "last_price": 80.77168635
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "quantity": -3338.242930037934,
+      "average_cost": 309.74,
+      "realized_pnl": 0.0,
+      "last_price": 333.5343
+    },
+    "ALAB": {
+      "symbol": "ALAB",
+      "quantity": -1604.049992614641,
+      "average_cost": 324.955,
+      "realized_pnl": 0.0,
+      "last_price": 360.245
+    },
+    "ARM": {
+      "symbol": "ARM",
+      "quantity": -3543.7293870133017,
+      "average_cost": 272.5430367612322,
+      "realized_pnl": -35421.68181789159,
+      "last_price": 302.58
+    },
+    "AVGO": {
+      "symbol": "AVGO",
+      "quantity": -2819.449954042624,
+      "average_cost": 362.9531,
+      "realized_pnl": 0.0,
+      "last_price": 361.92
+    },
+    "AXTI": {
+      "symbol": "AXTI",
+      "quantity": 13455.091398084336,
+      "average_cost": 66.12071255217487,
+      "realized_pnl": 231389.0839567096,
+      "last_price": 84.7943
+    },
+    "BE": {
+      "symbol": "BE",
+      "quantity": 6453.411910198112,
+      "average_cost": 233.81650947694672,
+      "realized_pnl": -63532.96866336596,
+      "last_price": 288.58
+    },
+    "CIEN": {
+      "symbol": "CIEN",
+      "quantity": -3443.935155479309,
+      "average_cost": 345.68739900625184,
+      "realized_pnl": 0.0,
+      "last_price": 391.59
+    },
+    "COHR": {
+      "symbol": "COHR",
+      "quantity": 3774.472072799589,
+      "average_cost": 320.8410261000532,
+      "realized_pnl": -196594.770824636,
+      "last_price": 330.1
+    },
+    "CRDO": {
+      "symbol": "CRDO",
+      "quantity": 5618.36772136988,
+      "average_cost": 185.55,
+      "realized_pnl": 0.0,
+      "last_price": 210.73
+    },
+    "CRWV": {
+      "symbol": "CRWV",
+      "quantity": -19287.40913076688,
+      "average_cost": 88.04332525788679,
+      "realized_pnl": -331754.5086535469,
+      "last_price": 87.71
+    },
+    "FN": {
+      "symbol": "FN",
+      "quantity": -2386.2972919862113,
+      "average_cost": 445.29642063365316,
+      "realized_pnl": 93233.78547113345,
+      "last_price": 456.88
+    },
+    "GLW": {
+      "symbol": "GLW",
+      "quantity": -5024.482402644599,
+      "average_cost": 155.73,
+      "realized_pnl": 0.0,
+      "last_price": 160.28999
+    },
+    "INTC": {
+      "symbol": "INTC",
+      "quantity": 11778.491233327757,
+      "average_cost": 109.95372287322209,
+      "realized_pnl": 0.0,
+      "last_price": 116.83
+    },
+    "LITE": {
+      "symbol": "LITE",
+      "quantity": 1662.3972624726994,
+      "average_cost": 890.4640075843804,
+      "realized_pnl": 460820.73677802604,
+      "last_price": 1083.77002
+    },
+    "MU": {
+      "symbol": "MU",
+      "quantity": -279.6882754897547,
+      "average_cost": 965.5349999999999,
+      "realized_pnl": 50697.68406911905,
+      "last_price": 1062.13
+    },
+    "NBIS": {
+      "symbol": "NBIS",
+      "quantity": 9405.640875628053,
+      "average_cost": 218.80319647279518,
+      "realized_pnl": 301087.14764261054,
+      "last_price": 234.92
+    },
+    "NOK": {
+      "symbol": "NOK",
+      "quantity": -77821.36222072417,
+      "average_cost": 10.352435706172574,
+      "realized_pnl": 194438.2614186318,
+      "last_price": 10.235
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "quantity": 2325.239194814135,
+      "average_cost": 222.34,
+      "realized_pnl": 0.0,
+      "last_price": 236.35001
+    },
+    "P": {
+      "symbol": "P",
+      "quantity": -2035.2623535433072,
+      "average_cost": 127.0,
+      "realized_pnl": 0.0,
+      "last_price": 141.2
+    },
+    "SMTC": {
+      "symbol": "SMTC",
+      "quantity": 6933.631274448868,
+      "average_cost": 148.98668793064334,
+      "realized_pnl": 0.0,
+      "last_price": 192.0
+    },
+    "SNDK": {
+      "symbol": "SNDK",
+      "quantity": 205.73745956976973,
+      "average_cost": 1570.1159330247908,
+      "realized_pnl": 18764.29484187975,
+      "last_price": 1707.625
+    },
+    "STX": {
+      "symbol": "STX",
+      "quantity": -295.13528913821966,
+      "average_cost": 915.0001,
+      "realized_pnl": 78008.85119189901,
+      "last_price": 885.405
+    },
+    "SWKS": {
+      "symbol": "SWKS",
+      "quantity": -13026.06080484292,
+      "average_cost": 87.2197259748239,
+      "realized_pnl": 0.0,
+      "last_price": 81.58
+    },
+    "TSEM": {
+      "symbol": "TSEM",
+      "quantity": 4247.267005624828,
+      "average_cost": 214.2821385419427,
+      "realized_pnl": -17965.837335542317,
+      "last_price": 245.49
+    },
+    "WDC": {
+      "symbol": "WDC",
+      "quantity": 2294.302703082107,
+      "average_cost": 458.1726621489026,
+      "realized_pnl": -42247.92418080283,
+      "last_price": 441.74
+    },
+    "WOLF": {
+      "symbol": "WOLF",
+      "quantity": -29094.178791010432,
+      "average_cost": 26.540037073105477,
+      "realized_pnl": 0.0,
+      "last_price": 33.645
+    }
+  },
+  "legs": [
+    {
+      "symbol": "WDC",
+      "side": "buy",
+      "quantity": 1185.451724292477,
+      "price": 442.24,
+      "notional": 524254.170551105,
+      "timestampHKT": "2026-10-05T23:44:39+08:00"
+    },
+    {
+      "symbol": "STX",
+      "side": "cover",
+      "quantity": 295.13528913821966,
+      "price": 885.8485,
+      "notional": 261445.15318015817,
+      "timestampHKT": "2026-10-05T23:44:39+08:00"
+    },
+    {
+      "symbol": "QCOM",
+      "side": "short",
+      "quantity": 4295.280572659414,
+      "price": 183.0803,
+      "notional": 786381.2558266573,
+      "timestampHKT": "2026-10-05T23:44:39+08:00"
+    }
+  ]
+}

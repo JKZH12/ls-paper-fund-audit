@@ -30,7 +30,7 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_DEFAULT_POSITION_METADATA["SNDK"]["pair"], "SNDK / MU")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["SNDK"]["pair"], "SNDK / MU")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["MU"]["pair"], "SNDK / MU")
-        self.assertEqual(_POSITION_METADATA_OVERRIDES["WDC"]["pair"], "WDC / STX")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["WDC"]["pair"], "WDC standalone long")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["STX"]["pair"], "WDC / STX")
 
     def test_nvda_and_aapl_are_classified_as_a_pair(self):

@@ -231,7 +231,9 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
         "pair": "GEV / ENR.DE",
     },
     "WDC": {
-        "pair": "WDC / STX",
+        "name": "Western Digital",
+        "theme": "HDD / storage hierarchy",
+        "pair": "WDC standalone long",
     },
     "MU": {
         "pair": "SNDK / MU",
