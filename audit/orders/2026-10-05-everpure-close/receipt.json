@@ -1,0 +1,12 @@
+{
+  "symbol": "P",
+  "name": "Everpure, Inc.",
+  "exchange": "NYSE",
+  "side": "cover",
+  "quantity": 2035.2623535433072,
+  "price": 141.105,
+  "quoteTimestamp": 1791215171,
+  "notional": 287185.69439672836,
+  "realizedPnl": -28707.375496728328,
+  "remainingQuantity": 0
+}
