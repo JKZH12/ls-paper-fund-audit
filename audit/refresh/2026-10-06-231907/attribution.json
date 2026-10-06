@@ -1,0 +1,763 @@
+{
+  "priorAsOf": "2026-10-05 23:46:55 HKT",
+  "asOf": "2026-10-06 23:19:33 HKT",
+  "summary": {
+    "cash": 50085012.87306553,
+    "long_market_value": 21145055.71126605,
+    "short_market_value": 18859792.262771707,
+    "net_market_value": 2285263.448494344,
+    "gross_exposure": 40004847.97403775,
+    "total_equity": 52370276.321559876,
+    "realized_pnl": 1122007.8501734214,
+    "unrealized_pnl": 1248268.4713865295,
+    "total_pnl": 2370276.321559876,
+    "return_pct": 0.047405526431197526,
+    "net_exposure_pct": 0.043636650577563274,
+    "gross_exposure_pct": 0.7638846075281923,
+    "peakEquity": 53283706.84,
+    "peakDate": "2026-08-18",
+    "drawdownFromPeakValue": -913430.5184401274,
+    "drawdownFromPeakPct": -0.01714277351579482,
+    "realizedPnl": 1122007.8501734214,
+    "grossExposurePct": 0.7638846075281923,
+    "netExposurePct": 0.043636650577563274,
+    "totalEquity": 52370276.321559876,
+    "longMarketValue": 21145055.71126605,
+    "shortMarketValue": 18859792.262771707,
+    "netMarketValue": 2285263.448494344,
+    "grossExposure": 40004847.97403775,
+    "totalPnl": 2370276.321559876,
+    "returnPct": 0.047405526431197526,
+    "unrealizedPnl": 1248268.4713865295
+  },
+  "priorSummary": {
+    "cash": 50085012.87306553,
+    "long_market_value": 20687753.132475678,
+    "short_market_value": 18340966.60114343,
+    "net_market_value": 2346786.531332246,
+    "gross_exposure": 39028719.73361911,
+    "total_equity": 52431799.40439778,
+    "realized_pnl": 1213125.7372807418,
+    "unrealized_pnl": 1309791.5542244317,
+    "total_pnl": 2431799.404397778,
+    "return_pct": 0.048635988087955564,
+    "net_exposure_pct": 0.04475884020748307,
+    "gross_exposure_pct": 0.7443711674397643,
+    "peakEquity": 53283706.84,
+    "peakDate": "2026-08-18",
+    "drawdownFromPeakValue": -851907.4356022254,
+    "drawdownFromPeakPct": -0.015988141331088845,
+    "realizedPnl": 1122007.8501734214,
+    "grossExposurePct": 0.7443711674397643,
+    "netExposurePct": 0.04475884020748307,
+    "totalEquity": 52431799.40439778,
+    "longMarketValue": 20687753.132475678,
+    "shortMarketValue": 18340966.60114343,
+    "netMarketValue": 2346786.531332246,
+    "grossExposure": 39028719.73361911,
+    "totalPnl": 2431799.404397778,
+    "returnPct": 0.048635988087955564,
+    "unrealizedPnl": 1309791.5542244317
+  },
+  "rows": [
+    {
+      "symbol": "0100.HK",
+      "name": "MiniMax",
+      "pair": "Z.AI / MiniMax",
+      "quantity": -18744.696038245726,
+      "usdMark": 31.755556,
+      "marketValue": -595248.2447454903,
+      "weightPct": -1.1366146725875448,
+      "sincePriorMark": -11897.408533042864,
+      "previousClosePnl": -11851.63398531743,
+      "localChangePct": 2.0475,
+      "quoteTimeHKT": "2026-10-06T16:08:01+08:00"
+    },
+    {
+      "symbol": "0992.HK",
+      "name": "Lenovo Group",
+      "pair": "Lenovo standalone short",
+      "quantity": -169634.1287160663,
+      "usdMark": 4.511022,
+      "marketValue": -765223.2865890068,
+      "weightPct": -1.4611786309670063,
+      "sincePriorMark": 11301.500630624776,
+      "previousClosePnl": 11362.433209659757,
+      "localChangePct": -1.44766,
+      "quoteTimeHKT": "2026-10-06T16:08:01+08:00"
+    },
+    {
+      "symbol": "1888.HK",
+      "name": "Kingboard Laminates",
+      "pair": "Kingboard Laminates standalone short",
+      "quantity": -170939.4771512418,
+      "usdMark": 7.021393,
+      "marketValue": -1200233.248293389,
+      "weightPct": -2.2918214922598668,
+      "sincePriorMark": 4451.093045541172,
+      "previousClosePnl": 4545.622576405813,
+      "localChangePct": -0.36166,
+      "quoteTimeHKT": "2026-10-06T16:08:01+08:00"
+    },
+    {
+      "symbol": "2513.HK",
+      "name": "Z.AI",
+      "pair": "Z.AI / MiniMax",
+      "quantity": 5454.568389324604,
+      "usdMark": 91.176165,
+      "marketValue": 497326.62746884435,
+      "weightPct": 0.9496352939121387,
+      "sincePriorMark": 35065.04743771848,
+      "previousClosePnl": 35028.77455792951,
+      "localChangePct": 7.59398,
+      "quoteTimeHKT": "2026-10-06T16:08:01+08:00"
+    },
+    {
+      "symbol": "3110.T",
+      "name": "Nitto Boseki (Nittobo)",
+      "pair": "Ibiden / Nittobo",
+      "quantity": -31136.391786430737,
+      "usdMark": 23.0287876,
+      "marketValue": -717033.353080098,
+      "weightPct": -1.3691609123416226,
+      "sincePriorMark": -55089.45607849464,
+      "previousClosePnl": -54406.29873358694,
+      "localChangePct": 8.33333,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "3308.HK",
+      "name": "Zhongji Innolight",
+      "pair": "Zhongji standalone long",
+      "quantity": 6317.6325706738,
+      "usdMark": 137.49697,
+      "marketValue": 868655.3360409584,
+      "weightPct": 1.6586800701743656,
+      "sincePriorMark": -25831.97828925089,
+      "previousClosePnl": -25902.16718711127,
+      "localChangePct": -2.88029,
+      "quoteTimeHKT": "2026-10-06T16:08:01+08:00"
+    },
+    {
+      "symbol": "3436.T",
+      "name": "SUMCO",
+      "pair": "Fujikura / SUMCO",
+      "quantity": -33523.449103185194,
+      "usdMark": 23.56022116,
+      "marketValue": -789819.8749170469,
+      "weightPct": -1.5081453266877125,
+      "sincePriorMark": -16252.615663269697,
+      "previousClosePnl": -15454.257739987803,
+      "localChangePct": 2.11132,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "4062.T",
+      "name": "Ibiden",
+      "pair": "Ibiden / Nittobo",
+      "quantity": 9451.215557874462,
+      "usdMark": 78.449716,
+      "marketValue": 741445.1763700331,
+      "weightPct": 1.415774802900541,
+      "sincePriorMark": 7997.997126256383,
+      "previousClosePnl": 7241.045019179215,
+      "localChangePct": 1.10069,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "5706.T",
+      "name": "Mitsui Kinzoku",
+      "pair": "Mitsui Kinzoku standalone short",
+      "quantity": -14298.98887704227,
+      "usdMark": 17.401285795,
+      "marketValue": -248820.79202893865,
+      "weightPct": -0.4751183486242247,
+      "sincePriorMark": -9293.547317326245,
+      "previousClosePnl": -9046.343895296874,
+      "localChangePct": 3.89046,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "5801.T",
+      "name": "Furukawa Electric",
+      "pair": "Furukawa / Sumitomo",
+      "quantity": 23591.335178411577,
+      "usdMark": 28.4063891,
+      "marketValue": 670144.6464664771,
+      "weightPct": 1.27962786056676,
+      "sincePriorMark": 16650.201951492218,
+      "previousClosePnl": 15975.764840357855,
+      "localChangePct": 2.55825,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "5802.T",
+      "name": "Sumitomo Electric",
+      "pair": "Furukawa / Sumitomo",
+      "quantity": -37729.36950619496,
+      "usdMark": 16.041068945,
+      "marketValue": -605219.417500254,
+      "weightPct": -1.1556544284474137,
+      "sincePriorMark": -16529.982501652292,
+      "previousClosePnl": -15922.427219081446,
+      "localChangePct": 2.81833,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "5803.T",
+      "name": "Fujikura",
+      "pair": "Fujikura / SUMCO",
+      "quantity": 10994.894626581601,
+      "usdMark": 37.04218445,
+      "marketValue": 407274.91476614954,
+      "weightPct": 0.7776833413393353,
+      "sincePriorMark": 20063.728570889423,
+      "previousClosePnl": 19664.10835068958,
+      "localChangePct": 5.19224,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "6857.T",
+      "name": "Advantest",
+      "pair": "Advantest / Nikon",
+      "quantity": 4017.946792355807,
+      "usdMark": 264.7677915,
+      "marketValue": 1063822.898576556,
+      "weightPct": 2.0313486452592953,
+      "sincePriorMark": 39297.217211759504,
+      "previousClosePnl": 38239.858351829935,
+      "localChangePct": 3.84615,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "7731.T",
+      "name": "Nikon",
+      "pair": "Advantest / Nikon",
+      "quantity": -71552.35887856346,
+      "usdMark": 12.2735846,
+      "marketValue": -878203.9300256098,
+      "weightPct": -1.6769129202857946,
+      "sincePriorMark": -10323.90991956222,
+      "previousClosePnl": -9428.21677559684,
+      "localChangePct": 1.19979,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "8035.T",
+      "name": "Tokyo Electron",
+      "pair": "Tokyo Electron standalone long",
+      "quantity": 11013.528320356865,
+      "usdMark": 81.01198495,
+      "marketValue": 892227.7905351492,
+      "weightPct": 1.7036912027287423,
+      "sincePriorMark": 2697.147004485498,
+      "previousClosePnl": 1779.1093952544172,
+      "localChangePct": 0.31336,
+      "quoteTimeHKT": "2026-10-06T14:30:00+08:00"
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "pair": "NVDA / AAPL",
+      "quantity": -3338.242930037934,
+      "usdMark": 332.87,
+      "marketValue": -1111200.924121727,
+      "weightPct": -2.1218160417921377,
+      "sincePriorMark": 2236.6227631254687,
+      "previousClosePnl": 66.76485860069796,
+      "localChangePct": -0.00600799,
+      "quoteTimeHKT": "2026-10-06T23:19:02+08:00"
+    },
+    {
+      "symbol": "ALAB",
+      "name": "Astera Labs",
+      "pair": "CRDO / ALAB",
+      "quantity": -1604.049992614641,
+      "usdMark": 391.84,
+      "marketValue": -628530.9491061209,
+      "weightPct": -1.2001673339412309,
+      "sincePriorMark": -49853.87377046302,
+      "previousClosePnl": -47319.47478213191,
+      "localChangePct": 8.14152,
+      "quoteTimeHKT": "2026-10-06T23:19:04+08:00"
+    },
+    {
+      "symbol": "ARM",
+      "name": "Arm Holdings",
+      "pair": "ARM standalone short",
+      "quantity": -3543.7293870133017,
+      "usdMark": 306.28,
+      "marketValue": -1085373.4366544338,
+      "weightPct": -2.072498968670909,
+      "sincePriorMark": -15362.06689270259,
+      "previousClosePnl": -11977.805328104943,
+      "localChangePct": 1.11588,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "AVGO",
+      "name": "Broadcom",
+      "pair": "TSEM / AVGO",
+      "quantity": -2819.449954042624,
+      "usdMark": 378.08499,
+      "marketValue": -1065991.707679706,
+      "weightPct": -2.0354899430630975,
+      "sincePriorMark": -47380.82828318685,
+      "previousClosePnl": -43912.90483971437,
+      "localChangePct": 4.29643,
+      "quoteTimeHKT": "2026-10-06T23:19:03+08:00"
+    },
+    {
+      "symbol": "AXTI",
+      "name": "AXTI",
+      "pair": "AXTI / FN",
+      "quantity": 13455.091398084336,
+      "usdMark": 86.39,
+      "marketValue": 1162385.3458805059,
+      "weightPct": 2.2195516761136,
+      "sincePriorMark": 19694.21727937608,
+      "previousClosePnl": -3632.8746774827173,
+      "localChangePct": -0.31156,
+      "quoteTimeHKT": "2026-10-06T23:19:03+08:00"
+    },
+    {
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "pair": "BE standalone long",
+      "quantity": 6453.411910198112,
+      "usdMark": 295.29599,
+      "marketValue": 1905666.6588997429,
+      "weightPct": 3.6388325453902843,
+      "sincePriorMark": 41663.16275812018,
+      "previousClosePnl": 55796.13484145403,
+      "localChangePct": 3.01622,
+      "quoteTimeHKT": "2026-10-06T23:19:00+08:00"
+    },
+    {
+      "symbol": "CIEN",
+      "name": "Ciena",
+      "pair": "COHR / CIEN",
+      "quantity": -3443.935155479309,
+      "usdMark": 428.65,
+      "marketValue": -1476242.8043962056,
+      "weightPct": -2.8188562445840364,
+      "sincePriorMark": -127167.27117672186,
+      "previousClosePnl": -134175.7136574738,
+      "localChangePct": 9.99769,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "COHR",
+      "name": "Coherent",
+      "pair": "COHR / CIEN",
+      "quantity": 3774.472072799589,
+      "usdMark": 337.82999,
+      "marketValue": 1275129.8626091646,
+      "weightPct": 2.434835086184598,
+      "sincePriorMark": 27968.8003147242,
+      "previousClosePnl": 15815.000240309637,
+      "localChangePct": 1.25584,
+      "quoteTimeHKT": "2026-10-06T23:19:04+08:00"
+    },
+    {
+      "symbol": "CRDO",
+      "name": "Credo Technology Group",
+      "pair": "CRDO / ALAB",
+      "quantity": 5618.36772136988,
+      "usdMark": 222.4532,
+      "marketValue": 1249823.8783954382,
+      "weightPct": 2.386513813143485,
+      "sincePriorMark": 64629.207572462125,
+      "previousClosePnl": 56033.1049587662,
+      "localChangePct": 4.69371,
+      "quoteTimeHKT": "2026-10-06T23:19:00+08:00"
+    },
+    {
+      "symbol": "CRWV",
+      "name": "CoreWeave",
+      "pair": "NBIS / CRWV",
+      "quantity": -19287.40913076688,
+      "usdMark": 90.9843,
+      "marketValue": -1754851.418576433,
+      "weightPct": -3.350853846562565,
+      "sincePriorMark": -57640.422187296856,
+      "previousClosePnl": -69324.73463871547,
+      "localChangePct": 4.11294,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "FN",
+      "name": "Fabrinet",
+      "pair": "AXTI / FN",
+      "quantity": -2386.2972919862113,
+      "usdMark": 482.69,
+      "marketValue": -1151841.8398688245,
+      "weightPct": -2.1994190612941877,
+      "sincePriorMark": -62377.81121251953,
+      "previousClosePnl": -68844.67687380225,
+      "localChangePct": 6.35687,
+      "quoteTimeHKT": "2026-10-06T23:19:03+08:00"
+    },
+    {
+      "symbol": "GLW",
+      "name": "Corning",
+      "pair": "GLW standalone short",
+      "quantity": -5024.482402644599,
+      "usdMark": 168.58,
+      "marketValue": -847027.2434378265,
+      "weightPct": -1.617381657940806,
+      "sincePriorMark": -41451.979821817935,
+      "previousClosePnl": -46275.482928356796,
+      "localChangePct": 5.779,
+      "quoteTimeHKT": "2026-10-06T23:19:00+08:00"
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel",
+      "pair": "INTC standalone long",
+      "quantity": 11778.491233327757,
+      "usdMark": 114.495,
+      "marketValue": 1348578.3537598616,
+      "weightPct": 2.575083517756191,
+      "sincePriorMark": -29210.65825865272,
+      "previousClosePnl": -19964.54264049047,
+      "localChangePct": -1.45882,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "LITE",
+      "name": "Lumentum",
+      "pair": "LITE / NOK",
+      "quantity": 1662.3972624726994,
+      "usdMark": 1116.94,
+      "marketValue": 1856797.998346257,
+      "weightPct": 3.5455188109860085,
+      "sincePriorMark": 54559.878154354265,
+      "previousClosePnl": 42008.77882268508,
+      "localChangePct": 2.3148,
+      "quoteTimeHKT": "2026-10-06T23:19:04+08:00"
+    },
+    {
+      "symbol": "MU",
+      "name": "MU",
+      "pair": "SNDK / MU",
+      "quantity": -279.6882754897547,
+      "usdMark": 1065.795,
+      "marketValue": -298090.3655756031,
+      "weightPct": -0.5691976184072277,
+      "sincePriorMark": -753.7599024449347,
+      "previousClosePnl": -513.22798552371,
+      "localChangePct": 0.17247,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "NBIS",
+      "name": "Nebius",
+      "pair": "NBIS / CRWV",
+      "quantity": 9405.640875628053,
+      "usdMark": 251.74,
+      "marketValue": 2367776.034030606,
+      "weightPct": 4.521221197100762,
+      "sincePriorMark": 158014.7667105514,
+      "previousClosePnl": 180306.13558578992,
+      "localChangePct": 8.24268,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "NOK",
+      "name": "Nokia",
+      "pair": "LITE / NOK",
+      "quantity": -77821.36222072417,
+      "usdMark": 10.73,
+      "marketValue": -835023.2166283703,
+      "weightPct": -1.5944602077354455,
+      "sincePriorMark": -36576.04024374041,
+      "previousClosePnl": -41245.3219769839,
+      "localChangePct": 5.19607,
+      "quoteTimeHKT": "2026-10-06T23:19:04+08:00"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "pair": "NVDA / AAPL",
+      "quantity": 2325.239194814135,
+      "usdMark": 241.89,
+      "marketValue": 562452.1088335911,
+      "weightPct": 1.0739911039996557,
+      "sincePriorMark": 12126.122400955655,
+      "previousClosePnl": 6952.465192494218,
+      "localChangePct": 1.25157,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "pair": "QCOM standalone short",
+      "quantity": -4295.280572659414,
+      "usdMark": 180.7759,
+      "marketValue": -776483.2112750211,
+      "weightPct": -1.4826792329819296,
+      "sincePriorMark": 8822.935824299726,
+      "previousClosePnl": 60.56345607443289,
+      "localChangePct": -0.0077991,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "SMTC",
+      "name": "Semtech",
+      "pair": "SMTC / WOLF",
+      "quantity": 6933.631274448868,
+      "usdMark": 197.41,
+      "marketValue": 1368768.1498889509,
+      "weightPct": 2.6136355315075055,
+      "sincePriorMark": 35826.072795077314,
+      "previousClosePnl": 31756.031236975705,
+      "localChangePct": 2.37515,
+      "quoteTimeHKT": "2026-10-06T23:19:06+08:00"
+    },
+    {
+      "symbol": "SNDK",
+      "name": "SanDisk",
+      "pair": "SNDK / MU",
+      "quantity": 205.73745956976973,
+      "usdMark": 1675.1622,
+      "marketValue": 344643.6153953065,
+      "weightPct": 0.6580901221126899,
+      "sincePriorMark": -7021.881216354119,
+      "previousClosePnl": -5965.933705112288,
+      "localChangePct": -1.70159,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "SWKS",
+      "name": "Skyworks Solutions",
+      "pair": "SWKS standalone short",
+      "quantity": -13026.06080484292,
+      "usdMark": 81.715,
+      "marketValue": -1064424.5586677394,
+      "weightPct": -2.0324975032250028,
+      "sincePriorMark": -2670.3424649927765,
+      "previousClosePnl": 28592.203466630122,
+      "localChangePct": -2.6159,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "TSEM",
+      "name": "Tower Semiconductor",
+      "pair": "TSEM / AVGO",
+      "quantity": 4247.267005624828,
+      "usdMark": 263.5091,
+      "marketValue": 1119193.5061118933,
+      "weightPct": 2.1370777179786278,
+      "sincePriorMark": 76064.7295304356,
+      "previousClosePnl": 59203.07951810503,
+      "localChangePct": 5.58525,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "WDC",
+      "name": "Western Digital",
+      "pair": "WDC standalone long",
+      "quantity": 3479.7544273745843,
+      "usdMark": 414.668,
+      "marketValue": 1442942.8088905641,
+      "weightPct": 2.7552705661332,
+      "sincePriorMark": -92951.20026402986,
+      "previousClosePnl": -93855.9712126916,
+      "localChangePct": -6.10724,
+      "quoteTimeHKT": "2026-10-06T23:19:05+08:00"
+    },
+    {
+      "symbol": "WOLF",
+      "name": "Wolfspeed",
+      "pair": "SMTC / WOLF",
+      "quantity": -29094.178791010432,
+      "usdMark": 33.165,
+      "marketValue": -964908.439603861,
+      "weightPct": -1.8424734551316966,
+      "sincePriorMark": 14983.502077370389,
+      "previousClosePnl": 10619.375258718866,
+      "localChangePct": -1.08858,
+      "quoteTimeHKT": "2026-10-06T23:19:03+08:00"
+    }
+  ],
+  "pairs": {
+    "Z.AI / MiniMax": {
+      "net": -97921.6172766459,
+      "gross": 1092574.8722143346,
+      "sincePriorMark": 23167.638904675616,
+      "previousClosePnl": 23177.14057261208
+    },
+    "Lenovo standalone short": {
+      "net": -765223.2865890068,
+      "gross": 765223.2865890068,
+      "sincePriorMark": 11301.500630624776,
+      "previousClosePnl": 11362.433209659757
+    },
+    "Kingboard Laminates standalone short": {
+      "net": -1200233.248293389,
+      "gross": 1200233.248293389,
+      "sincePriorMark": 4451.093045541172,
+      "previousClosePnl": 4545.622576405813
+    },
+    "Ibiden / Nittobo": {
+      "net": 24411.82328993501,
+      "gross": 1458478.529450131,
+      "sincePriorMark": -47091.45895223825,
+      "previousClosePnl": -47165.25371440772
+    },
+    "Zhongji standalone long": {
+      "net": 868655.3360409584,
+      "gross": 868655.3360409584,
+      "sincePriorMark": -25831.97828925089,
+      "previousClosePnl": -25902.16718711127
+    },
+    "Fujikura / SUMCO": {
+      "net": -382544.9601508973,
+      "gross": 1197094.7896831965,
+      "sincePriorMark": 3811.1129076197267,
+      "previousClosePnl": 4209.850610701778
+    },
+    "Mitsui Kinzoku standalone short": {
+      "net": -248820.79202893865,
+      "gross": 248820.79202893865,
+      "sincePriorMark": -9293.547317326245,
+      "previousClosePnl": -9046.343895296874
+    },
+    "Furukawa / Sumitomo": {
+      "net": 64925.228966223076,
+      "gross": 1275364.063966731,
+      "sincePriorMark": 120.2194498399258,
+      "previousClosePnl": 53.337621276408754
+    },
+    "Advantest / Nikon": {
+      "net": 185618.9685509462,
+      "gross": 1942026.828602166,
+      "sincePriorMark": 28973.307292197285,
+      "previousClosePnl": 28811.641576233094
+    },
+    "Tokyo Electron standalone long": {
+      "net": 892227.7905351492,
+      "gross": 892227.7905351492,
+      "sincePriorMark": 2697.147004485498,
+      "previousClosePnl": 1779.1093952544172
+    },
+    "NVDA / AAPL": {
+      "net": -548748.8152881359,
+      "gross": 1673653.0329553182,
+      "sincePriorMark": 14362.745164081123,
+      "previousClosePnl": 7019.230051094916
+    },
+    "CRDO / ALAB": {
+      "net": 621292.9292893173,
+      "gross": 1878354.8275015592,
+      "sincePriorMark": 14775.333801999106,
+      "previousClosePnl": 8713.630176634288
+    },
+    "ARM standalone short": {
+      "net": -1085373.4366544338,
+      "gross": 1085373.4366544338,
+      "sincePriorMark": -15362.06689270259,
+      "previousClosePnl": -11977.805328104943
+    },
+    "TSEM / AVGO": {
+      "net": 53201.79843218741,
+      "gross": 2185185.2137915995,
+      "sincePriorMark": 28683.901247248745,
+      "previousClosePnl": 15290.174678390656
+    },
+    "AXTI / FN": {
+      "net": 10543.506011681398,
+      "gross": 2314227.1857493306,
+      "sincePriorMark": -42683.59393314345,
+      "previousClosePnl": -72477.55155128497
+    },
+    "BE standalone long": {
+      "net": 1905666.6588997429,
+      "gross": 1905666.6588997429,
+      "sincePriorMark": 41663.16275812018,
+      "previousClosePnl": 55796.13484145403
+    },
+    "COHR / CIEN": {
+      "net": -201112.94178704103,
+      "gross": 2751372.6670053704,
+      "sincePriorMark": -99198.47086199766,
+      "previousClosePnl": -118360.71341716417
+    },
+    "NBIS / CRWV": {
+      "net": 612924.615454173,
+      "gross": 4122627.4526070394,
+      "sincePriorMark": 100374.34452325455,
+      "previousClosePnl": 110981.40094707445
+    },
+    "GLW standalone short": {
+      "net": -847027.2434378265,
+      "gross": 847027.2434378265,
+      "sincePriorMark": -41451.979821817935,
+      "previousClosePnl": -46275.482928356796
+    },
+    "INTC standalone long": {
+      "net": 1348578.3537598616,
+      "gross": 1348578.3537598616,
+      "sincePriorMark": -29210.65825865272,
+      "previousClosePnl": -19964.54264049047
+    },
+    "LITE / NOK": {
+      "net": 1021774.7817178867,
+      "gross": 2691821.2149746274,
+      "sincePriorMark": 17983.837910613853,
+      "previousClosePnl": 763.4568457011846
+    },
+    "SNDK / MU": {
+      "net": 46553.2498197034,
+      "gross": 642733.9809709096,
+      "sincePriorMark": -7775.641118799053,
+      "previousClosePnl": -6479.161690635999
+    },
+    "QCOM standalone short": {
+      "net": -776483.2112750211,
+      "gross": 776483.2112750211,
+      "sincePriorMark": 8822.935824299726,
+      "previousClosePnl": 60.56345607443289
+    },
+    "SMTC / WOLF": {
+      "net": 403859.7102850899,
+      "gross": 2333676.589492812,
+      "sincePriorMark": 50809.5748724477,
+      "previousClosePnl": 42375.40649569457
+    },
+    "SWKS standalone short": {
+      "net": -1064424.5586677394,
+      "gross": 1064424.5586677394,
+      "sincePriorMark": -2670.3424649927765,
+      "previousClosePnl": 28592.203466630122
+    },
+    "WDC standalone long": {
+      "net": 1442942.8088905641,
+      "gross": 1442942.8088905641,
+      "sincePriorMark": -92951.20026402986,
+      "previousClosePnl": -93855.9712126916
+    }
+  },
+  "regions": {
+    "HK": {
+      "sincePriorMark": 13088.254291590674,
+      "previousClosePnl": 13183.029171566377
+    },
+    "Japan": {
+      "sincePriorMark": -20783.219615422076,
+      "previousClosePnl": -21357.658406238894
+    },
+    "US": {
+      "sincePriorMark": -53828.117514071026,
+      "previousClosePnl": -99799.02780998028
+    }
+  },
+  "sincePriorMark": -61523.08283790245,
+  "previousClosePnl": -107973.6570446528,
+  "method": "Signed current quantities times latest USD mark less exchange previousClose times FX previousClose. Mixed regional clocks; no dividends/financing/borrow accrual. Prior-mark change uses the last verified ledger snapshot.",
+  "recentEntryPnl": {
+    "WDC_added_lot": -32685.274942192176,
+    "QCOM_new_short": 9898.044551636298
+  }
+}

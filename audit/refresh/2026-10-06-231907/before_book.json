@@ -1,0 +1,971 @@
+{
+  "asOf": "2026-10-05 23:46:55 HKT",
+  "summary": {
+    "cash": 50085012.87306553,
+    "long_market_value": 20687753.132475678,
+    "short_market_value": 18340966.60114343,
+    "net_market_value": 2346786.531332246,
+    "gross_exposure": 39028719.73361911,
+    "total_equity": 52431799.40439778,
+    "realized_pnl": 1213125.7372807418,
+    "unrealized_pnl": 1309791.5542244317,
+    "total_pnl": 2431799.404397778,
+    "return_pct": 0.048635988087955564,
+    "net_exposure_pct": 0.04475884020748307,
+    "gross_exposure_pct": 0.7443711674397643,
+    "peakEquity": 53283706.84,
+    "peakDate": "2026-08-18",
+    "drawdownFromPeakValue": -851907.4356022254,
+    "drawdownFromPeakPct": -0.015988141331088845,
+    "realizedPnl": 1122007.8501734214,
+    "grossExposurePct": 0.7443711674397643,
+    "netExposurePct": 0.04475884020748307,
+    "totalEquity": 52431799.40439778,
+    "longMarketValue": 20687753.132475678,
+    "shortMarketValue": 18340966.60114343,
+    "netMarketValue": 2346786.531332246,
+    "grossExposure": 39028719.73361911,
+    "totalPnl": 2431799.404397778,
+    "returnPct": 0.048635988087955564,
+    "unrealizedPnl": 1309791.5542244317
+  },
+  "positions": [
+    {
+      "symbol": "0100.HK",
+      "name": "MiniMax",
+      "theme": "Foundation models / AI applications",
+      "pair": "Z.AI / MiniMax",
+      "quantity": -18744.696038245726,
+      "averageCost": 41.0779415723224,
+      "lastPrice": 31.120848,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "0992.HK",
+      "name": "Lenovo Group",
+      "theme": "AI hardware / consumer and enterprise devices",
+      "pair": "Lenovo standalone short",
+      "quantity": -169634.1287160663,
+      "averageCost": 4.5991176,
+      "lastPrice": 4.5776448,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "1888.HK",
+      "name": "Kingboard Laminates",
+      "theme": "PCB materials / copper-clad laminates",
+      "pair": "Kingboard Laminates standalone short",
+      "quantity": -170939.4771512418,
+      "averageCost": 6.04138246784604,
+      "lastPrice": 7.047432,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "2513.HK",
+      "name": "Z.AI",
+      "theme": "Foundation models / AI applications",
+      "pair": "Z.AI / MiniMax",
+      "quantity": 5454.568389324604,
+      "averageCost": 141.87432708050093,
+      "lastPrice": 84.7476,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "3110.T",
+      "name": "Nitto Boseki (Nittobo)",
+      "theme": "AI substrates / packaging",
+      "pair": "Ibiden / Nittobo",
+      "quantity": -31136.391786430737,
+      "averageCost": 19.711067459865642,
+      "lastPrice": 21.2594928,
+      "realizedPnl": 104994.69884395304,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "3308.HK",
+      "name": "Zhongji Innolight",
+      "theme": "AI optical transceivers / device demand hedge",
+      "pair": "Zhongji standalone long",
+      "quantity": 6317.6325706738,
+      "averageCost": 165.07365,
+      "lastPrice": 141.58584,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "3436.T",
+      "name": "SUMCO",
+      "theme": "Silicon wafers",
+      "pair": "Fujikura / SUMCO",
+      "quantity": -33523.449103185194,
+      "averageCost": 21.296252702083454,
+      "lastPrice": 23.07540781,
+      "realizedPnl": 3558.507916329539,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "4062.T",
+      "name": "Ibiden",
+      "theme": "AI substrates / packaging",
+      "pair": "Ibiden / Nittobo",
+      "quantity": 9451.215557874462,
+      "averageCost": 49.715218430476604,
+      "lastPrice": 77.60347595,
+      "realizedPnl": 190288.06178180221,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "5706.T",
+      "name": "Mitsui Kinzoku",
+      "theme": "Nonferrous metals / semiconductor materials",
+      "pair": "Mitsui Kinzoku standalone short",
+      "quantity": -14298.98887704227,
+      "averageCost": 17.849983520000002,
+      "lastPrice": 16.751341425,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "5801.T",
+      "name": "Furukawa Electric",
+      "theme": "Japan optical / cables",
+      "pair": "Furukawa / Sumitomo",
+      "quantity": 23591.335178411577,
+      "averageCost": 20.705003506149044,
+      "lastPrice": 27.70061294,
+      "realizedPnl": 221752.96288956294,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "5802.T",
+      "name": "Sumitomo Electric",
+      "theme": "Japan optical / cables",
+      "pair": "Furukawa / Sumitomo",
+      "quantity": -37729.36950619496,
+      "averageCost": 14.37470799406354,
+      "lastPrice": 15.60294918,
+      "realizedPnl": 12921.845428532106,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "5803.T",
+      "name": "Fujikura",
+      "theme": "Japan optical / cables",
+      "pair": "Fujikura / SUMCO",
+      "quantity": 10994.894626581601,
+      "averageCost": 37.9649636,
+      "lastPrice": 35.21736218,
+      "realizedPnl": -15744.29845665879,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "6857.T",
+      "name": "Advantest",
+      "theme": "Semiconductor test",
+      "pair": "Advantest / Nikon",
+      "quantity": 4017.946792355807,
+      "averageCost": 208.6963412043234,
+      "lastPrice": 254.987369,
+      "realizedPnl": 38796.9180281332,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "7731.T",
+      "name": "Nikon",
+      "theme": "Japan precision / lithography",
+      "pair": "Advantest / Nikon",
+      "quantity": -71552.35887856346,
+      "averageCost": 11.994799571312402,
+      "lastPrice": 12.12929991,
+      "realizedPnl": -6356.261853237082,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "8035.T",
+      "name": "Tokyo Electron",
+      "theme": "Semiconductor equipment",
+      "pair": "Tokyo Electron standalone long",
+      "quantity": 11013.528320356865,
+      "averageCost": 70.52829064,
+      "lastPrice": 80.76709095,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "theme": "AI compute / mega-cap technology hedge",
+      "pair": "NVDA / AAPL",
+      "quantity": -3338.242930037934,
+      "averageCost": 309.74,
+      "lastPrice": 333.54,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "ALAB",
+      "name": "Astera Labs",
+      "theme": "AI connectivity / interconnect",
+      "pair": "CRDO / ALAB",
+      "quantity": -1604.049992614641,
+      "averageCost": 324.955,
+      "lastPrice": 360.76,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "ARM",
+      "name": "Arm Holdings",
+      "theme": "AI compute / CPU architecture",
+      "pair": "ARM standalone short",
+      "quantity": -3543.7293870133017,
+      "averageCost": 272.5430367612322,
+      "lastPrice": 301.945,
+      "realizedPnl": -35421.68181789159,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "AVGO",
+      "name": "Broadcom",
+      "theme": "Specialty foundry / semiconductor hedge",
+      "pair": "TSEM / AVGO",
+      "quantity": -2819.449954042624,
+      "averageCost": 362.9531,
+      "lastPrice": 361.28,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "AXTI",
+      "name": "AXTI",
+      "theme": "Optical materials / InP substrates",
+      "pair": "AXTI / FN",
+      "quantity": 13455.091398084336,
+      "averageCost": 66.12071255217487,
+      "lastPrice": 84.9263,
+      "realizedPnl": 231389.0839567096,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "theme": "AI power / onsite generation",
+      "pair": "BE standalone long",
+      "quantity": 6453.411910198112,
+      "averageCost": 233.81650947694672,
+      "lastPrice": 288.84,
+      "realizedPnl": -63532.96866336596,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "CIEN",
+      "name": "Ciena",
+      "theme": "Optical networking",
+      "pair": "COHR / CIEN",
+      "quantity": -3443.935155479309,
+      "averageCost": 345.68739900625184,
+      "lastPrice": 391.72501,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "COHR",
+      "name": "Coherent",
+      "theme": "Optical networking",
+      "pair": "COHR / CIEN",
+      "quantity": 3774.472072799589,
+      "averageCost": 320.8410261000532,
+      "lastPrice": 330.42,
+      "realizedPnl": -196594.770824636,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "CRDO",
+      "name": "Credo Technology Group",
+      "theme": "AI connectivity / interconnect",
+      "pair": "CRDO / ALAB",
+      "quantity": 5618.36772136988,
+      "averageCost": 185.55,
+      "lastPrice": 210.95,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "CRWV",
+      "name": "CoreWeave",
+      "theme": "AI cloud demand",
+      "pair": "NBIS / CRWV",
+      "quantity": -19287.40913076688,
+      "averageCost": 88.04332525788679,
+      "lastPrice": 87.9958,
+      "realizedPnl": -331754.5086535469,
+      "updatedAt": "2026-10-05 23:46:55 HKT",
+      "pairAllocations": []
+    },
+    {
+      "symbol": "FN",
+      "name": "Fabrinet",
+      "theme": "Optical networking",
+      "pair": "AXTI / FN",
+      "quantity": -2386.2972919862113,
+      "averageCost": 445.29642063365316,
+      "lastPrice": 456.55,
+      "realizedPnl": 93233.78547113345,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "GLW",
+      "name": "Corning",
+      "theme": "Optical fiber / connectivity",
+      "pair": "GLW standalone short",
+      "quantity": -5024.482402644599,
+      "averageCost": 155.73,
+      "lastPrice": 160.33,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel",
+      "theme": "AI compute / x86",
+      "pair": "INTC standalone long",
+      "quantity": 11778.491233327757,
+      "averageCost": 109.95372287322209,
+      "lastPrice": 116.975,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "LITE",
+      "name": "Lumentum",
+      "theme": "Optical networking",
+      "pair": "LITE / NOK",
+      "quantity": 1662.3972624726994,
+      "averageCost": 890.4640075843804,
+      "lastPrice": 1084.12,
+      "realizedPnl": 460820.73677802604,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "MU",
+      "name": "MU",
+      "theme": "Unclassified",
+      "pair": "SNDK / MU",
+      "quantity": -279.6882754897547,
+      "averageCost": 965.5349999999999,
+      "lastPrice": 1063.1,
+      "realizedPnl": 50697.68406911905,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "NBIS",
+      "name": "Nebius",
+      "theme": "AI cloud demand",
+      "pair": "NBIS / CRWV",
+      "quantity": 9405.640875628053,
+      "averageCost": 218.80319647279518,
+      "lastPrice": 234.94,
+      "realizedPnl": 301087.14764261054,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "NOK",
+      "name": "Nokia",
+      "theme": "Optical networking / communications equipment",
+      "pair": "LITE / NOK",
+      "quantity": -77821.36222072417,
+      "averageCost": 10.352435706172574,
+      "lastPrice": 10.26,
+      "realizedPnl": 194438.2614186318,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "theme": "AI compute / accelerators",
+      "pair": "NVDA / AAPL",
+      "quantity": 2325.239194814135,
+      "averageCost": 222.34,
+      "lastPrice": 236.675,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "theme": "Compute semis",
+      "pair": "QCOM standalone short",
+      "quantity": -4295.280572659414,
+      "averageCost": 183.0803,
+      "lastPrice": 182.83,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "SMTC",
+      "name": "Semtech",
+      "theme": "Analog / mixed-signal semiconductors",
+      "pair": "SMTC / WOLF",
+      "quantity": 6933.631274448868,
+      "averageCost": 148.98668793064334,
+      "lastPrice": 192.243,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "SNDK",
+      "name": "SanDisk",
+      "theme": "Storage hierarchy",
+      "pair": "SNDK / MU",
+      "quantity": 205.73745956976973,
+      "averageCost": 1570.1159330247908,
+      "lastPrice": 1709.2925,
+      "realizedPnl": 18764.29484187975,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "SWKS",
+      "name": "Skyworks Solutions",
+      "theme": "Analog / connectivity semiconductors",
+      "pair": "SWKS standalone short",
+      "quantity": -13026.06080484292,
+      "averageCost": 87.2197259748239,
+      "lastPrice": 81.51,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "TSEM",
+      "name": "Tower Semiconductor",
+      "theme": "Specialty foundry / semiconductor hedge",
+      "pair": "TSEM / AVGO",
+      "quantity": 4247.267005624828,
+      "averageCost": 214.2821385419427,
+      "lastPrice": 245.6,
+      "realizedPnl": -17965.837335542317,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "WDC",
+      "name": "Western Digital",
+      "theme": "HDD / storage hierarchy",
+      "pair": "WDC standalone long",
+      "quantity": 3479.7544273745843,
+      "averageCost": 452.74486481113576,
+      "lastPrice": 441.38,
+      "realizedPnl": -42247.92418080283,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    },
+    {
+      "symbol": "WOLF",
+      "name": "Wolfspeed",
+      "theme": "AI compute systems",
+      "pair": "SMTC / WOLF",
+      "quantity": -29094.178791010432,
+      "averageCost": 26.540037073105477,
+      "lastPrice": 33.68,
+      "realizedPnl": 0.0,
+      "updatedAt": "2026-10-05 23:46:55 HKT"
+    }
+  ],
+  "trades": [
+    {
+      "time": "2026-10-05 23:46:31 HKT",
+      "symbol": "P",
+      "side": "cover",
+      "quantity": 2035.2623535433072,
+      "price": 141.105,
+      "notes": "User-directed full simulated close of Everpure, Inc. (P, NYSE) short; quantity 2035.2623535433072; FMP quote USD 141.105 ts=1791215171; simulated only; no broker order"
+    },
+    {
+      "time": "2026-10-05 23:45:06 HKT",
+      "symbol": "QCOM",
+      "side": "short",
+      "quantity": 4295.280572659414,
+      "price": 183.0803,
+      "notes": "User-directed simulated add short 1.5% NAV (new standalone short); sizing NAV USD 52425417.0551104993; target notional USD 786381.2558266573; FMP QUALCOMM Incorporated NASDAQ quote USD 183.0803 ts=1791215079; fractional paper shares; simulated only"
+    },
+    {
+      "time": "2026-10-05 23:45:06 HKT",
+      "symbol": "STX",
+      "side": "cover",
+      "quantity": 295.13528913821966,
+      "price": 885.8485,
+      "notes": "User-directed simulated full short close; sizing NAV USD 52425417.0551104993; target notional USD 261445.1531801582; FMP Seagate Technology Holdings plc NASDAQ quote USD 885.8485 ts=1791215079; fractional paper shares; simulated only"
+    },
+    {
+      "time": "2026-10-05 23:45:06 HKT",
+      "symbol": "WDC",
+      "side": "buy",
+      "quantity": 1185.451724292477,
+      "price": 442.24,
+      "notes": "User-directed simulated add long 1.0% NAV; sizing NAV USD 52425417.0551104993; target notional USD 524254.1705511050; FMP Western Digital Corporation NASDAQ quote USD 442.24 ts=1791215079; fractional paper shares; simulated only"
+    },
+    {
+      "time": "2026-09-25 08:57:11 HKT",
+      "symbol": "8035.T",
+      "side": "buy",
+      "quantity": 2202.705664071373,
+      "price": 352.6414532,
+      "notes": "User-directed simulated buy 1.5% NAV Tokyo Electron 8035.T (new long; previous holding closed); sizing NAV USD 51784355.09; target notional USD 776765.32635; FMP quote JPY 55960 ts=1790296921 (2026-09-25 08:42:01 HKT) x JPYUSD 0.00630167 ts=1790297818 (2026-09-25 08:56:58 HKT) = USD 352.64145320; fractional paper shares; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-24 22:33:56 HKT",
+      "symbol": "CRWV",
+      "side": "short",
+      "quantity": 1763.9649497727273,
+      "price": 88.0,
+      "notes": "User-directed simulated add short 0.3% NAV CRWV; sizing NAV USD 51742971.86; target notional USD 155228.91558; FMP quote CRWV (CoreWeave, NASDAQ) USD 88 ts=1790260430 (2026-09-24 22:33:50 HKT); existing CRWV short retained and increased; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-24 22:28:30 HKT",
+      "symbol": "P",
+      "side": "short",
+      "quantity": 2035.2623535433072,
+      "price": 127.0,
+      "notes": "User-directed simulated open P short at 0.5% of audited pre-trade NAV USD 51695663.78; target notional USD 258478.31890; FMP quote Everpure, Inc. (P, NYSE) USD 127 ts=1790260085; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-24 22:28:30 HKT",
+      "symbol": "BE",
+      "side": "buy",
+      "quantity": 994.166498971134,
+      "price": 259.995,
+      "notes": "User-directed simulated add existing BE long at 0.5% of audited pre-trade NAV USD 51695663.78; target notional USD 258478.31890; FMP quote Bloom Energy Corporation (BE, NYSE) USD 259.995 ts=1790260092; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-22 09:54:22 HKT",
+      "symbol": "3308.HK",
+      "side": "buy",
+      "quantity": 6317.6325706738,
+      "price": 165.07365,
+      "notes": "User-directed simulated buyback of Zhongji Innolight 3308.HK at 2.0% of audited NAV; sizing NAV USD 52143733.39; target notional USD 1042874.6678; FMP quote HKD 1295 ts=2026-09-22 09:39:06 HKT x HKDUSD 0.12747 ts=2026-09-22 09:54:07 HKT = USD 165.07365; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-22 09:47:35 HKT",
+      "symbol": "1888.HK",
+      "side": "short",
+      "quantity": 83238.0431512418,
+      "price": 6.258777,
+      "notes": "User-directed simulated add short 1.0% NAV Kingboard Laminates 1888.HK; sizing NAV USD 52096835.00; target notional USD 520968.35; FMP quote HKD 49.10 ts=2026-09-22 09:32:12 HKT x HKDUSD 0.12747 ts=2026-09-22 09:47:12 HKT = USD 6.258777; borrow not modeled; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-22 09:47:35 HKT",
+      "symbol": "3308.HK",
+      "side": "sell",
+      "quantity": 7496.9029129504,
+      "price": 166.09341,
+      "notes": "User-directed full simulated close of Zhongji Innolight 3308.HK long; quantity 7496.9029129504; sizing NAV USD 52096835.00; FMP quote HKD 1303 ts=2026-09-22 09:32:11 HKT x HKDUSD 0.12747 ts=2026-09-22 09:47:12 HKT = USD 166.09341; simulated only; no broker order"
+    },
+    {
+      "time": "2026-09-21 21:56:55 HKT",
+      "symbol": "ALAB",
+      "side": "short",
+      "quantity": 1604.049992614641,
+      "price": 324.955,
+      "notes": "open/add ALAB short 1.0% audited NAV 52124406.535009064; notional USD 521244.0653500907; pair=CRDO / ALAB; simulated only"
+    }
+  ],
+  "performanceHistory": [
+    {
+      "date": "2026-07-06",
+      "totalEquity": 49931244.06,
+      "totalPnl": -68755.94,
+      "returnPct": -0.0014
+    },
+    {
+      "date": "2026-07-07",
+      "totalEquity": 49756951.34,
+      "totalPnl": -243048.66,
+      "returnPct": -0.0049
+    },
+    {
+      "date": "2026-07-08",
+      "totalEquity": 49779978.51,
+      "totalPnl": -220021.49,
+      "returnPct": -0.0044
+    },
+    {
+      "date": "2026-07-09",
+      "totalEquity": 49924256.43,
+      "totalPnl": -75743.57,
+      "returnPct": -0.0015
+    },
+    {
+      "date": "2026-07-10",
+      "totalEquity": 49696473.76,
+      "totalPnl": -303526.24,
+      "returnPct": -0.0061
+    },
+    {
+      "date": "2026-07-11",
+      "totalEquity": 49835488.44,
+      "totalPnl": -164511.56,
+      "returnPct": -0.0033
+    },
+    {
+      "date": "2026-07-13",
+      "totalEquity": 49707060.24,
+      "totalPnl": -292939.76,
+      "returnPct": -0.0059
+    },
+    {
+      "date": "2026-07-14",
+      "totalEquity": 49823195.39,
+      "totalPnl": -176804.61,
+      "returnPct": -0.0035
+    },
+    {
+      "date": "2026-07-15",
+      "totalEquity": 49935461.67,
+      "totalPnl": -64538.33,
+      "returnPct": -0.0013
+    },
+    {
+      "date": "2026-07-16",
+      "totalEquity": 49739831.98,
+      "totalPnl": -260168.02,
+      "returnPct": -0.0052
+    },
+    {
+      "date": "2026-07-17",
+      "totalEquity": 49603146.59,
+      "totalPnl": -396853.41,
+      "returnPct": -0.0079
+    },
+    {
+      "date": "2026-07-18",
+      "totalEquity": 49513016.17,
+      "totalPnl": -486983.83,
+      "returnPct": -0.0097
+    },
+    {
+      "date": "2026-07-20",
+      "totalEquity": 49644804.16,
+      "totalPnl": -355195.84,
+      "returnPct": -0.0071
+    },
+    {
+      "date": "2026-07-21",
+      "totalEquity": 50139106.45,
+      "totalPnl": 139106.45,
+      "returnPct": 0.0028
+    },
+    {
+      "date": "2026-07-22",
+      "totalEquity": 50518155.47,
+      "totalPnl": 518155.47,
+      "returnPct": 0.0104
+    },
+    {
+      "date": "2026-07-24",
+      "totalEquity": 50362127.34,
+      "totalPnl": 362127.34,
+      "returnPct": 0.0072
+    },
+    {
+      "date": "2026-07-27",
+      "totalEquity": 49608758.35,
+      "totalPnl": -391241.65,
+      "returnPct": -0.0078
+    },
+    {
+      "date": "2026-07-28",
+      "totalEquity": 49267881.57,
+      "totalPnl": -732118.43,
+      "returnPct": -0.0146
+    },
+    {
+      "date": "2026-07-29",
+      "totalEquity": 49066866.11,
+      "totalPnl": -933133.89,
+      "returnPct": -0.0187
+    },
+    {
+      "date": "2026-07-30",
+      "totalEquity": 49272162.5,
+      "totalPnl": -727837.5,
+      "returnPct": -0.0146
+    },
+    {
+      "date": "2026-07-31",
+      "totalEquity": 50098743.79,
+      "totalPnl": 98743.79,
+      "returnPct": 0.002
+    },
+    {
+      "date": "2026-08-01",
+      "totalEquity": 50161333.81,
+      "totalPnl": 161333.81,
+      "returnPct": 0.0032
+    },
+    {
+      "date": "2026-08-03",
+      "totalEquity": 50070131.79,
+      "totalPnl": 70131.79,
+      "returnPct": 0.0014
+    },
+    {
+      "date": "2026-08-04",
+      "totalEquity": 50588364.54,
+      "totalPnl": 588364.54,
+      "returnPct": 0.0118
+    },
+    {
+      "date": "2026-08-05",
+      "totalEquity": 51014331.45,
+      "totalPnl": 1014331.45,
+      "returnPct": 0.0203
+    },
+    {
+      "date": "2026-08-06",
+      "totalEquity": 51017963.46,
+      "totalPnl": 1017963.46,
+      "returnPct": 0.0204
+    },
+    {
+      "date": "2026-08-07",
+      "totalEquity": 51119914.79,
+      "totalPnl": 1119914.79,
+      "returnPct": 0.0224
+    },
+    {
+      "date": "2026-08-08",
+      "totalEquity": 51197407.65,
+      "totalPnl": 1197407.65,
+      "returnPct": 0.0239
+    },
+    {
+      "date": "2026-08-10",
+      "totalEquity": 51019911.52,
+      "totalPnl": 1019911.52,
+      "returnPct": 0.0204
+    },
+    {
+      "date": "2026-08-11",
+      "totalEquity": 50962719.36,
+      "totalPnl": 962719.36,
+      "returnPct": 0.0193
+    },
+    {
+      "date": "2026-08-12",
+      "totalEquity": 51607496.85,
+      "totalPnl": 1607496.85,
+      "returnPct": 0.0321
+    },
+    {
+      "date": "2026-08-13",
+      "totalEquity": 51437870.3,
+      "totalPnl": 1437870.3,
+      "returnPct": 0.0288
+    },
+    {
+      "date": "2026-08-14",
+      "totalEquity": 51656049.68,
+      "totalPnl": 1656049.68,
+      "returnPct": 0.0331
+    },
+    {
+      "date": "2026-08-15",
+      "totalEquity": 51695295.64,
+      "totalPnl": 1695295.64,
+      "returnPct": 0.0339
+    },
+    {
+      "date": "2026-08-17",
+      "totalEquity": 52932242.73,
+      "totalPnl": 2932242.73,
+      "returnPct": 0.0586
+    },
+    {
+      "date": "2026-08-18",
+      "totalEquity": 52300299.03,
+      "totalPnl": 2300299.03,
+      "returnPct": 0.046
+    },
+    {
+      "date": "2026-08-19",
+      "totalEquity": 52063525.39,
+      "totalPnl": 2063525.39,
+      "returnPct": 0.0413
+    },
+    {
+      "date": "2026-08-20",
+      "totalEquity": 51417279.97,
+      "totalPnl": 1417279.97,
+      "returnPct": 0.0283
+    },
+    {
+      "date": "2026-08-21",
+      "totalEquity": 51620704.28,
+      "totalPnl": 1620704.28,
+      "returnPct": 0.0324
+    },
+    {
+      "date": "2026-08-24",
+      "totalEquity": 51119538.08,
+      "totalPnl": 1119538.08,
+      "returnPct": 0.0224
+    },
+    {
+      "date": "2026-08-25",
+      "totalEquity": 51378234.29,
+      "totalPnl": 1378234.29,
+      "returnPct": 0.0276
+    },
+    {
+      "date": "2026-08-26",
+      "totalEquity": 51476142.36,
+      "totalPnl": 1476142.36,
+      "returnPct": 0.0295
+    },
+    {
+      "date": "2026-08-27",
+      "totalEquity": 51683479.3,
+      "totalPnl": 1683479.3,
+      "returnPct": 0.0337
+    },
+    {
+      "date": "2026-08-28",
+      "totalEquity": 51503046.48,
+      "totalPnl": 1503046.48,
+      "returnPct": 0.0301
+    },
+    {
+      "date": "2026-08-29",
+      "totalEquity": 51236064.09,
+      "totalPnl": 1236064.09,
+      "returnPct": 0.0247
+    },
+    {
+      "date": "2026-08-31",
+      "totalEquity": 51217972.88,
+      "totalPnl": 1217972.88,
+      "returnPct": 0.0244
+    },
+    {
+      "date": "2026-09-01",
+      "totalEquity": 51137338.06,
+      "totalPnl": 1137338.06,
+      "returnPct": 0.0227
+    },
+    {
+      "date": "2026-09-02",
+      "totalEquity": 50942544.87,
+      "totalPnl": 942544.87,
+      "returnPct": 0.0189
+    },
+    {
+      "date": "2026-09-03",
+      "totalEquity": 51005990.18,
+      "totalPnl": 1005990.18,
+      "returnPct": 0.0201
+    },
+    {
+      "date": "2026-09-04",
+      "totalEquity": 51069922.53,
+      "totalPnl": 1069922.53,
+      "returnPct": 0.0214
+    },
+    {
+      "date": "2026-09-05",
+      "totalEquity": 51367202.29,
+      "totalPnl": 1367202.29,
+      "returnPct": 0.0273
+    },
+    {
+      "date": "2026-09-07",
+      "totalEquity": 51613012.63,
+      "totalPnl": 1613012.63,
+      "returnPct": 0.0323
+    },
+    {
+      "date": "2026-09-10",
+      "totalEquity": 51913409.47,
+      "totalPnl": 1913409.47,
+      "returnPct": 0.0383
+    },
+    {
+      "date": "2026-09-12",
+      "totalEquity": 51768461.54,
+      "totalPnl": 1768461.54,
+      "returnPct": 0.0354
+    },
+    {
+      "date": "2026-09-14",
+      "totalEquity": 51384025.73,
+      "totalPnl": 1384025.73,
+      "returnPct": 0.0277
+    },
+    {
+      "date": "2026-09-15",
+      "totalEquity": 51398681.32,
+      "totalPnl": 1398681.32,
+      "returnPct": 0.028
+    },
+    {
+      "date": "2026-09-16",
+      "totalEquity": 51609709.84,
+      "totalPnl": 1609709.84,
+      "returnPct": 0.0322
+    },
+    {
+      "date": "2026-09-17",
+      "totalEquity": 51643584.03,
+      "totalPnl": 1643584.03,
+      "returnPct": 0.0329
+    },
+    {
+      "date": "2026-09-18",
+      "totalEquity": 51978831.39,
+      "totalPnl": 1978831.39,
+      "returnPct": 0.0396
+    },
+    {
+      "date": "2026-09-19",
+      "totalEquity": 52011153.8,
+      "totalPnl": 2011153.8,
+      "returnPct": 0.0402
+    },
+    {
+      "date": "2026-09-21",
+      "totalEquity": 52096835.0,
+      "totalPnl": 2096835.0,
+      "returnPct": 0.0419
+    },
+    {
+      "date": "2026-09-22",
+      "totalEquity": 52143733.39,
+      "totalPnl": 2143733.39,
+      "returnPct": 0.0429
+    },
+    {
+      "date": "2026-09-24",
+      "totalEquity": 51784355.09,
+      "totalPnl": 1784355.09,
+      "returnPct": 0.0357
+    },
+    {
+      "date": "2026-09-25",
+      "totalEquity": 51926091.55,
+      "totalPnl": 1926091.55,
+      "returnPct": 0.0385
+    },
+    {
+      "date": "2026-09-28",
+      "totalEquity": 51911205.89,
+      "totalPnl": 1911205.89,
+      "returnPct": 0.0382
+    },
+    {
+      "date": "2026-10-05",
+      "totalEquity": 52431799.4,
+      "totalPnl": 2431799.4,
+      "returnPct": 0.0486
+    }
+  ]
+}
