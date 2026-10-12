@@ -72,7 +72,8 @@ class CoreTest(unittest.TestCase):
 
     def test_cohr_is_standalone_after_cien_cover(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["COHR"]["pair"], "COHR standalone long")
-        self.assertEqual(_POSITION_METADATA_OVERRIDES["CIEN"]["pair"], "COHR / CIEN")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["CIEN"]["pair"], "CIEN standalone long")
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["FN"]["pair"], "FN standalone short")
 
     def test_lite_nok_pair_and_glw_short_have_durable_taxonomy(self):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["LITE"]["pair"], "LITE / NOK")

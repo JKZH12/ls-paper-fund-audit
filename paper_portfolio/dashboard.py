@@ -333,7 +333,12 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "CIEN": {
         "name": "Ciena",
         "theme": "Optical networking",
-        "pair": "COHR / CIEN",
+        "pair": "CIEN standalone long",
+    },
+    "FN": {
+        "name": "Fabrinet",
+        "theme": "Optical manufacturing",
+        "pair": "FN standalone short",
     },
     "LITE": {
         "name": "Lumentum",
