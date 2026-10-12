@@ -328,7 +328,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "COHR": {
         "name": "Coherent",
         "theme": "Optical networking",
-        "pair": "COHR / CIEN",
+        "pair": "COHR standalone long",
     },
     "CIEN": {
         "name": "Ciena",
@@ -363,7 +363,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "SMTC": {
         "name": "Semtech",
         "theme": "Analog / mixed-signal semiconductors",
-        "pair": "SMTC / WOLF",
+        "pair": "SMTC standalone long",
     },
     "SMCI": {
         "name": "Super Micro Computer",

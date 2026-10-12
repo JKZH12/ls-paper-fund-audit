@@ -37,8 +37,8 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["NVDA"]["pair"], "NVDA / AAPL")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["AAPL"]["pair"], "NVDA / AAPL")
 
-    def test_smtc_and_wolf_are_classified_as_a_pair(self):
-        self.assertEqual(_POSITION_METADATA_OVERRIDES["SMTC"]["pair"], "SMTC / WOLF")
+    def test_smtc_is_standalone_after_wolf_cover(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["SMTC"]["pair"], "SMTC standalone long")
         self.assertEqual(_DEFAULT_POSITION_METADATA["WOLF"]["pair"], "SMTC / WOLF")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["CBRS"]["pair"], "CBRS standalone long")
 
@@ -70,8 +70,8 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(_POSITION_METADATA_OVERRIDES["ARM"]["pair"], "ARM standalone short")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["SWKS"]["pair"], "SWKS standalone short")
 
-    def test_cohr_cien_pair_has_durable_taxonomy(self):
-        self.assertEqual(_POSITION_METADATA_OVERRIDES["COHR"]["pair"], "COHR / CIEN")
+    def test_cohr_is_standalone_after_cien_cover(self):
+        self.assertEqual(_POSITION_METADATA_OVERRIDES["COHR"]["pair"], "COHR standalone long")
         self.assertEqual(_POSITION_METADATA_OVERRIDES["CIEN"]["pair"], "COHR / CIEN")
 
     def test_lite_nok_pair_and_glw_short_have_durable_taxonomy(self):
