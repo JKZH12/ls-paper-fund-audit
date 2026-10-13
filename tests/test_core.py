@@ -123,15 +123,15 @@ class CoreTest(unittest.TestCase):
             "YOFC standalone long",
         )
 
-    def test_fujikura_and_sumco_share_pair_classification(self):
+    def test_fujikura_and_sumco_are_standalone_shorts(self):
         self.assertEqual(
             {
                 symbol: _POSITION_METADATA_OVERRIDES[symbol]["pair"]
                 for symbol in ("5803.T", "3436.T")
             },
             {
-                "5803.T": "Fujikura / SUMCO",
-                "3436.T": "Fujikura / SUMCO",
+                "5803.T": "Fujikura standalone short",
+                "3436.T": "SUMCO standalone short",
             },
         )
 

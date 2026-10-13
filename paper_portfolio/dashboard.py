@@ -63,6 +63,16 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "3110.T": {
+        "name": "Nitto Boseki",
+        "theme": "AI substrates / packaging",
+        "pair": "Nitto Boseki standalone long",
+    },
+    "5332.T": {
+        "name": "TOTO",
+        "theme": "Building products / ceramics",
+        "pair": "TOTO standalone short",
+    },
     "8035.T": {
         "name": "Tokyo Electron",
         "theme": "Semiconductor equipment",
@@ -149,7 +159,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "3436.T": {
         "name": "SUMCO",
         "theme": "Silicon wafers",
-        "pair": "Fujikura / SUMCO",
+        "pair": "SUMCO standalone short",
     },
     "7731.T": {
         "name": "Nikon",
@@ -174,7 +184,7 @@ _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
     "5803.T": {
         "name": "Fujikura",
         "theme": "Japan optical / cables",
-        "pair": "Fujikura / SUMCO",
+        "pair": "Fujikura standalone short",
     },
     "6327.T": {
         "name": "Kitagawa Seiki",
