@@ -63,6 +63,11 @@ _DEFAULT_POSITION_METADATA: dict[str, dict[str, object]] = {
     },
 }
 _POSITION_METADATA_OVERRIDES: dict[str, dict[str, object]] = {
+    "CSCO": {
+        "name": "Cisco Systems",
+        "theme": "Networking / communications equipment",
+        "pair": "CSCO standalone short",
+    },
     "3110.T": {
         "name": "Nitto Boseki",
         "theme": "AI substrates / packaging",
